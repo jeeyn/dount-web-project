@@ -9,7 +9,7 @@
 						<div class="row">
 							<div class="col-sm-8">
 								<div class="footer-logo pb20">
-									<a href="index.jsp"><img src="resources/assets/img/logo.png" alt="image"></a>
+									<a href="index.jsp"><img src="assets/img/logo.png" alt="image"></a>
 								</div>
 								<div class="footer-text">
 									<p>Lorem ipsum dolor sit ametlyeolo consectetur adipisicing elit sed dong eiusmod tempor incididunt ut labore et incididunt.  </p>

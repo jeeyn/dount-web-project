@@ -14,7 +14,7 @@
 	
 	<mvc:annotation-driven/>
 	
-	<!-- <mvc:resources mapping="/**" location="/resources/"/> -->
+	<mvc:resources mapping="/**" location="/resources/"/>
 	
 	<mvc:view-controller path="/index.do" view-name="index"/>
 	
