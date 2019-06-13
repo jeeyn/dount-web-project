@@ -76,7 +76,7 @@
 													<input class="password" name="password" type="text" placeholder="Your Password*">
 												</div>
 												<div class="contact-comment-info">
-													<input class="password_check" name="password_check" type="text" placeholder="Your Password*">
+													<input class="password_check" name="password_check" type="text" placeholder="Your Password Check*">
 												</div>
 												<div class="contact-comment-info">
 													<input class="name" name="name" type="text" placeholder="Your Name*">
@@ -84,12 +84,20 @@
 												<div class="contact-comment-info">
 													<input class="email" name="email" type="email" placeholder="Email*">
 												</div>
-												<!-- 출생년도월일 라이브러리? 찾아서 하기 -->
 												<div class="contact-comment-info">
-													<input class="age" name="age" type="text" placeholder="Your Age*">
+													<input class="phone" name="phone" type="text" placeholder="Your Phone*">
 												</div>
 												<div class="contact-comment-info">
-													<input class="email" name="email" type="text" placeholder="Address*">
+													<input class="country" name="country" type="text" placeholder="Country*">
+												</div>
+												<div class="contact-comment-info">
+													<input class="address_1" name="address_1" type="text" placeholder="Address 1*">
+												</div>
+												<div class="contact-comment-info">
+													<input class="address_2" name="address_2" type="text" placeholder="Address 2*">
+												</div>
+												<div class="contact-comment-info">
+													<input class="zip_code" name="zip_code" type="text" placeholder="Zip Code*">
 												</div>
 											</form>
 										</div>
@@ -100,13 +108,13 @@
 											</div>
 											<div class="method-list mb20">
 												<form>
-													<input type="radio" name="user_type" value="Donor" checked=""> <label>Donor</label>
+													<input type="radio" name="user_type" value="Donor"> <label>Donor</label>
 													<input type="radio" name="user_type" value="Beneficient"> <label>Beneficient</label>
 												</form>
 											</div>
 											<div class="comment-form">
 												<div class="send-button text-uppercase">
-													<button type="submit" value="Submit">donate now</button> 
+													<button type="submit" value="Submit">확인</button> 
 												</div>
 											</div>
 										</div>

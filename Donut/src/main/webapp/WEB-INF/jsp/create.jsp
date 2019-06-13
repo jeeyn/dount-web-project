@@ -84,9 +84,10 @@
 							</div>
 							<div class="contact-comment-info">
 								<input class="albumQuantity" name="albumQuantity" type="email" placeholder="Album Quantity..">
-							<textarea id="summernote" name="contents"></textarea>
-							<div class="send-button text-uppercase text-center">
-								<button type="submit" value="Create">CREATE</button> 
+								<textarea id="summernote" name="contents"></textarea>
+								<div class="send-button text-uppercase text-center">
+									<button type="submit" value="Create">CREATE</button> 
+								</div>
 							</div>
 						</form>
 					</div>

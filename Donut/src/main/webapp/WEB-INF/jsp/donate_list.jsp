@@ -301,7 +301,7 @@
 										<div class="cause-text pt75 pb50">
 											<div class="gola-reach">
 												<ul class="gola-reach-list">
-													<li class="black">Artist : 장범준</li><br>
+													<li class="black">Artist : 장범준<br></li>
 													<li class="black">Title : 3집</li>
 												</ul>
 											</div>
