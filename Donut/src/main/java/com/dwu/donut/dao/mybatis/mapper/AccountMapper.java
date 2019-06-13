@@ -1,15 +1,14 @@
-package com.dwu.donut.dao;
+package com.dwu.donut.dao.mybatis.mapper;
 
 import java.util.List;
 import com.dwu.donut.domain.Account;
+import org.springframework.dao.DataAccessException;
 
 public interface AccountMapper {
 
   Account getAccountByUserId(String userId);
 
   Account getAccountByUserIdAndPassword(String userId, String password);
-
-  List<Account> getAccountList();
   
   void insertAccount(Account account);
 
