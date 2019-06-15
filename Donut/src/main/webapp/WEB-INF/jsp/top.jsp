@@ -22,7 +22,7 @@
 						</ul>
 					</div><!-- /.navbar-collapse -->
 					<div class="home-donate donate-btn-1 text-uppercase">
-						<a href="login.jsp">Sign in</a>
+						<a href="login.do">Sign in</a>
 					</div>
 				</nav>
 				<div class="wrap">

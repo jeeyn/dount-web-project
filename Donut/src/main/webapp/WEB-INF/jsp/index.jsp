@@ -44,6 +44,7 @@
 <!-- /end of head -->
 
 <body>
+	<div id="preloader"></div>
 	<!-- Start of Header 
 	============================================= -->
 	<jsp:include page="top.jsp"/>
@@ -221,7 +222,7 @@
 								<div class="gola-reach">
 									<ul class="gola-reach-list">
 										<li class="yellow">Artist : <span class="black">김재환</span></li>
-										<li class="yellow">Title : <span class="black">미니앨범 1집 : Another [Classy ver.]</span></li>
+										<li class="yellow">Title : <span class="black">미니앨범 1집 : Another</span></li>
 									</ul>
 								</div>
 								<!-- /gola-reach -->
@@ -443,8 +444,8 @@
 							<div class="cause-text pt75 pb50">
 								<div class="gola-reach">
 									<ul class="gola-reach-list">
-										<li class="yellow">Artist : <span class="black">장범준</span></li>
-										<li class="yellow">Title : <span class="black">3집</span></li>
+										<li class="yellow">Artist : <span class="black">아이유(IU)</span></li>
+										<li class="yellow">Title : <span class="black">모던타임즈(Modern Times)</span></li>
 									</ul>
 								</div>
 								<div class="cause-text-head pt15 pb20">
@@ -499,7 +500,6 @@
     <script type="text/javascript" src="resources/rev-slider/js/revolution.extension.parallax.min.js"></script>
     <script type="text/javascript" src="resources/rev-slider/js/revolution.extension.slideanims.min.js"></script>
     <script type="text/javascript" src="resources/rev-slider/js/revolution.extension.video.min.js"></script>
-
 
 
     <script type="text/javascript" src="resources/assets/js/function.js"></script>

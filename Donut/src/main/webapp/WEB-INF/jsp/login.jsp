@@ -60,11 +60,11 @@
 	</header>
 	<br><br><br>
 	<div class="login-form">
-	    <form action="#" method="post">
+	    <form action="index.jsp" method="post">
 			<div class="avatar">
 				<img src="resources/assets/img/donut.png" alt="donut">
 			</div>
-	        <h2 class="text-center">Member Login</h2>   
+	        <h2 class="text-center">Login</h2>   
 	        <div class="form-group">
 	        	<input type="text" class="form-control" name="username" placeholder="Username" required="required">
 	        </div>
@@ -110,16 +110,16 @@
 
 
     <script type="text/javascript" src="resources/assets/js/function.js"></script>
-
+	
     <script>
     	var tpj=jQuery;
 
     	var revapi2;
     	tpj(document).ready(function() {
-    		if(tpj("#rev_slider_2_1").revolution == undefined){
+    		if (tpj("#rev_slider_2_1").revolution == undefined) {
     			revslider_showDoubleJqueryError("#rev_slider_2_1");
-    		}else{
-    			revapi2 = tpj("#rev_slider_2_1").show().revolution({
+    		} else {
+    			revapi2 = tpj("#rev_slider_2_1").show().revolution( {
     				sliderType:"standard",
     				jsFileLocation:"js/",
     				sliderLayout:"fullscreen",
