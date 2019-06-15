@@ -62,7 +62,9 @@
 	<div class="login-form">
 	    <form action="#" method="post">
 			<div class="avatar">
-				<img src="resources/assets/img/donut.png" alt="donut">
+				<a href=onClick()>
+					<img src="resources/assets/img/donut.png" alt="donut">
+				</a>
 			</div>
 	        <h2 class="text-center">Member Login</h2>   
 	        <div class="form-group">
