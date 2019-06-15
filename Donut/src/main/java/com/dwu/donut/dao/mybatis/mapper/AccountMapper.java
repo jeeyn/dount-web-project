@@ -1,8 +1,6 @@
 package com.dwu.donut.dao.mybatis.mapper;
 
-import java.util.List;
 import com.dwu.donut.domain.Account;
-import org.springframework.dao.DataAccessException;
 
 public interface AccountMapper {
 
