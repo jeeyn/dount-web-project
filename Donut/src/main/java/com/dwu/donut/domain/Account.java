@@ -13,6 +13,13 @@ public class Account {
 	private String zipCode;
 	private String userType;
 	
+	public boolean checkPassword(String input) {
+		if (input.equals(password))
+			return true;
+		
+		return false;
+	}
+	
 	public String getUserId() {
 		return userId;
 	}
