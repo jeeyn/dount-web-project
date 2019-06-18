@@ -7,7 +7,7 @@
 				<nav class="navbar">
 					<!-- Brand and toggle get grouped for better mobile display -->
 					<div class="navbar-header">
-						<a class="navbar-brand" href="index.jsp"><img src="assets/img/logo.png" alt="image"></a>
+						<a class="navbar-brand" href="index.jsp"><img src="resources/assets/img/logo.png" alt="image"></a>
 					</div>
 
 					<!-- Collect the nav links, forms, and other content for toggling -->
@@ -22,7 +22,7 @@
 						</ul>
 					</div><!-- /.navbar-collapse -->
 					<div class="home-donate donate-btn-1 text-uppercase">
-						<a href="login.do">Sign in</a>
+						<a href="login.jsp">Sign in</a>
 					</div>
 				</nav>
 				<div class="wrap">
