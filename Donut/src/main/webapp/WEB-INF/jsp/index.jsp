@@ -7,7 +7,7 @@
 	<meta http-equiv="X-UA-Compatible" content="IE=edge">
 
 	<title>Donut</title>
-	<link rel="shortcut icon" href="assets/img/icon.png">
+	<link rel="shortcut icon" href="resources/assets/img/icon.png">
 
 	<meta name="description" content="Donut">
 	<meta name="keywords" content="Premium HTML Template">
@@ -18,27 +18,27 @@
 	<!-- css-include -->
 
 	<!-- bootstrap -->
-	<link rel="stylesheet" type="text/css" href="assets/css/bootstrap.min.css">
+	<link rel="stylesheet" type="text/css" href="resources/assets/css/bootstrap.min.css">
 	<!-- themify-icon.css -->
-	<link rel="stylesheet" type="text/css" href="assets/css/themify-icons.css">
+	<link rel="stylesheet" type="text/css" href="resources/assets/css/themify-icons.css">
 	<!-- owl-carousel -->
-	<link rel="stylesheet" type="text/css" href="assets/css/owl.carousel.css">
+	<link rel="stylesheet" type="text/css" href="resources/assets/css/owl.carousel.css">
 	<!-- Video-min -->
-	<link rel="stylesheet" type="text/css" href="assets/css/video.min.css">
+	<link rel="stylesheet" type="text/css" href="resources/assets/css/video.min.css">
 	<!-- animate.css -->
-	<link rel="stylesheet" type="text/css" href="assets/css/animate.css">
+	<link rel="stylesheet" type="text/css" href="resources/assets/css/animate.css">
 	<!-- REVOLUTION STYLE SHEETS -->
-	<link rel="stylesheet" type="text/css" href="rev-slider/css/settings.css">
+	<link rel="stylesheet" type="text/css" href="resources/rev-slider/css/settings.css">
 	<!-- REVOLUTION LAYERS STYLES -->
-	<link rel="stylesheet" type="text/css" href="rev-slider/css/layers.css">
+	<link rel="stylesheet" type="text/css" href="resources/rev-slider/css/layers.css">
 	<!-- REVOLUTION NAVIGATION STYLES -->
-	<link rel="stylesheet" type="text/css" href="rev-slider/css/navigation.css">
+	<link rel="stylesheet" type="text/css" href="resources/rev-slider/css/navigation.css">
 	<!-- menu style -->
-	<link rel="stylesheet" type="text/css" href="assets/css/menu.css">
+	<link rel="stylesheet" type="text/css" href="resources/assets/css/menu.css">
 	<!-- style -->
-	<link rel="stylesheet" type="text/css" href="assets/css/style.css">
+	<link rel="stylesheet" type="text/css" href="resources/assets/css/style.css">
 	<!-- responsive.css -->
-	<link rel="stylesheet" type="text/css" href="assets/css/responsive.css">
+	<link rel="stylesheet" type="text/css" href="resources/assets/css/responsive.css">
 
 </head>
 <!-- /end of head -->
@@ -56,9 +56,9 @@
 	<!-- START REVOLUTION SLIDER 5.2.6 fullscreen mode -->
 	<div id="rev_slider_2_1" class="rev_slider fullscreenbanner" style="display:none;" data-version="5.2.6">
 		<ul>	<!-- SLIDE  -->
-			<li data-index="rs-13" data-transition="slidingoverlayup" data-slotamount="default" data-hideafterloop="0" data-hideslideonmobile="off"  data-easein="default" data-easeout="default" data-masterspeed="default"  data-thumb="rev-slider/img/slider-bg.jpg"  data-rotate="0"  data-saveperformance="off"  data-title="Slide" data-param1="" data-param2="" data-param3="" data-param4="" data-param5="" data-param6="" data-param7="" data-param8="" data-param9="" data-param10="" data-description="">
+			<li data-index="rs-13" data-transition="slidingoverlayup" data-slotamount="default" data-hideafterloop="0" data-hideslideonmobile="off"  data-easein="default" data-easeout="default" data-masterspeed="default"  data-thumb="resources/rev-slider/img/slider-bg.jpg"  data-rotate="0"  data-saveperformance="off"  data-title="Slide" data-param1="" data-param2="" data-param3="" data-param4="" data-param5="" data-param6="" data-param7="" data-param8="" data-param9="" data-param10="" data-description="">
 				<!-- MAIN IMAGE -->
-				<img src="rev-slider/img/slider-bg.jpg"  alt="" title="slider-bg"  width="1920" height="750" data-bgposition="center center" data-bgfit="cover" data-bgrepeat="no-repeat" class="rev-slidebg" data-no-retina>
+				<img src="resources/rev-slider/img/slider-bg.jpg"  alt="" title="slider-bg"  width="1920" height="750" data-bgposition="center center" data-bgfit="cover" data-bgrepeat="no-repeat" class="rev-slidebg" data-no-retina>
 				<!-- LAYERS -->
 
 				<!-- LAYER NR. 1 -->
@@ -142,9 +142,9 @@
 				style="z-index: 8; min-width: 150px; max-width: 150px; max-width: 45px; max-width: 45px; white-space: normal; font-size: 14px; line-height: 22px; font-weight: 500; color: rgba(255, 255, 255, 1.00);font-family:'Merriweather Sans', sans-serif;text-align:center;background-color:#FFCC48;padding:12px 20px 12px 20px;border-color:rgba(0, 0, 0, 1.00);border-radius:3px 3px 3px 3px;outline:none;box-shadow:none;box-sizing:border-box;-moz-box-sizing:border-box;-webkit-box-sizing:border-box;cursor:pointer;">DONATE NOW</div>
 			</li>
 			<!-- /slide -->
-			<li data-index="rs-15" data-transition="slidingoverlayup" data-slotamount="default" data-hideafterloop="0" data-hideslideonmobile="off"  data-easein="default" data-easeout="default" data-masterspeed="default"  data-thumb="rev-slider/img/slider-bg.jpg"  data-rotate="0"  data-saveperformance="off"  data-title="Slide" data-param1="" data-param2="" data-param3="" data-param4="" data-param5="" data-param6="" data-param7="" data-param8="" data-param9="" data-param10="" data-description="">
+			<li data-index="rs-15" data-transition="slidingoverlayup" data-slotamount="default" data-hideafterloop="0" data-hideslideonmobile="off"  data-easein="default" data-easeout="default" data-masterspeed="default"  data-thumb="resources/rev-slider/img/slider-bg.jpg"  data-rotate="0"  data-saveperformance="off"  data-title="Slide" data-param1="" data-param2="" data-param3="" data-param4="" data-param5="" data-param6="" data-param7="" data-param8="" data-param9="" data-param10="" data-description="">
 		<!-- MAIN IMAGE -->
-		<img src="rev-slider/img/slider-bg.jpg"  alt="" title="slider-bg"  width="1920" height="750" data-bgposition="center center" data-bgfit="cover" data-bgrepeat="no-repeat" class="rev-slidebg" data-no-retina>
+		<img src="resources/rev-slider/img/slider-bg.jpg"  alt="" title="slider-bg"  width="1920" height="750" data-bgposition="center center" data-bgfit="cover" data-bgrepeat="no-repeat" class="rev-slidebg" data-no-retina>
 		<!-- LAYERS -->
 
 		<!-- LAYER NR. 1 -->
@@ -253,7 +253,7 @@
 							<div class="col-lg-3 col-md-3 col-sm-6">
 								<div class="way-help-pic-text text-center colmd3">
 									<div class="way-help-pic pb40">
-										<img src="assets/img/help-1.png" alt="image">
+										<img src="resources/assets/img/help-1.png" alt="image">
 									</div>
 									<!-- /img -->
 									<div class="way-help-text">
@@ -283,7 +283,7 @@
 							<div class="col-lg-3 col-md-3 col-sm-6">
 								<div class="way-help-pic-text text-center colmd3">
 									<div class="way-help-pic pb40">
-										<img src="assets/img/help-2.png" alt="image">
+										<img src="resources/assets/img/help-2.png" alt="image">
 									</div>
 									<!-- /img -->
 									<div class="way-help-text">
@@ -313,7 +313,7 @@
 							<div class="col-lg-3 col-md-3 col-sm-6">
 								<div class="way-help-pic-text text-center colmd3">
 									<div class="way-help-pic pb40">
-										<img src="assets/img/help-3.png" alt="image">
+										<img src="resources/assets/img/help-3.png" alt="image">
 									</div>
 									<!-- /img -->
 									<div class="way-help-text">
@@ -342,7 +342,7 @@
 							<div class="col-lg-3 col-md-3 col-sm-6">
 								<div class="way-help-pic-text text-center colmd3">
 									<div class="way-help-pic pb40">
-										<img src="assets/img/help-4.png" alt="image">
+										<img src="resources/assets/img/help-4.png" alt="image">
 									</div>
 									<!-- /img -->
 									<div class="way-help-text">
@@ -395,7 +395,7 @@
 					<div class="cause-item">
 						<div class="recent-causes-pic-text">
 							<div class="recent-causes-pic">
-								<img src="assets/img/cause-1.jpg" alt="image">
+								<img src="resources/assets/img/cause-1.jpg" alt="image">
 							</div>
 							<!-- /img -->
 
@@ -426,7 +426,7 @@
 					<div class="cause-item">
 						<div class="recent-causes-pic-text">
 							<div class="recent-causes-pic">
-								<img src="assets/img/cause-2.jpg" alt="image">
+								<img src="resources/assets/img/cause-2.jpg" alt="image">
 							</div>
 							<!-- /img -->
 
@@ -458,7 +458,7 @@
 					<div class="cause-item">
 						<div class="recent-causes-pic-text">
 							<div class="recent-causes-pic">
-								<img src="assets/img/cause-3.jpg" alt="image">
+								<img src="resources/assets/img/cause-3.jpg" alt="image">
 							</div>
 							<!-- /img -->
 							<div class="cause-text pt75 pb50">
@@ -489,7 +489,7 @@
 					<div class="cause-item">
 						<div class="recent-causes-pic-text">
 							<div class="recent-causes-pic">
-								<img src="assets/img/cause-4.jpg" alt="image">
+								<img src="resources/assets/img/cause-4.jpg" alt="image">
 							</div>
 							<!-- /img -->
 							<div class="cause-text pt75 pb50">
@@ -515,7 +515,7 @@
 					<div class="cause-item">
 						<div class="recent-causes-pic-text">
 							<div class="recent-causes-pic">
-								<img src="assets/img/cause-5.jpg" alt="image">
+								<img src="resources/assets/img/cause-5.jpg" alt="image">
 							</div>
 							<!-- /img -->
 							<div class="cause-text pt75 pb50">
@@ -541,7 +541,7 @@
 					<div class="cause-item">
 						<div class="recent-causes-pic-text">
 							<div class="recent-causes-pic">
-								<img src="assets/img/cause-6.jpg" alt="image">
+								<img src="resources/assets/img/cause-6.jpg" alt="image">
 							</div>
 							<!-- /img -->
 							<div class="cause-text pt75 pb50">
@@ -567,7 +567,7 @@
 					<div class="cause-item">
 						<div class="recent-causes-pic-text">
 							<div class="recent-causes-pic">
-								<img src="assets/img/cause-7.jpg" alt="image">
+								<img src="resources/assets/img/cause-7.jpg" alt="image">
 							</div>
 							<!-- /img -->
 							<div class="cause-text pt75 pb50">
@@ -592,7 +592,7 @@
 					<div class="cause-item">
 						<div class="recent-causes-pic-text">
 							<div class="recent-causes-pic">
-								<img src="assets/img/cause-9.jpg" alt="image">
+								<img src="resources/assets/img/cause-9.jpg" alt="image">
 							</div>
 							<!-- /img -->
 							<div class="cause-text pt75 pb50">
@@ -620,7 +620,7 @@
 					<div class="cause-item">
 						<div class="recent-causes-pic-text">
 							<div class="recent-causes-pic">
-								<img src="assets/img/cause-6.jpg" alt="image">
+								<img src="resources/assets/img/cause-6.jpg" alt="image">
 							</div>
 							<!-- /img -->
 							<div class="cause-text pt75 pb50">
@@ -657,39 +657,33 @@
 
 
 	<!-- js -->
-	<script type="text/javascript" src="assets/js/jquery-2.1.4.min.js"></script>
-	<script type="text/javascript" src="assets/js/bootstrap.min.js"></script>
-	<script type="text/javascript" src="assets/js/owl.carousel.min.js"></script>
-	<script type="text/javascript" src="assets/js/jquery.magnific-popup.min.js"></script>
-	<script type="text/javascript" src="assets/js/waypoints.min.js"></script>
-	<script type="text/javascript" src="assets/js/jquery.counterup.min.js"></script>
-	<script type="text/javascript" src="assets/js/countdown.js"></script>
-	<script type="text/javascript" src="assets/js/parallax.min.js"></script>
-	<script type="text/javascript" src="assets/js/circle-progress.js"></script>
+	<script type="text/javascript" src="resources/assets/js/jquery-2.1.4.min.js"></script>
+	<script type="text/javascript" src="resources/assets/js/bootstrap.min.js"></script>
+	<script type="text/javascript" src="resources/assets/js/owl.carousel.min.js"></script>
+	<script type="text/javascript" src="resources/assets/js/jquery.magnific-popup.min.js"></script>
+	<script type="text/javascript" src="resources/assets/js/waypoints.min.js"></script>
+	<script type="text/javascript" src="resources/assets/js/jquery.counterup.min.js"></script>
+	<script type="text/javascript" src="resources/assets/js/countdown.js"></script>
+	<script type="text/javascript" src="resources/assets/js/parallax.min.js"></script>
+	<script type="text/javascript" src="resources/assets/js/circle-progress.js"></script>
 
 
 	<!-- REVOLUTION JS FILES -->
-	<script type="text/javascript" src="rev-slider/js/jquery.themepunch.tools.min.js"></script>
-	<script type="text/javascript" src="rev-slider/js/jquery.themepunch.revolution.min.js"></script>
+	<script type="text/javascript" src="resources/rev-slider/js/jquery.themepunch.tools.min.js"></script>
+	<script type="text/javascript" src="resources/rev-slider/js/jquery.themepunch.revolution.min.js"></script>
 
     <!-- SLIDER REVOLUTION 5.0 EXTENSIONS (Load Extensions only on Local File Systems !
     The following part can be removed on Server for On Demand Loading) -->
 
-    <script type="text/javascript" src="rev-slider/js/revolution.extension.actions.min.js"></script>
+    <script type="text/javascript" src="resources/rev-slider/js/revolution.extension.actions.min.js"></script>
     
-    <script type="text/javascript" src="rev-slider/js/revolution.extension.layeranimation.min.js"></script>
-    <script type="text/javascript" src="rev-slider/js/revolution.extension.navigation.min.js"></script>
-    <script type="text/javascript" src="rev-slider/js/revolution.extension.parallax.min.js"></script>
-    <script type="text/javascript" src="rev-slider/js/revolution.extension.slideanims.min.js"></script>
-    <script type="text/javascript" src="rev-slider/js/revolution.extension.video.min.js"></script>
+    <script type="text/javascript" src="resources/rev-slider/js/revolution.extension.layeranimation.min.js"></script>
+    <script type="text/javascript" src="resources/rev-slider/js/revolution.extension.navigation.min.js"></script>
+    <script type="text/javascript" src="resources/rev-slider/js/revolution.extension.parallax.min.js"></script>
+    <script type="text/javascript" src="resources/rev-slider/js/revolution.extension.slideanims.min.js"></script>
+    <script type="text/javascript" src="resources/rev-slider/js/revolution.extension.video.min.js"></script>
 
-
-<<<<<<< HEAD
     <script type="text/javascript" src="resources/assets/js/function.js"></script>
-=======
-
-    <script type="text/javascript" src="assets/js/function.js"></script>
->>>>>>> refs/remotes/origin/jiyun
 
     <script>
     	var tpj=jQuery;

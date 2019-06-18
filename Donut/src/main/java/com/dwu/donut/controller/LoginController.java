@@ -1,11 +1,9 @@
 package com.dwu.donut.controller;
 
-import javax.servlet.http.HttpServletRequest;
 import javax.servlet.http.HttpSession;
 
 import org.springframework.stereotype.Controller;
 import org.springframework.web.bind.annotation.RequestMapping;
-import org.springframework.web.bind.annotation.RequestParam;
 import org.springframework.web.servlet.ModelAndView;
 
 import com.dwu.donut.domain.Account;
@@ -21,11 +19,9 @@ public class LoginController {
 	
 	// 2. 로그인 처리
 	@RequestMapping("/login.do")
-	public ModelAndView login(HttpServletRequest request) {
-		String userId = request.getParameter("userId");
-		String password = request.getParameter("password");
+	public ModelAndView login(Account account) {
 		
-		ModelAndView mav = new ModelAndView("login");
+		ModelAndView mav = new ModelAndView("index");
 		
 		return mav;
 	}

@@ -7,7 +7,7 @@
 	<meta http-equiv="X-UA-Compatible" content="IE=edge">
 
 	<title>Donut</title>
-	<link rel="shortcut icon" href="assets/img/icon.png">
+	<link rel="shortcut icon" href="resources/assets/img/icon.png">
 
 	<meta name="description" content="Donut">
 	<meta name="keywords" content="Premium HTML Template">
@@ -18,29 +18,29 @@
 	<!-- css-include -->
 
 	<!-- boorstrap -->
-	<link rel="stylesheet" type="text/css" href="assets/css/bootstrap.min.css">
+	<link rel="stylesheet" type="text/css" href="resources/assets/css/bootstrap.min.css">
 	<!-- themify-icon.css -->
-	<link rel="stylesheet" type="text/css" href="assets/css/themify-icons.css">
+	<link rel="stylesheet" type="text/css" href="resources/assets/css/themify-icons.css">
 	<!-- owl-carousel -->
-	<link rel="stylesheet" type="text/css" href="assets/css/owl.carousel.css">
+	<link rel="stylesheet" type="text/css" href="resources/assets/css/owl.carousel.css">
 	<!-- Video-min -->
-	<link rel="stylesheet" type="text/css" href="assets/css/video.min.css">
+	<link rel="stylesheet" type="text/css" href="resources/assets/css/video.min.css">
 	<!-- animate.css -->
-	<link rel="stylesheet" type="text/css" href="assets/css/animate.css">
+	<link rel="stylesheet" type="text/css" href="resources/assets/css/animate.css">
 	<!-- REVOLUTION STYLE SHEETS -->
-	<link rel="stylesheet" type="text/css" href="rev-slider/css/settings.css">
+	<link rel="stylesheet" type="text/css" href="resources/rev-slider/css/settings.css">
 	<!-- REVOLUTION LAYERS STYLES -->
-	<link rel="stylesheet" type="text/css" href="rev-slider/css/layers.css">
+	<link rel="stylesheet" type="text/css" href="resources/rev-slider/css/layers.css">
 	<!-- REVOLUTION NAVIGATION STYLES -->
-	<link rel="stylesheet" type="text/css" href="rev-slider/css/navigation.css">
+	<link rel="stylesheet" type="text/css" href="resources/rev-slider/css/navigation.css">
 	<!-- menu style -->
-	<link rel="stylesheet" type="text/css" href="assets/css/menu.css">
+	<link rel="stylesheet" type="text/css" href="resources/assets/css/menu.css">
 	<!-- style -->
-	<link rel="stylesheet" type="text/css" href="assets/css/style.css">
+	<link rel="stylesheet" type="text/css" href="resources/assets/css/style.css">
 	<!-- responsive.css -->
-	<link rel="stylesheet" type="text/css" href="assets/css/responsive.css">
+	<link rel="stylesheet" type="text/css" href="resources/assets/css/responsive.css">
 	<!-- login.css -->
-	<link rel="stylesheet" type="text/css" href="assets/css/login.css">
+	<link rel="stylesheet" type="text/css" href="resources/assets/css/login.css">
 </head>
 <body>
 	<div id="preloader"></div>
@@ -51,7 +51,7 @@
 					<nav class="navbar">
 						<!-- Brand and toggle get grouped for better mobile display -->
 						<div class="navbar-header">
-							<a class="navbar-brand" href="index.html"><img src="assets/img/logo.png" alt="image"></a>
+							<a class="navbar-brand" href="index.html"><img src="resources/assets/img/logo.png" alt="image"></a>
 						</div>
 					</nav>
 				</div>
@@ -62,7 +62,7 @@
 	<div class="login-form">
 	    <form action="index.jsp" method="post">
 			<div class="avatar">
-				<img src="assets/img/donut.png" alt="donut">
+				<img src="resources/assets/img/donut.png" alt="donut">
 			</div>
 	        <h2 class="text-center">Login</h2>   
 	        <div class="form-group">
@@ -75,47 +75,38 @@
 	            <button type="submit" class="btn btn-primary btn-lg btn-block">Sign in</button>
 	        </div>
 	    </form>
-	    <!--
-	    <p class="text-center small">Don't have an account? <a href="#">Sign up here!</a></p>
-	    -->
+	    <p class="text-center small">Don't have an account? <a href="registerAccount.do">Sign up here!</a></p>
 	</div>
 
 	<!-- js -->
-	<script type="text/javascript" src="assets/js/jquery-2.1.4.min.js"></script>
-	<script type="text/javascript" src="assets/js/bootstrap.min.js"></script>
-	<script type="text/javascript" src="assets/js/owl.carousel.min.js"></script>
-	<script type="text/javascript" src="assets/js/jquery.magnific-popup.min.js"></script>
-	<script type="text/javascript" src="assets/js/waypoints.min.js"></script>
-	<script type="text/javascript" src="assets/js/jquery.counterup.min.js"></script>
-	<script type="text/javascript" src="assets/js/countdown.js"></script>
-	<script type="text/javascript" src="assets/js/parallax.min.js"></script>
-	<script type="text/javascript" src="assets/js/circle-progress.js"></script>
+	<script type="text/javascript" src="resources/assets/js/jquery-2.1.4.min.js"></script>
+	<script type="text/javascript" src="resources/assets/js/bootstrap.min.js"></script>
+	<script type="text/javascript" src="resources/assets/js/owl.carousel.min.js"></script>
+	<script type="text/javascript" src="resources/assets/js/jquery.magnific-popup.min.js"></script>
+	<script type="text/javascript" src="resources/assets/js/waypoints.min.js"></script>
+	<script type="text/javascript" src="resources/assets/js/jquery.counterup.min.js"></script>
+	<script type="text/javascript" src="resources/assets/js/countdown.js"></script>
+	<script type="text/javascript" src="resources/assets/js/parallax.min.js"></script>
+	<script type="text/javascript" src="resources/assets/js/circle-progress.js"></script>
 
 
 	<!-- REVOLUTION JS FILES -->
-	<script type="text/javascript" src="rev-slider/js/jquery.themepunch.tools.min.js"></script>
-	<script type="text/javascript" src="rev-slider/js/jquery.themepunch.revolution.min.js"></script>
+	<script type="text/javascript" src="resources/rev-slider/js/jquery.themepunch.tools.min.js"></script>
+	<script type="text/javascript" src="resources/rev-slider/js/jquery.themepunch.revolution.min.js"></script>
 
     <!-- SLIDER REVOLUTION 5.0 EXTENSIONS (Load Extensions only on Local File Systems !
     The following part can be removed on Server for On Demand Loading) -->
 
-    <script type="text/javascript" src="rev-slider/js/revolution.extension.actions.min.js"></script>
+    <script type="text/javascript" src="resources/rev-slider/js/revolution.extension.actions.min.js"></script>
     
-    <script type="text/javascript" src="rev-slider/js/revolution.extension.layeranimation.min.js"></script>
-    <script type="text/javascript" src="rev-slider/js/revolution.extension.navigation.min.js"></script>
-    <script type="text/javascript" src="rev-slider/js/revolution.extension.parallax.min.js"></script>
-    <script type="text/javascript" src="rev-slider/js/revolution.extension.slideanims.min.js"></script>
-    <script type="text/javascript" src="rev-slider/js/revolution.extension.video.min.js"></script>
+    <script type="text/javascript" src="resources/rev-slider/js/revolution.extension.layeranimation.min.js"></script>
+    <script type="text/javascript" src="resources/rev-slider/js/revolution.extension.navigation.min.js"></script>
+    <script type="text/javascript" src="resources/rev-slider/js/revolution.extension.parallax.min.js"></script>
+    <script type="text/javascript" src="resources/rev-slider/js/revolution.extension.slideanims.min.js"></script>
+    <script type="text/javascript" src="resources/rev-slider/js/revolution.extension.video.min.js"></script>
 
-
-
-<<<<<<< HEAD
     <script type="text/javascript" src="resources/assets/js/function.js"></script>
 	
-=======
-    <script type="text/javascript" src="assets/js/function.js"></script>
-
->>>>>>> refs/remotes/origin/jiyun
     <script>
     	var tpj=jQuery;
 
