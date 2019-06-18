@@ -75,9 +75,7 @@
 	            <button type="submit" class="btn btn-primary btn-lg btn-block">Sign in</button>
 	        </div>
 	    </form>
-	    <!--
-	    <p class="text-center small">Don't have an account? <a href="#">Sign up here!</a></p>
-	    -->
+	    <p class="text-center small">Don't have an account? <a href="registerAccount.do">Sign up here!</a></p>
 	</div>
 
 	<!-- js -->
@@ -90,7 +88,6 @@
 	<script type="text/javascript" src="resources/assets/js/countdown.js"></script>
 	<script type="text/javascript" src="resources/assets/js/parallax.min.js"></script>
 	<script type="text/javascript" src="resources/assets/js/circle-progress.js"></script>
-
 
 	<!-- REVOLUTION JS FILES -->
 	<script type="text/javascript" src="resources/rev-slider/js/jquery.themepunch.tools.min.js"></script>
@@ -106,9 +103,6 @@
     <script type="text/javascript" src="resources/rev-slider/js/revolution.extension.parallax.min.js"></script>
     <script type="text/javascript" src="resources/rev-slider/js/revolution.extension.slideanims.min.js"></script>
     <script type="text/javascript" src="resources/rev-slider/js/revolution.extension.video.min.js"></script>
-
-
-
     <script type="text/javascript" src="resources/assets/js/function.js"></script>
 
     <script>
