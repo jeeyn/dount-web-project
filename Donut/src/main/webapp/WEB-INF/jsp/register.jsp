@@ -51,8 +51,6 @@
 	<!-- End of Header 
 	============================================= -->
 
-
-
 	<!-- Start of Donate page content
 	============================================= -->
 	<section id="donate-page" class="donate-page-section">
@@ -68,7 +66,7 @@
 									</div>
 									<div class="donate-form">
 										<div class="comment-form clearfix  mb20">
-											<form id="contact_form" action="#" method="POST" enctype="multipart/form-data">
+											<form id="contact_form" action="/submitRegisterForm.do" method="POST" enctype="multipart/form-data">
 												<div class="contact-comment-info">
 													<input class="id" name="id" type="text" placeholder="Your ID*">
 												</div>
@@ -114,7 +112,7 @@
 											</div>
 											<div class="comment-form">
 												<div class="send-button text-uppercase">
-													<button type="submit" value="Submit">확인</button> 
+													<button type="submit" value="Submit">가입</button> 
 												</div>
 											</div>
 										</div>

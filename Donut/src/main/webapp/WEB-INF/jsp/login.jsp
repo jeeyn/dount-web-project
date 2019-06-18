@@ -62,7 +62,9 @@
 	<div class="login-form">
 	    <form action="index.jsp" method="post">
 			<div class="avatar">
-				<img src="assets/img/donut.png" alt="donut">
+				<a href="/accountRegister.do">
+					<img src="assets/img/donut.png" alt="donut">
+				</a>
 			</div>
 	        <h2 class="text-center">Login</h2>   
 	        <div class="form-group">
@@ -106,16 +108,9 @@
     <script type="text/javascript" src="rev-slider/js/revolution.extension.parallax.min.js"></script>
     <script type="text/javascript" src="rev-slider/js/revolution.extension.slideanims.min.js"></script>
     <script type="text/javascript" src="rev-slider/js/revolution.extension.video.min.js"></script>
-
-
-
-<<<<<<< HEAD
+    
     <script type="text/javascript" src="resources/assets/js/function.js"></script>
 	
-=======
-    <script type="text/javascript" src="assets/js/function.js"></script>
-
->>>>>>> refs/remotes/origin/jiyun
     <script>
     	var tpj=jQuery;
 

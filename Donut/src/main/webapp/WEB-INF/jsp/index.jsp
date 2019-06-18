@@ -683,13 +683,7 @@
     <script type="text/javascript" src="rev-slider/js/revolution.extension.slideanims.min.js"></script>
     <script type="text/javascript" src="rev-slider/js/revolution.extension.video.min.js"></script>
 
-
-<<<<<<< HEAD
     <script type="text/javascript" src="resources/assets/js/function.js"></script>
-=======
-
-    <script type="text/javascript" src="assets/js/function.js"></script>
->>>>>>> refs/remotes/origin/jiyun
 
     <script>
     	var tpj=jQuery;
