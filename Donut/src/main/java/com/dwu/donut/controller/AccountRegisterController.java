@@ -8,7 +8,7 @@ import org.springframework.web.bind.annotation.RequestMapping;
 
 import com.dwu.donut.dao.AccountDao;
 
-@Controller
+// @Controller
 class AccountRegisterController {
 	@Autowired
 	private AccountDao accountDao;
