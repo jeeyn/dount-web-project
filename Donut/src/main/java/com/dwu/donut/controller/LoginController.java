@@ -21,7 +21,6 @@ public class LoginController {
 	public String login(Account account, HttpSession session) {
 		
 		
-		
 	
 		
 		

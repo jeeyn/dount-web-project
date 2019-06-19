@@ -677,12 +677,6 @@
     <script type="text/javascript" src="resources/rev-slider/js/revolution.extension.parallax.min.js"></script>
     <script type="text/javascript" src="resources/rev-slider/js/revolution.extension.slideanims.min.js"></script>
     <script type="text/javascript" src="resources/rev-slider/js/revolution.extension.video.min.js"></script>
-
-<<<<<<< HEAD
-
-
-=======
->>>>>>> refs/remotes/origin/soyeon
     <script type="text/javascript" src="resources/assets/js/function.js"></script>
 
     <script>

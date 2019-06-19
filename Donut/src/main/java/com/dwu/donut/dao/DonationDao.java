@@ -3,10 +3,12 @@ package com.dwu.donut.dao;
 import java.util.List;
 
 import org.springframework.beans.factory.annotation.Autowired;
+import org.springframework.stereotype.Repository;
 
 import com.dwu.donut.dao.mybatis.mapper.DonationMapper;
 import com.dwu.donut.domain.Donation;
 
+@Repository
 public class DonationDao {
 
 	@Autowired
@@ -18,6 +20,18 @@ public class DonationDao {
 	
 	public List<Donation> getDonationList(Donation donation) {
 		return donationMapper.getDonationList();
+	}
+	
+	public void insertDonation(Donation donation) {
+		donationMapper.insertAccount(donation);
+	}
+	
+	public void updateDonation(Donation donation) {
+		donationMapper.updateAccount(donation);
+	}
+	
+	public void deleteDonation(Donation donation) {
+		donationMapper.deleteAccount(donation);
 	}
 	 
 }
