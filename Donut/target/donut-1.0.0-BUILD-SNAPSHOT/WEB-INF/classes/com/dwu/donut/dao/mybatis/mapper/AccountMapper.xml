@@ -16,7 +16,7 @@
     		ZIP_CODE,
     		USER_TYPE
     FROM ACCOUNT
-    WHERE USERID = #{userId}
+    WHERE USER_ID = #{userId}
   </select>
 
   <select id="getAccountByUserIdAndPassword" resultType="Account">
@@ -31,12 +31,12 @@
     		ZIP_CODE,
     		USER_TYPE
     FROM ACCOUNT
-    WHERE USERID = #{param1}
+    WHERE USER_ID = #{param1}
     	AND PASSWORD = #{param2}
   </select>
 
   <update id="updateAccount" parameterType="Account">
-    UPDATE ACCOUNT SET 
+    UPDATE ACCOUNT SET
     	PASSWORD = #{password},
     	USER_NAME = #{userName},
     	EMAIL = #{email},

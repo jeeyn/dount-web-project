@@ -68,7 +68,7 @@
 									</div>
 									<div class="donate-form">
 										<div class="comment-form clearfix  mb20">
-											<form id="contact_form" action="#" method="POST" enctype="multipart/form-data">
+											<form id="contact_form" action="#" method="POST">
 												<div class="contact-comment-info">
 													<input class="id" name="id" type="text" placeholder="Your ID*">
 												</div>

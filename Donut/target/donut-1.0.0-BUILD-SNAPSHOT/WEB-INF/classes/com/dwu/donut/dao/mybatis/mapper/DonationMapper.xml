@@ -1,0 +1,49 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE mapper PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN" "http://mybatis.org/dtd/mybatis-3-mapper.dtd">
+
+<mapper namespace="com.dwu.donut.dao.mybatis.mapper.DonationMapper">
+
+	<select id="selectDonationItem" resultType="Donation">
+		SELECT DONATION_ID,
+				USER_ID,
+				DONATION_DATE,
+				DONATION_MATCHING_STATE, 
+				ALBUM_ID,
+				DONATION_ALBUM_QUANTITY,
+				DONATION_CONTENT
+		FROM DONATION
+		WHERE DANATION_ID = #{donationId}
+	</select>
+	
+	<select id="selectDonationList">
+		SELECT *
+		FROM DONATION
+	</select>
+	
+	<update id="updateDonation">
+		UPDATE DANATION SET
+			ALBUM_ID,
+			DONATION_ALBUM_QUANTITY,
+			DONATION_CONTENT
+		WHERE DONATION_ID = #{donationId}
+	</update>
+	
+	<insert id="insertDonation" parameterType="Donation">
+		INSERT INTO DONATION
+			(DONATION_ID, USER_ID, DONATION_DATE, DONATION_MATCHING_STATE, ALBUM_ID, DONATION_ALBUM_QUANTITY, DONATION_CONTENT)
+		VALUES
+			(#{donationId, jdbcType=NUMERIC}, 
+			 #{userId, jdbcType=VARCHAR}, 
+			 #{donationDate, jdbcType=DATE}, 
+			 #{donationMatchingState, jdbcType=CHAR}, 
+			 #{albumId, jdbcType=NUMERIC}, 
+			 #{donationAlbumQuantity, jdbcType=NUMERIC}, 
+			 #{donationContent, jdbcType=VARCHAR})
+	</insert>
+	
+	<delete id="deleteDonation">
+		DELETE FROM DONATION
+		WHERE DONATION_ID = #{donationId}
+	</delete>
+
+</mapper>

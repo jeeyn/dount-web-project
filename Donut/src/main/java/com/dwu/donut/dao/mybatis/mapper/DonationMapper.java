@@ -10,9 +10,9 @@ public interface DonationMapper {
 
 	List<Donation> getDonationList();
 	 
-	void insertAccount(Donation donation);
+	void insertDonation(Donation donation);
 
-	void updateAccount(Donation donation);
+	void updateDonation(Donation donation);
 	
-	void deleteAccount(Donation donation);
+	void deleteDonation(Donation donation);
 }

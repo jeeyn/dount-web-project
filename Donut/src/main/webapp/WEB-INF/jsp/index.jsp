@@ -651,7 +651,9 @@
 
 	<!-- Start of footer section
 	============================================= -->
+	
 	<jsp:include page="bottom.jsp"/>
+	
 	<!-- End of footer section
 	============================================= -->
 

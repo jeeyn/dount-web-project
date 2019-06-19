@@ -121,7 +121,7 @@
 					<div class="row section-btn">
 						<div class="col-sm-offset-8 col-sm-4">
 							<div class="home-donate donate-btn-1 text-uppercase">
-								<a href="donate_create.jsp">Create</a>
+								<a href="createDonationItemForm.do">Create</a>
 							</div>
 						</div>
 					</div>

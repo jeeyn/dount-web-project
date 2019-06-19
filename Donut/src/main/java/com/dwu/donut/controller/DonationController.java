@@ -1,6 +1,14 @@
 package com.dwu.donut.controller;
 
+import java.beans.PropertyEditorSupport;
+import java.text.ParseException;
+import java.text.SimpleDateFormat;
+import java.util.Date;
+
+import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Controller;
+import org.springframework.web.bind.WebDataBinder;
+import org.springframework.web.bind.annotation.InitBinder;
 import org.springframework.web.bind.annotation.RequestMapping;
 import org.springframework.web.bind.annotation.RequestParam;
 import org.springframework.web.servlet.ModelAndView;
@@ -10,6 +18,9 @@ import com.dwu.donut.domain.Donation;
 
 @Controller
 public class DonationController {
+	
+	@Autowired
+	DonationDao donationDao;
 	
 	// 1. '기증해요' 게시판
 	@RequestMapping("donationList.do")
@@ -21,7 +32,6 @@ public class DonationController {
 	@RequestMapping("donationItem.do")
 	public ModelAndView donationItem(@RequestParam("donationId") int donationId) {
 		
-		DonationDao donationDao = new DonationDao();
 		Donation donation = donationDao.getDonationItem(donationId);
 		
 		ModelAndView mav = new ModelAndView();
@@ -30,4 +40,35 @@ public class DonationController {
 		
 		return mav;
 	}
+	
+	// 3. '기증해요' 게시물 작성 화면
+	@RequestMapping("createDonationItemForm.do")
+	public String createDonationItemForm() {
+		
+		return "create_donation_item";
+	}
+	
+	// 4. '기증해요' 게시물 작성하기
+	@RequestMapping("createDonationItem.do")
+	public String createDonationItem(Donation donation) {
+		
+		donationDao.insertDonation(donation);
+		
+		return "donate_list";
+	}
+	
+	@InitBinder
+	public void initBinder(WebDataBinder binder) throws Exception {
+	    binder.registerCustomEditor(Date.class, new PropertyEditorSupport() {
+
+	        public void setAsText(String text) throws IllegalArgumentException {
+	            try {
+	                setValue(new SimpleDateFormat("yyyy-MM-dd").parse(text));
+	            } catch (ParseException e) {
+	                setValue(null);
+	            }
+	        }
+	    });
+	}
+
 }
