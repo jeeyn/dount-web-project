@@ -34,4 +34,13 @@ public class AccountDao {
 	public void deleteAccount(Account account) {
 		accountMapper.deleteAccount(account);
 	}
+	
+	public boolean loginCheck(Account account) {
+		return (accountMapper.getAccountByUserIdAndPassword(account.getUserId(), account.getPassword()) != null)? true : false;
+	}
+	
+	public Account viewAccount(Account account) {
+		return accountMapper.getAccountByUserIdAndPassword(account.getUserId(), account.getPassword());
+	}
+	
 }

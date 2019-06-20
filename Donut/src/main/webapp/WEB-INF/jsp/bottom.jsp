@@ -52,7 +52,7 @@
 						</div>
 						<div class="footer-menu-list pull-right mt25">
 							<ul class="menu-list">
-								<li><a href="index.jsp">Home</a><span>/</span></li>
+								<li><a href="index.do">Home</a><span>/</span></li>
 								<li><a href="donate_list.jsp">Donate</a><span>/</span></li>
 								<li><a href="benefit_list.jsp">Benefit</a><span>/</span></li>
 								<li><a href="review_lsit.jsp">Review</a><span>/</span></li>
