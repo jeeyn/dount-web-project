@@ -89,19 +89,19 @@
 											<!-- /img -->
 											<div class="cause-text pt75 pb50">
 												<div class="gola-reach">
-													<ul class="gola-reach-list">
+													<ul class="gola-reach-list" style="text-align:center;">
 														<li>ID : ${donation.userId}</li>
 														<li>QUANTITY : ${donation.donationAlbumQuantity}</li>
 													</ul>
 												</div>
-												<div class="cause-text-head pt15 pb20 p10">
-													<h3>${donation.donationContent}</h3>
+												<div class="cause-text-head pt15 pb20 p10" style="height: 100px; font-size:12px;">
+													<h3><p>${donation.donationContent}</p></h3>
 												</div>
 												<div class="donate-now-btn">
 													<div class="donate-btn margin0 text-uppercase">
 														<a href="<c:url value="donationItem.do">
-																 	<c:param name="donationId" value="${donation.donationId}"/>
-																 </c:url>">donate now</a>
+																 	<c:param name="donationId" value="${donation.donationId}"></c:param>
+																 </c:url>">request now</a>
 													</div>
 												</div>
 											</div>

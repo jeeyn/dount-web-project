@@ -18,6 +18,7 @@ import org.springframework.web.bind.annotation.RequestParam;
 import org.springframework.web.servlet.ModelAndView;
 
 import com.dwu.donut.dao.DonationDao;
+import com.dwu.donut.domain.Account;
 import com.dwu.donut.domain.Donation;
 import com.dwu.donut.service.AccountService;
 import com.dwu.donut.service.DonationService;
@@ -28,6 +29,9 @@ public class DonationController {
 	@Autowired
 	public DonationService donationService;
 	
+	@Autowired
+	public AccountService accountService;
+	
 	// 1. '기증해요' 게시판
 	@RequestMapping("donationList.do")
 	@ModelAttribute("donationList")
@@ -36,6 +40,7 @@ public class DonationController {
 		List<Donation> donationList = donationService.getDonationList();
 		
 		ModelAndView mav = new ModelAndView();
+		
 		mav.setViewName("donate_list");
 		mav.addObject("donationList", donationList);
 		
@@ -44,11 +49,21 @@ public class DonationController {
 		
 	// 2. '기증해요' 게시물
 	@RequestMapping("/donationItem.do")
-	public ModelAndView donationItem(@RequestParam("donationId") int donationId) {
+	public ModelAndView donationItem(@RequestParam("donationId") int donationId, HttpSession session) {
 		
 		Donation donation = donationService.getDonationItem(donationId);
+		String userId = (String)session.getAttribute("userId");
 		
 		ModelAndView mav = new ModelAndView();
+		
+		if (userId != null) { // 로그인이 되어있으면
+			if (donation.getUserId().equals(userId)) {
+				mav.addObject("isWriter", "me");
+			} else {
+				mav.addObject("isWriter", "notMe");
+			}
+		}
+		
 		mav.setViewName("donate_item");
 		mav.addObject("donation", donation);
 		
@@ -56,28 +71,29 @@ public class DonationController {
 	}
 	
 	// 3. '기증해요' 게시물 작성 화면
-	@RequestMapping("createDonationItemForm.do")
+	@RequestMapping({"createDonationItemForm.do", "updateDonationItemForm.do"})
 	public String createDonationItemForm(HttpSession session) {
 		if (session.getAttribute("userId") != null) {
-			return "create_donation_item";
+			return "donation_item_form";
 		} else {
+			session.setAttribute("from", "donation_item_form");
 			return "login";
 		}
 	}
 	
 	// 4. '기증해요' 게시물 작성하기
 	@RequestMapping("createDonationItem.do")
-	public String createDonationItem(Donation donation) {
+	public String createDonationItem(@ModelAttribute Account account, Donation donation) {
 		
-		donationService.insertDonation(donation);
+		donationService.insertDonation(account, donation);
 		
 		return "donate_list";
 	}
 	
 	// 5. '기증해요' 게시물 수정하기
-	@RequestMapping("updateDonationItemForm.do")
+	@RequestMapping("updateDonationItem.do")
 	public String updateDonationItem(Donation donation) {
-		return "create_donate_item";
+		return "donate_item";
 	}
 	
 	@InitBinder

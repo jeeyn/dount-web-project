@@ -26,10 +26,11 @@ public class AccountService {
 		return loginResult;
 	}
 	
-	// 2. 회원 로그인 정보
-	public Account ViewAccount(Account account) {
-		return accountDao.viewAccount(account);
-	}
+	// 2. 회원정보 조회
+	   public Account getAccount(String userId) {
+	      Account account = accountDao.getAccountByUserId(userId);
+	      return account;
+	   }
 	
 	// 3. 회원 로그아웃
 	public void logout(HttpSession session) {

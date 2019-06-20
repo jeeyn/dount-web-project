@@ -74,16 +74,16 @@
 				<div class="comment-form">
 					<form action="createDonationItem.do" method="POST">
 						<div class="contact-comment-info col-xs-12 col-sm-6 col-md-6">
-							<input name="donationId" type="text" placeholder="Donation ID..">
+							<input name="donationId" type="text" value="${donation.donationId}" placeholder="Donation Id...">
 						</div>
 						<div class="contact-comment-info col-xs-12 col-sm-6 col-md-6">
-							<input name="userId" type="text" placeholder="Your ID..">
+							<input name="userId" type="hidden" value="${account.userId}">
 						</div>
 						<div class="contact-comment-info col-xs-12 col-sm-6 col-md-6">
 							<input name="donationDate" type="date">
 						</div>
 						<div class="contact-comment-info col-xs-12 col-sm-6 col-md-6">
-							<input name="donationMatchingState" type="text" placeholder="Donation Matching State...">
+							<input name="donationMatchingState" type="text" placeholder="Matching State...">
 						</div>
 						<div class="contact-comment-info col-xs-12 col-sm-6 col-md-6">
 							<input name="albumId" type="text" placeholder="Album ID...">
@@ -95,7 +95,7 @@
 							<textarea name="donationContent" placeholder="Message Here.. " rows="7" cols="30"></textarea>
 						</div>
 						<div class="send-button text-uppercase text-center">
-							<button type="submit" value="Create">Create</button> 
+							<button type="submit" value="Donate Now">Donate Now</button> 
 						</div>
 					</form>
 				</div>

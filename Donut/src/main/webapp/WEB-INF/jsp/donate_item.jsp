@@ -1,5 +1,7 @@
 <%@ page language="java" contentType="text/html; charset=UTF-8" pageEncoding="UTF-8"%>
 
+<%@ taglib prefix="c" uri="http://java.sun.com/jsp/jstl/core" %>
+
 <!DOCTYPE html>
 <html lang="zxx">
 <head>
@@ -53,16 +55,17 @@
 
 	<!-- Start of blog details section  
 	============================================= -->
-	<section id="blog-details" class="blog-details-section pt60  pb80">
+	<section id="blog-details" class="blog-details-section pt60 pb80">
 		<div class="container">
 			<div class="row">
 				<div class="blog-details-section-content">
 					<div class="row">
 						<div class="col-sm-12">
-							<div class="blog-details-section-left-side  pb80">
+							<div class="blog-details-section-left-side" style="text-align:center;">
 								<div class="blog-details-main-pic">
-									<img src="resources/assets/img/blog-detail.jpg" alt="image">
+									<img src="resources/assets/img/Tri-Angle.jpg" alt="image">
 								</div>
+								<br><br>
 								<!-- /img -->
 								<div class="blog-single-text  pb50">
 									<div class="blog-head-title pt15 pb20">
@@ -71,30 +74,35 @@
 									<!-- /head -->
 									<div class="blog-recent-post-meta">
 										<ul class="meta-list pb20 mb20">
-											<li><a href="<c:url value="updateDonationItem.do">
-														 	<c:param name="donation" value="${donation}"/>
-														 </c:url>"><span class="mr5 ti-pencil"></span>${donation.userId}</a></li>
-											<li><span class="mr5 ti-timer"></span>${donation.donationDate}</li>
-											<li class="pull-right"><span class="mr5 ti-comment-alt"></span>45</li>
-											<li class="pull-right"><span class="mr5 ti-heart"></span>${donation.donationAlbumQuantity}</li>
+											<li><span class="mr5 ti-pencil"></span>${donation.userId}&nbsp&nbsp</li>
+											<li><span class="mr5 ti-timer"></span>${donation.donationDate}&nbsp&nbsp</li>
+											<li><span class="mr5 ti-heart"></span>${donation.donationAlbumQuantity}&nbsp&nbsp</li>
 										</ul>
 									</div>
 									<!-- recent-post-meta -->
 									<div class="blog-details-text">
 										<p>${donation.donationContent}</p>
 									</div>
-									<!-- /text -->
-									<div class="blog-details-text pt15 pb10">
-										<p>Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum. Sed ut perspiciatis unde omnis iste natus error sit voluptatem accusantium doloremque laudantium sunt in culpa qui officia deserunt.</p>
-									</div>
-									<!-- /text -->
-
-									<div class="blog-details-text">
-										<p>Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt.</p>
-									</div>
-									<!-- /text -->
 								</div>
 								<!-- / blog-single-text-->
+							</div>
+							
+							<div class="container">
+								<div class="row section-btn">
+									<c:if test="${isWriter == 'me'}">
+										<div class="col-sm-offset-10 col-sm-1">
+											<div class="home-donate donate-btn-1 text-uppercase">
+												<a href="createDonationItemForm.do">Update</a>
+											</div>
+										</div>
+										
+										<div class="col-sm-1">
+											<div class="home-donate donate-btn-1 text-uppercase">
+												<a href="createDonationItemForm.do">Delete</a>
+											</div>
+										</div>
+									</c:if>
+								</div>
 							</div>
 
 							<div class="comment-area">
@@ -121,52 +129,39 @@
 										</div>
 									</div>
 									<!-- /client-name-reply --> 
-									<div class="reply-text-2">
-										<div class="client-name-reply">
-											<div class="reply-pic pull-left mr25">
-												<img src="resources/assets/img/reply-2.jpg" alt="image">
-											</div>
-											<div class="name-reply-text">
-												<div class="name-reply pb20">
-													<span class="client-name"><a href="#">Saiful Islam</a></span>
-													<span class="designation">2day ago</span>
-													<div class="comment-icon pull-right">
-														<a href="#"><span class="ti-comments"></span></a>
-													</div>
-												</div>
-
-												<div class="reply-text">
-													<p>Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor.</p>
-												</div>
-											</div>
-										</div>
-									</div>
 								</div>
 								<!-- /reply-comment -->
 								<div class="leave-comment">
 									<div class="side-bar-title mb40">
 										<h2>Leave a Comment</h2>
 									</div>
-									<div class="leave-comment-form pb50 clearfix">
+									<div class="leave-comment-form pb50 clearfix" style="padding:30px;">
 										<div class="comment-form">
-											<form id="contact_form" action="#" method="POST" enctype="multipart/form-data">
+											<form id="contact_form" action="requestBenefit.do" method="POST" enctype="multipart/form-data">
 												<div class="leave-commen-info">
-													<input class="name" name="name" type="text" placeholder="Your Name..">
+													<input name="brId" type="text" placeholder="Request Id...">
 												</div>
 												<div class="leave-commen-info">
-													<input class="email" name="email" type="text" placeholder="Your Website..">
+													<input name="brDate" type="date" placeholder="Request Date...">
 												</div>
 												<div class="leave-commen-info">
-													<div class="leave-commen-info">
-														<input class="email" name="email" type="text" placeholder="Phone Number...">
-													</div>
+													<input name="brAlbumQuantity" type="text" placeholder="Album Quantity...">
 												</div>
 												<div class="leave-commen-info mt25">
-													<textarea id="message" name="message" placeholder="Message Here.. " rows="7" cols="30"></textarea>
+													<textarea id="message" name="brContent" placeholder="Message Here..." rows="7" cols="30"></textarea>
 
 												</div>
+												<div class="leave-commen-info">
+													<input name="brMatchingState" type="text" placeholder="Matching State...">
+												</div>
+												<div class="leave-commen-info">
+													<input name="donationId" type="text" placeholder="Donation Id...">
+												<div class="leave-commen-info">
+													<input name="userId" type="text" placeholder="User Id...">
+												</div>
+												</div>
 												<div class="send-button text-uppercase pull-right">
-													<button type="submit" value="Submit">SEND MESSAGE</button> 
+													<button type="submit" value="Submit">SEND REQUEST</button> 
 												</div>
 											</form>
 										</div>

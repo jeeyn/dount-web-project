@@ -35,13 +35,13 @@
 		WHERE DONATION_ID = #{donationId}
 	</update>
 	
-	<insert id="insertDonation" parameterType="Donation">
+	<insert id="insertDonation">
 		INSERT INTO DONATION
 			(DONATION_ID, USER_ID, DONATION_DATE, DONATION_MATCHING_STATE, ALBUM_ID, DONATION_ALBUM_QUANTITY, DONATION_CONTENT)
 		VALUES
 			(#{donationId, jdbcType=NUMERIC}, 
 			 #{userId, jdbcType=VARCHAR}, 
-			 #{donationDate, javaType=java.util.Date, jdbcType=DATE}, 
+			 #{donationDate, jdbcType=DATE},
 			 #{donationMatchingState, jdbcType=CHAR}, 
 			 #{albumId, jdbcType=NUMERIC}, 
 			 #{donationAlbumQuantity, jdbcType=NUMERIC}, 

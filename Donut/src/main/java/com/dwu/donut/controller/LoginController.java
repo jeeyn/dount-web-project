@@ -25,12 +25,11 @@ public class LoginController {
 	}
 	
 	// 2. 로그인 처리
-	@RequestMapping("*/login.do")
+	@RequestMapping("/login.do")
 	public ModelAndView login(@ModelAttribute Account account, HttpSession session, HttpServletRequest request) {
 		boolean loginResult = accountService.loginCheck(account, session);
 		ModelAndView mav = new ModelAndView();
 		String from = (String) session.getAttribute("from");
-		System.out.println("LOG: " + from);
 		
 		if (loginResult == true) { // 로그인 성공
 			if (from != null) {
