@@ -5,31 +5,31 @@
   <cache />
 
   <select id="getAccountByUserId" resultType="Account">
-    SELECT USER_ID,
-    		PASSWORD,
-    		USER_NAME,
-    		EMAIL,
-    		PHONE,
-    		COUNTRY,
-    		ADDRESS_1,
-    		ADDRESS_2,
-    		ZIP_CODE,
-    		USER_TYPE
+    SELECT USER_ID userId,
+    		PASSWORD password,
+    		USER_NAME userName,
+    		EMAIL email,
+    		PHONE phone,
+    		COUNTRY country,
+    		ADDRESS_1 address1,
+    		ADDRESS_2 address2,
+    		ZIP_CODE zipCode,
+    		USER_TYPE userType
     FROM ACCOUNT
     WHERE USER_ID = #{userId, jdbcType=VARCHAR}
   </select>
 
   <select id="getAccountByUserIdAndPassword" resultType="Account">
-    SELECT USER_ID,
-    		PASSWORD,
-    		USER_NAME,
-    		EMAIL,
-    		PHONE,
-    		COUNTRY,
-    		ADDRESS_1,
-    		ADDRESS_2,
-    		ZIP_CODE,
-    		USER_TYPE
+    SELECT USER_ID userId,
+    		PASSWORD password,
+    		USER_NAME userName,
+    		EMAIL email,
+    		PHONE phone,
+    		COUNTRY country,
+    		ADDRESS_1 address1,
+    		ADDRESS_2 address2,
+    		ZIP_CODE zipCode,
+    		USER_TYPE userType
     FROM ACCOUNT
     WHERE USER_ID = #{param1, jdbcType=VARCHAR}
     	AND PASSWORD = #{param2, jdbcType=VARCHAR}

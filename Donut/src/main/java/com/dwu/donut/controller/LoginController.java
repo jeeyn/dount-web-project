@@ -33,10 +33,11 @@ public class LoginController {
 		
 		if (loginResult == true) { // 로그인 성공
 			if (from != null) {
-				mav.setViewName(from);
+				mav.setViewName(from); // 이전 페이지로 이동
 			} else {
 				mav.setViewName("index"); // index.jsp로 이동
 			}
+			
 			mav.addObject("msg", "success");
 		} else { // 로그인 실패
 			mav.setViewName("login"); // login.jsp로 이동

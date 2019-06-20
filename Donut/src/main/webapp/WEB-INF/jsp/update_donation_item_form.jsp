@@ -72,27 +72,38 @@
 		<div class="container">
 			<div class="contact-comment-form pb50 clearfix">
 				<div class="comment-form">
-					<form action="createDonationItem.do" method="POST">
+					<form action="updateDonationItem.do" method="POST">
 						<div class="contact-comment-info col-xs-12 col-sm-6 col-md-6">
-							<input name="donationId" type="text" value="${donation.donationId}" placeholder="Donation Id...">
+							<input name="donationId" type="hidden" value="${donation.donationId}">
 						</div>
 						<div class="contact-comment-info col-xs-12 col-sm-6 col-md-6">
 							<input name="userId" type="hidden" value="${account.userId}">
 						</div>
 						<div class="contact-comment-info col-xs-12 col-sm-6 col-md-6">
-							<input name="donationDate" type="date">
+							<input name="donationDate" type="hidden" value="${donation.donationDate}">
 						</div>
 						<div class="contact-comment-info col-xs-12 col-sm-6 col-md-6">
-							<input name="donationMatchingState" type="text" placeholder="Matching State...">
+							<input name="donationMatchingState" type="hidden" value="${donation.donationMatchingState}">
 						</div>
 						<div class="contact-comment-info col-xs-12 col-sm-6 col-md-6">
-							<input name="albumId" type="text" placeholder="Album ID...">
-						</div>
+							<div class="donate-cause-item">
+								<select name="albumId" class="custom-select">
+					                <option value="">Select Album *</option>
+					                <option value="1">동방신기 - Tri-Angle</option>
+					                <option value="2">아이유 - Palette</option>
+					                <option value="3">WANNA ONE - 1X1=1(TO BE ONE)</option>
+					                <option value="4">TWICE - YES or YES</option>
+					                <option value="5">BLACKPINK - SQUARE ONE</option>
+					                <option value="6">방탄소년단 - MAP OF THE SOUL : PERSONA</option>
+					                <option value="7">레드벨벳 - The Red Summer</option>
+					            </select>
+					        </div>
+					    </div>
 						<div class="contact-comment-info col-xs-12 col-sm-6 col-md-6">
-							<input name="donationAlbumQuantity" type="text" placeholder="Album Quantity...">
+							<input name="donationAlbumQuantity" type="number" value="${donation.donationAlbumQuantity}">
 						</div>
 						<div class="contact-comment-info mt25">
-							<textarea name="donationContent" placeholder="Message Here.. " rows="7" cols="30"></textarea>
+							<textarea name="donationContent" rows="7" cols="30">${donation.donationContent}</textarea>
 						</div>
 						<div class="send-button text-uppercase text-center">
 							<button type="submit" value="Donate Now">Donate Now</button> 

@@ -21,7 +21,7 @@
 						<div class="cause-item">
 							<div class="recent-causes-pic-text">
 								<div class="recent-causes-pic" style="text-align:center;">
-									<img src="resources/assets/img/Tri-Angle.jpg" alt="image">
+									<img src="resources/assets/img/${donation.temp}" alt="image">
 								</div>
 								<!-- /img -->
 	
@@ -40,7 +40,9 @@
 									<!-- /cause-head -->
 									<div class="donate-now-btn">
 										<div class="donate-btn margin0 text-uppercase">
-											<a href="donation.html">request now</a>
+											<a href="<c:url value="donationItem.do">
+															<c:param name="donationId" value="${donation.donationId}"></c:param>
+														 </c:url>">request now</a>
 										</div>
 									</div>
 									<!-- /donate-now-btn -->

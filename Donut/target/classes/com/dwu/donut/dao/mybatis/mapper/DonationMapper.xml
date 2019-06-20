@@ -26,27 +26,34 @@
 		FROM DONATION
 	</select>
 	
+	<insert id="insertDonation">
+		INSERT INTO DONATION 
+			(DONATION_ID,
+				USER_ID,
+				DONATION_DATE,
+				DONATION_MATCHING_STATE,
+				ALBUM_ID,
+				DONATION_ALBUM_QUANTITY,
+				DONATION_CONTENT) 
+		VALUES 
+			(SEQ_DONATION.NEXTVAL,
+				#{userId, jdbcType=VARCHAR},
+				#{donationDate, jdbcType=DATE},
+				#{donationMatchingState, jdbcType=CHAR},
+				#{albumId, jdbcType=NUMERIC},
+				#{donationAlbumQuantity, jdbcType=NUMERIC},
+				#{donationContent, jdbcType=VARCHAR})
+	</insert>
+	
 	<update id="updateDonation" parameterType="Donation">
 		UPDATE DONATION SET
-			DONATION_DATE=#{donationDate}
+			DONATION_DATE=#{donationDate, jdbcType=DATE},
 			ALBUM_ID=#{albumId},
-			DONATION_ALBUM_QUANTITY=#{donationContentAlbumQuantity},
+			DONATION_ALBUM_QUANTITY=#{donationAlbumQuantity},
 			DONATION_CONTENT=#{donationContent}
 		WHERE DONATION_ID = #{donationId}
 	</update>
 	
-	<insert id="insertDonation">
-		INSERT INTO DONATION
-			(DONATION_ID, USER_ID, DONATION_DATE, DONATION_MATCHING_STATE, ALBUM_ID, DONATION_ALBUM_QUANTITY, DONATION_CONTENT)
-		VALUES
-			(#{donationId, jdbcType=NUMERIC}, 
-			 #{userId, jdbcType=VARCHAR}, 
-			 #{donationDate, jdbcType=DATE},
-			 #{donationMatchingState, jdbcType=CHAR}, 
-			 #{albumId, jdbcType=NUMERIC}, 
-			 #{donationAlbumQuantity, jdbcType=NUMERIC}, 
-			 #{donationContent, jdbcType=VARCHAR})
-	</insert>
 	
 	<delete id="deleteDonation">
 		DELETE FROM DONATION

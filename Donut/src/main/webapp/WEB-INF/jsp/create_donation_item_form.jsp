@@ -1,5 +1,4 @@
 <%@ page language="java" contentType="text/html; charset=UTF-8" pageEncoding="UTF-8"%>
-<%@ taglib prefix="c" uri="http://java.sun.com/jsp/jstl/core" %>
 
 <!DOCTYPE html>
 <html lang="zxx">
@@ -8,10 +7,12 @@
 	<title>Donut</title>
 	<link rel="shortcut icon" href="resources/assets/img/icon.png">
 
-	<meta name="description" content="FundMe - is a Premium HTML Responsive Templeate by HTMLmate Team. You can use this for anykind of Nonprofit website">
+	<!-- include libraries(jQuery, bootstrap) -->
+	<link href="http://netdna.bootstrapcdn.com/bootstrap/3.3.5/css/bootstrap.css" rel="stylesheet">
+	<script src="http://cdnjs.cloudflare.com/ajax/libs/jquery/3.2.1/jquery.js"></script> 
+	<script src="http://netdna.bootstrapcdn.com/bootstrap/3.3.5/js/bootstrap.js"></script> 
 
 	<meta name="keywords" content="Premium HTML Template">
-
 	<meta name="author" content="HTMLmate">
 
 	<!-- Mobile Specific Meta -->
@@ -48,112 +49,68 @@
 	<div id="preloader"></div>
 	<!-- Start of Header 
 	============================================= -->
+	
 	<jsp:include page="top.jsp"/>
+	
 	<!-- End of Header 
 	============================================= -->
-						 
-	<!-- Start of can we do section 
+
+	<!-- Start of create page section 
 	============================================= -->
-	<section id="can-we-do" class="can-we-do-section">
+	<div class="contact-form">
+		<div class="contact-form-title">
+			<div class="section-title text-center">
+				<div class="section-title-text text-uppercase">
+					<p>Create Donation</p>
+				</div>
+				<div class="section-title-text">
+					<h2>Create Donation</h2>
+				</div>
+			</div>
+		</div>
+		<!-- / create-form-title-->
 		<div class="container">
-			<div class="row section-content">
-				<div class="section-title text-center">
-					<div class="section-title-text text-uppercase">
-						<p>My Page</p>
-					</div>
-					<div class="section-title-text">
-						<h2>마이페이지</h2>
-					</div>
+			<div class="contact-comment-form pb50 clearfix">
+				<div class="comment-form">
+					<form action="createDonationItem.do" method="POST">
+						<div class="contact-comment-info col-xs-12 col-sm-6 col-md-6">
+							<div class="donate-cause-item">
+								<select id="albumId" name="albumId" class="albumId">
+					                <option value="">Select Album *</option>
+					                <option value="1">동방신기 - Tri-Angle</option>
+					                <option value="2">아이유 - Palette</option>
+					                <option value="3">WANNA ONE - 1X1=1(TO BE ONE)</option>
+					                <option value="4">TWICE - YES or YES</option>
+					                <option value="5">BLACKPINK - SQUARE ONE</option>
+					                <option value="6">방탄소년단 - MAP OF THE SOUL : PERSONA</option>
+					                <option value="7">레드벨벳 - The Red Summer</option>
+					            </select>
+					        </div>
+					    </div>
+						<div class="contact-comment-info col-xs-12 col-sm-6 col-md-6">
+							<input name="donationAlbumQuantity" type="text" placeholder="Album Quantity...">
+						</div>
+						<div class="contact-comment-info mt25">
+							<textarea name="donationContent" placeholder="Message Here..." rows="7" cols="30"></textarea>
+						</div>
+						<div class="send-button text-uppercase text-center">
+							<button type="submit" value="Donate Now">Donate Now</button> 
+						</div>
+					</form>
 				</div>
-				<!-- /section-title -->
+			</div>
+		</div>
+	</div>
+	<!-- / create-form-->
 
-				<div class="can-we-do-section-content">
-					<div class="row">
-						<div class="col-md-3">
-							<div class="we-can-do-text-icon  text-center colmd3">
-								<div class="we-can-do-icon">
-									<span class="yellow ti-crown"></span>
-								</div>
-								<div class="we-can-do-text">
-									<h3 class="we-can-do-head red"><a href="viewAccount.do">개인 정보 조회</a></h3>
-								</div>
-								<div class="hide-icon">
-									<span class="red ti-crown"></span>
-								</div> 
-								<div class="hide-text text-left">
-									<p>View Your Account Information</p>
-								</div>
-							</div>
-						</div>
-						<!-- /col-md-3 -->
-
-						<div class="col-md-3">
-							<div class="we-can-do-text-icon  text-center colmd3">
-								<div class="we-can-do-icon">
-									<span class="yellow ti-heart"></span>
-								</div>
-								<div class="we-can-do-text">
-									<h3 class="we-can-do-head red"><a href="updateAccount.do">개인 정보 수정</a></h3>
-								</div>
-								<div class="hide-icon">
-									<span class="red ti-heart"></span>
-								</div> 
-								<div class="hide-text text-left">
-									<p>Update Your Account Information</p>
-								</div>
-							</div>
-						</div>
-						<!-- /col-md-3 -->
-
-						<div class="col-md-3">
-							<div class="we-can-do-text-icon  text-center colmd3">
-								<div class="we-can-do-icon">
-									<span class="yellow ti-book"></span>
-								</div>
-								<div class="we-can-do-text">
-									<h3 class="we-can-do-head red"><a href="posting_list.jsp">작성 게시물 조회</a></h3>
-								</div>
-								<div class="hide-icon">
-									<span class="red ti-book"></span>
-								</div> 
-								<div class="hide-text text-left">
-									<p>View Your Posting Information</p>
-								</div>
-							</div>
-						</div>
-						<!-- /col-md-3 -->
-
-						<div class="col-md-3">
-							<div class="we-can-do-text-icon  text-center colmd3">
-								<div class="we-can-do-icon">
-									<span class="yellow ti-gift"></span>
-								</div>
-								<div class="we-can-do-text">
-									<h3 class="we-can-do-head red"><a href="matching_list.jsp">매칭 기록 조회</a></h3>
-								</div>
-								<div class="hide-icon">
-									<span class="red ti-gift"></span>
-								</div> 
-								<div class="hide-text text-left">
-									<p>View Your Matching History Information</p>
-								</div>
-							</div>
-						</div>
-						<!-- /col-md-3 -->
-					</div>
-				</div>
-			</div><!-- /row -->
-		</div><!-- /container -->
-	</section>
-	<!-- End of can we do section 
+	<!-- End of contact page section  
 	============================================= -->
-	
+
 	<!-- Start of footer section
 	============================================= -->
 	<jsp:include page="bottom.jsp"/>
 	<!-- End of footer section
 	============================================= -->
-
 
 	<!-- js -->
 	<script type="text/javascript" src="resources/assets/js/jquery-2.1.4.min.js"></script>
@@ -165,7 +122,7 @@
 	<script type="text/javascript" src="resources/assets/js/wow.min.js"></script>
 	<script type="text/javascript">new WOW().init();</script>
 	<script type="text/javascript" src="resources/assets/js/circle-progress.js"></script>
-	<!-- REVOLUTION JS FILES -->
+		<!-- REVOLUTION JS FILES -->
 	<script type="text/javascript" src="resources/rev-slider/js/jquery.themepunch.tools.min.js"></script>
 	<script type="text/javascript" src="resources/rev-slider/js/jquery.themepunch.revolution.min.js"></script>
 
@@ -179,6 +136,6 @@
     <script type="text/javascript" src="resources/rev-slider/js/revolution.extension.parallax.min.js"></script>
     <script type="text/javascript" src="resources/rev-slider/js/revolution.extension.slideanims.min.js"></script>
     <script type="text/javascript" src="resources/rev-slider/js/revolution.extension.video.min.js"></script>
-    <script type="text/javascript" src="resources/assets/js/function.js"></script>
+	<script type="text/javascript" src="resources/assets/js/function.js"></script>
 </body> 
 </html>

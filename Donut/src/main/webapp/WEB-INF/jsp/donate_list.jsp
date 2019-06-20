@@ -84,7 +84,7 @@
 									<div class="col-sm-4">
 										<div class="recent-causes-pic-text causes colmd4">
 											<div class="recent-causes-pic">
-												<img src="resources/assets/img/cause-1.jpg" alt="image">
+												<img src="resources/assets/img/${donation.temp}" alt="image">
 											</div>
 											<!-- /img -->
 											<div class="cause-text pt75 pb50">
@@ -95,7 +95,7 @@
 													</ul>
 												</div>
 												<div class="cause-text-head pt15 pb20 p10" style="height: 100px; font-size:12px;">
-													<h3><p>${donation.donationContent}</p></h3>
+													<h3>${donation.donationContent}</h3>
 												</div>
 												<div class="donate-now-btn">
 													<div class="donate-btn margin0 text-uppercase">

@@ -14,6 +14,7 @@ public class Donation {
 	private int albumId;
 	private int donationAlbumQuantity;
 	private String donationContent;
+	private String temp;
 	
 	public int getDonationId() {
 		return donationId;
@@ -56,6 +57,12 @@ public class Donation {
 	}
 	public void setDonationContent(String donationContent) {
 		this.donationContent = donationContent;
+	}
+	public String getTemp() {
+		return temp;
+	}
+	public void setTemp(String temp) {
+		this.temp = temp;
 	}
 
 	

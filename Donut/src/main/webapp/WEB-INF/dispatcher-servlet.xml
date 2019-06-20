@@ -19,7 +19,6 @@
 	
 	<mvc:annotation-driven/>
 	
-	<mvc:view-controller path="/index.do" view-name="index"/>
 	<mvc:view-controller path="/contact.do" view-name="contact"/>
 	
 	<bean id="viewResolver"

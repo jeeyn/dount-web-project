@@ -6,6 +6,7 @@ import java.text.SimpleDateFormat;
 import java.util.Date;
 import java.util.List;
 
+import javax.servlet.http.HttpServletRequest;
 import javax.servlet.http.HttpSession;
 
 import org.springframework.beans.factory.annotation.Autowired;
@@ -14,6 +15,7 @@ import org.springframework.web.bind.WebDataBinder;
 import org.springframework.web.bind.annotation.InitBinder;
 import org.springframework.web.bind.annotation.ModelAttribute;
 import org.springframework.web.bind.annotation.RequestMapping;
+import org.springframework.web.bind.annotation.RequestMethod;
 import org.springframework.web.bind.annotation.RequestParam;
 import org.springframework.web.servlet.ModelAndView;
 
@@ -21,6 +23,7 @@ import com.dwu.donut.dao.DonationDao;
 import com.dwu.donut.domain.Account;
 import com.dwu.donut.domain.Donation;
 import com.dwu.donut.service.AccountService;
+import com.dwu.donut.service.AlbumService;
 import com.dwu.donut.service.DonationService;
 
 @Controller
@@ -32,7 +35,10 @@ public class DonationController {
 	@Autowired
 	public AccountService accountService;
 	
-	// 1. '기증해요' 게시판
+	@Autowired
+	public AlbumService albumService;
+	
+	// '기증해요' 게시판 View
 	@RequestMapping("donationList.do")
 	@ModelAttribute("donationList")
 	public ModelAndView donationList() {
@@ -41,13 +47,19 @@ public class DonationController {
 		
 		ModelAndView mav = new ModelAndView();
 		
+		for (int i = 0; i < donationList.size(); i++) {
+			
+			int temp = donationList.get(i).getAlbumId();
+			donationList.get(i).setTemp(albumService.getAlbumItem(temp).getCover());
+		}
+		
 		mav.setViewName("donate_list");
 		mav.addObject("donationList", donationList);
 		
 		return mav;
 	}
 		
-	// 2. '기증해요' 게시물
+	// '기증해요' 게시물 View
 	@RequestMapping("/donationItem.do")
 	public ModelAndView donationItem(@RequestParam("donationId") int donationId, HttpSession session) {
 		
@@ -58,42 +70,76 @@ public class DonationController {
 		
 		if (userId != null) { // 로그인이 되어있으면
 			if (donation.getUserId().equals(userId)) {
-				mav.addObject("isWriter", "me");
+				session.setAttribute("isWriter", "me");
 			} else {
-				mav.addObject("isWriter", "notMe");
+				session.setAttribute("isWriter", "notMe");
 			}
 		}
 		
 		mav.setViewName("donate_item");
 		mav.addObject("donation", donation);
+		mav.addObject("album", albumService.getAlbumItem(donation.getAlbumId()));
 		
 		return mav;
 	}
 	
-	// 3. '기증해요' 게시물 작성 화면
-	@RequestMapping({"createDonationItemForm.do", "updateDonationItemForm.do"})
-	public String createDonationItemForm(HttpSession session) {
+	// '기증해요' 게시물 작성 화면
+	@RequestMapping("createDonationItemForm.do")
+	public String createDonationItemForm(HttpSession session) {		
 		if (session.getAttribute("userId") != null) {
-			return "donation_item_form";
+			return "create_donation_item_form";
 		} else {
-			session.setAttribute("from", "donation_item_form");
+			session.setAttribute("from", "create_donation_item_form");
 			return "login";
 		}
 	}
 	
-	// 4. '기증해요' 게시물 작성하기
-	@RequestMapping("createDonationItem.do")
-	public String createDonationItem(@ModelAttribute Account account, Donation donation) {
+	// '기증해요' 게시물 작성하기
+	@RequestMapping(value="createDonationItem.do", method=RequestMethod.POST)
+	public ModelAndView createDonationItem(Donation donation, HttpSession session) {
+		donation.setUserId((String)session.getAttribute("userId"));
+		donationService.insertDonation(donation);
 		
-		donationService.insertDonation(account, donation);
+		List<Donation> donationList = donationService.getDonationList();
 		
-		return "donate_list";
+		ModelAndView mav = new ModelAndView();
+		
+		mav.setViewName("donate_list");
+		mav.addObject("donationList", donationList);
+		
+		return mav;
 	}
 	
-	// 5. '기증해요' 게시물 수정하기
+	// '기증해요' 게시물 수정 화면
+	@RequestMapping("updateDonationItemForm.do")
+	public ModelAndView updateDonationItemForm(@RequestParam int donationId) {
+		ModelAndView mav = new ModelAndView();
+		
+		mav.addObject("donation", donationService.getDonationItem(donationId));
+		mav.setViewName("update_donation_item_form");
+		
+		return mav;
+	}
+	
+	// '기증해요' 게시물 수정하기
 	@RequestMapping("updateDonationItem.do")
 	public String updateDonationItem(Donation donation) {
+		donationService.updateDonation(donation);
 		return "donate_item";
+	}
+	
+	// '기증해요' 게시물 삭제하기
+	@RequestMapping("deleteDonationItem.do")
+	public ModelAndView deleteDonationItem(int donationId) {
+		donationService.deleteDonation(donationId);
+		
+		List<Donation> donationList = donationService.getDonationList();
+		
+		ModelAndView mav = new ModelAndView();
+		mav.setViewName("donate_list");
+		mav.addObject("donationList", donationList);
+		
+		return mav;
 	}
 	
 	@InitBinder
