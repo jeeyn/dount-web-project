@@ -1,5 +1,5 @@
 <%@ page language="java" contentType="text/html; charset=UTF-8" pageEncoding="UTF-8"%>
-<%@ taglib prefix="form" uri="http://www.springframework.org/tags/form"%>
+<%@ taglib prefix="c" uri="http://java.sun.com/jsp/jstl/core" %>
 
 <!DOCTYPE html>
 <html lang="zxx">
@@ -42,6 +42,18 @@
 	<!-- responsive.css -->
 	<link rel="stylesheet" type="text/css" href="resources/assets/css/responsive.css">
 
+	<style type="text/css">
+		th {
+			font-size: 20px;
+			font-color: black;
+			text-align: center;
+		}
+		
+		td {
+			font-size: 15px;
+			text-align: center;
+		}
+	</style>
 </head>
 <!-- /end of head -->
 
@@ -64,34 +76,55 @@
 							<div class="donar-type">
 								<div class="donar-info">
 									<div class="side-bar-title mb40">
-										<h2>&nbsp;&nbsp;&nbsp;User Infomation</h2>
+										<h2>&nbsp;&nbsp;&nbsp;User Information</h2>
 									</div>
 									<div class="donate-form">
-										<div class="comment-form clearfix  mb20">
+										<div class="comment-form clearfix mb20">
 											<div class="contact-comment-info">
-												<div style="float: left; width: 10%; font-size: 25px; font-color: black;">User ID</div>
-												<div style="float: left; font-size: 20px;">${account.userId}</div>
-											</div>
-											<div class="contact-comment-info">
-												<div style="float: left; width: 10%; font-size: 20px;">User Name</div>
-											</div>
-											<div class="contact-comment-info">
-												<div style="float: left; width: 10%; font-size: 20px;">Email</div>
-											</div>
-											<div class="contact-comment-info">
-												<div style="float: left; width: 10%; font-size: 20px;">Phone</div>
-											</div>
-											<div class="contact-comment-info">
-										        <div style="float: left; width: 10%; font-size: 20px;">Country</div>
-											</div>
-											<div class="contact-comment-info">
-												<div style="float: left; width: 10%; font-size: 20px;">Address</div>
-											</div>
-											<div class="contact-comment-info">
-												<div style="float: left; width: 10%; font-size: 20px;">Zip Code</div>
-											</div>
-											<div class="method-list mb20">
-												<div style="float: left; width: 10%; font-size: 20px;">User Type</div>
+												<table class="table table-bordered">
+												    <tbody>
+												        <tr>
+												          	<th>User ID</th>
+												          	<td>${account.userId}</td>
+												        </tr>
+												        <tr>
+												          	<th>User Name</th>
+												         	<td>${account.userName}</td>
+												        </tr>
+												        <tr>
+												        	<th>User Type</th>
+												          	<td>
+												          		<c:if test="${account.userType == 'D'}">Donor</c:if>
+													          	<c:if test="${account.userType == 'B'}">Beneficient</c:if>
+												          	</td>
+												        </tr>
+												        <tr>
+												          	<th>Email</th>
+												          	<td>${account.email}</td>
+												        </tr>
+												        <tr>
+												         	<th>Phone</th>
+												          	<td>${account.phone}</td>
+												        </tr>
+												        <tr>
+												          	<th>Country</th>
+												          	<td>${account.country}</td>
+												        </tr>
+												        <tr>
+												          	<th>Address 1</th>
+												          	<td>${account.address1}</td>
+												        </tr>
+												        <tr>
+												          	<th>Address 2</th>
+												          	<td>${account.address2}</td>
+												        </tr>
+
+												        <tr>
+												          	<th>Zip Code</th>
+												          	<td>${account.zipCode}</td>
+												        </tr>
+												    </tbody>
+												</table>
 											</div>
 										</div>
 									</div>
