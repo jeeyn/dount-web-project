@@ -10,34 +10,45 @@ import org.springframework.web.bind.annotation.RequestMethod;
 
 import com.dwu.donut.dao.AccountDao;
 import com.dwu.donut.domain.Account;
+import com.dwu.donut.service.AccountService;
 
 @Controller
 public class AccountController {
 	
 	@Autowired
 	private AccountDao accountDao;
+	
+	@Autowired
+	public AccountService accountService;
 
-	// 1. 회원가입 화면
+	// 회원가입 화면
 	@RequestMapping("/registerForm.do")
 	public String accountRegisterForm() {
 		return "register";
 	}
 	
-	// 2. 회원가입 처리
+	// 회원가입 처리
 	@RequestMapping(value="/register.do", method=RequestMethod.POST)
 	public String submitRegisterForm(@Valid Account account) {
 		accountDao.insertAccount(account);
 		return "index";
 	}
 	
-	// 3. 마이페이지
+	// 마이페이지 화면
 	@RequestMapping("/myPage.do")
 	public String viewMyPage(HttpSession session) {
 		if (session.getAttribute("userId") != null) {
 			return "my_page";
 		} else {
+			session.setAttribute("from", "my_page");
 			return "login";
 		}
+	}
+	
+	// 개인정보조회 화면
+	@RequestMapping("/viewAccount.do")
+	public String viewAccountInfo() {
+		return "view_account";
 	}
 
 }

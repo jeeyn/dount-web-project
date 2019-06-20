@@ -52,7 +52,7 @@
 					<nav class="navbar">
 						<!-- Brand and toggle get grouped for better mobile display -->
 						<div class="navbar-header">
-							<a class="navbar-brand" href="index.html"><img src="resources/assets/img/logo.png" alt="image"></a>
+							<a class="navbar-brand" href="index.do"><img src="resources/assets/img/logo.png" alt="image"></a>
 						</div>
 					</nav>
 				</div>
@@ -77,7 +77,7 @@
 	        <div class="form-group">
 	            <button type="submit" class="btn btn-primary btn-lg btn-block">Sign in</button>
 	            <c:if test="${msg == 'failure'}">
-	            	<div style="color: red">아이디 또는 비밀번호가 일치하지 않습니다</div>
+	            	<div style="color: red; text-align: center;">ID or password Do Not Match</div>
 	            </c:if>
 	        </div>
 	    </form>
