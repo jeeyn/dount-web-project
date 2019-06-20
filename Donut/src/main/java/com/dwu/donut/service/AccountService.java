@@ -1,6 +1,7 @@
 package com.dwu.donut.service;
 
 import javax.servlet.http.HttpSession;
+import javax.validation.Valid;
 
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Service;
@@ -14,6 +15,11 @@ public class AccountService {
 	@Autowired
 	AccountDao accountDao;
 	
+	// 회원가입 처리
+	public void registerAccount(@Valid Account account) {
+		accountDao.insertAccount(account);
+	}
+	
 	// 회원 로그인 여부 체크
 	public boolean loginCheck(Account account, HttpSession session) {
 		boolean loginResult = accountDao.loginCheck(account);
@@ -25,15 +31,21 @@ public class AccountService {
 		return loginResult;
 	}
 	
-	// 회원 로그인 정보
-	public Account ViewAccount(Account account) {
-		return accountDao.viewAccount(account);
+	// 회원정보 조회
+	public Account getAccount(String userId) {
+		Account account = accountDao.getAccountByUserId(userId);
+		return account;
 	}
 	
 	// 회원 로그아웃
 	public void logout(HttpSession session) {
 		// 세선 정보를 초기화
 		session.invalidate();
+	}
+	
+	// 회원정보수정 처리
+	public void updateAccount(@Valid Account account) {
+		accountDao.updateAccount(account);
 	}
 
 }

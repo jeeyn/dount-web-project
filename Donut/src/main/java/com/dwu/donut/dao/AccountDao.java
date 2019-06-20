@@ -37,8 +37,4 @@ public class AccountDao {
 		return (accountMapper.getAccountByUserIdAndPassword(account.getUserId(), account.getPassword()) != null)? true : false;
 	}
 	
-	public Account viewAccount(Account account) {
-		return accountMapper.getAccountByUserIdAndPassword(account.getUserId(), account.getPassword());
-	}
-	
 }

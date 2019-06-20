@@ -1,5 +1,4 @@
 <%@ page language="java" contentType="text/html; charset=UTF-8" pageEncoding="UTF-8"%>
-<%@ taglib prefix="form" uri="http://www.springframework.org/tags/form"%>
 
 <!DOCTYPE html>
 <html lang="zxx">
@@ -64,7 +63,7 @@
 							<div class="donar-type">
 								<div class="donar-info">
 									<div class="side-bar-title mb40">
-										<h2>&nbsp;&nbsp;&nbsp;User Info</h2>
+										<h2>&nbsp;&nbsp;&nbsp;User Information</h2>
 									</div>
 									<div class="donate-form">
 										<div class="comment-form clearfix  mb20">
