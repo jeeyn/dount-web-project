@@ -19,7 +19,7 @@
 							<li><a href="benefit_list.jsp">Benefit</a></li>
 							<li><a href="review_list.jsp">Review</a></li>
 							<li><a href="contact.do">Contact Us</a></li>
-							<li><a href="my_page.jsp">My Page</a></li>
+							<li><a href="myPage.do">My Page</a></li>
 						</ul>
 					</div><!-- /.navbar-collapse -->
 					<div class="home-donate donate-btn-1 text-uppercase">
@@ -48,7 +48,7 @@
 								<li><a href="benefit_list.jsp">Benefit</a></li>
 								<li><a href="review_list.jsp">Review</a></li>
 								<li><a href="contact.do">Contact Us</a></li>
-								<li><a href="my_page.jsp">My Page</a></li>
+								<li><a href="myPage.do">My Page</a></li>
 							</ul>
 						</div>
 					</div>

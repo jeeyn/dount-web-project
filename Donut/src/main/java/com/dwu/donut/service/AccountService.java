@@ -18,7 +18,7 @@ public class AccountService {
 	public boolean loginCheck(Account account, HttpSession session) {
 		boolean loginResult = accountDao.loginCheck(account);
 		
-		if (loginResult) { // true일 경우 세션에 등록
+		if (loginResult == true) { // true일 경우 세션에 등록
 			session.setAttribute("userId", account.getUserId());
 		}
 		

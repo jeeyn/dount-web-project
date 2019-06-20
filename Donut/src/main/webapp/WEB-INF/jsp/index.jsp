@@ -84,7 +84,7 @@
 											<h3 class="black">Donate</h3>
 										</div>
 										<div class="way-help-text-content">
-											<p>Excepteur sint occaecat cupidatat non proident suntin culpa</p>
+											<p>GIVE K-POP ALBUMS NOW</p>
 										</div>
 									</div>
 									<!-- /text -->
@@ -93,7 +93,7 @@
 											<h3 class="yellow">Donate</h3>
 										</div>
 										<div class="way-help-text-content pb20">
-											<p>Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla.</p>
+											<p>If Your User Type is DONOR, Donate Your Album to K-POP Fans Around the World Now!</p>
 										</div>
 										<div class="way-help-pic pb30">
 											<a href="donate_list.html"><span class="ti-plus"></span></a>
@@ -114,7 +114,7 @@
 											<h3 class="black">Benefit</h3>
 										</div>
 										<div class="way-help-text-content">
-											<p>Excepteur sint occaecat cupidatat non proident suntin culpa</p>
+											<p>GET K-POP ALBUMS NOW</p>
 										</div>
 									</div>
 									<!-- /text -->
@@ -123,7 +123,7 @@
 											<h3 class="yellow">Benefit</h3>
 										</div>
 										<div class="way-help-text-content pb20">
-											<p>Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla.</p>
+											<p>If Your User Type is DONOR, Benefit K-POP Albums to K-POP Fans Around the World Now!</p>
 										</div>
 										<div class="way-help-pic pb30">
 											<a href="#"><span class="ti-plus"></span></a>
@@ -144,7 +144,7 @@
 											<h3 class="black">Review</h3>
 										</div>
 										<div class="way-help-text-content">
-											<p>Excepteur sint occaecat cupidatat non proident suntin culpa</p>
+											<p>WRITE REVIEW NOW</p>
 										</div>
 									</div>
 									<!-- /text -->
@@ -153,7 +153,7 @@
 											<h3 class="yellow">Review</h3>
 										</div>
 										<div class="way-help-text-content pb20">
-											<p>Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla.</p>
+											<p>If You Have Received The K-POP Albums, Write a Review Please</p>
 										</div>
 										<div class="way-help-pic pb30">
 											<a href="review.html"><span class="ti-plus"></span></a>
@@ -173,7 +173,7 @@
 											<h3 class="black">Contact Us</h3>
 										</div>
 										<div class="way-help-text-content">
-											<p>Excepteur sint occaecat cupidatat non proident suntin culpa</p>
+											<p>Contact Us Now</p>
 										</div>
 									</div>
 									<!-- /text -->
@@ -182,10 +182,10 @@
 											<h3 class="yellow">Contact Us</h3>
 										</div>
 										<div class="way-help-text-content pb20">
-											<p>Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla.</p>
+											<p>Do You Have Any Problem? Feel Free to Contact Us</p>
 										</div>
 										<div class="way-help-pic pb30">
-											<a href="contact.html"><span class="ti-plus"></span></a>
+											<a href="contact.do"><span class="ti-plus"></span></a>
 										</div>
 									</div>
 								</div>

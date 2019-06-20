@@ -1,5 +1,6 @@
 package com.dwu.donut.controller;
 
+import javax.servlet.http.HttpServletRequest;
 import javax.servlet.http.HttpSession;
 
 import org.springframework.beans.factory.annotation.Autowired;
@@ -28,9 +29,15 @@ public class LoginController {
 	public ModelAndView login(@ModelAttribute Account account, HttpSession session) {
 		boolean loginResult = accountService.loginCheck(account, session);
 		ModelAndView mav = new ModelAndView();
+		String from = (String) session.getAttribute("from");
+		System.out.println("LOG: " + from);
 		
 		if (loginResult == true) { // 로그인 성공
-			mav.setViewName("index"); // index.jsp로 이동
+			if (from != null) {
+				mav.setViewName(from);
+			} else {
+				mav.setViewName("index"); // index.jsp로 이동
+			}
 			mav.addObject("msg", "success");
 		} else { // 로그인 실패
 			mav.setViewName("login"); // login.jsp로 이동
@@ -40,7 +47,7 @@ public class LoginController {
 		return mav;
 	}
 	
-	// 3. 로그아웃 처리
+	// 로그아웃 처리
 	@RequestMapping("/logout.do")
 	public ModelAndView logout(HttpSession session) {
 		accountService.logout(session);
