@@ -18,7 +18,7 @@ public class DonationDao {
 		return donationMapper.getDonationItem(donationId);
 	}
 	
-	public List<Donation> getDonationList(Donation donation) {
+	public List<Donation> getDonationList() {
 		return donationMapper.getDonationList();
 	}
 	

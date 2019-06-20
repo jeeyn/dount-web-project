@@ -4,11 +4,13 @@ import java.beans.PropertyEditorSupport;
 import java.text.ParseException;
 import java.text.SimpleDateFormat;
 import java.util.Date;
+import java.util.List;
 
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Controller;
 import org.springframework.web.bind.WebDataBinder;
 import org.springframework.web.bind.annotation.InitBinder;
+import org.springframework.web.bind.annotation.ModelAttribute;
 import org.springframework.web.bind.annotation.RequestMapping;
 import org.springframework.web.bind.annotation.RequestParam;
 import org.springframework.web.servlet.ModelAndView;
@@ -24,8 +26,16 @@ public class DonationController {
 	
 	// 1. '기증해요' 게시판
 	@RequestMapping("donationList.do")
-	public String donationList() {
-		return "donate_list";
+	@ModelAttribute("donationList")
+	public ModelAndView donationList() {
+		
+		List<Donation> donationList = donationDao.getDonationList();
+		
+		ModelAndView mav = new ModelAndView();
+		mav.setViewName("donate_list");
+		mav.addObject("donationList", donationList);
+		
+		return mav;
 	}
 		
 	// 2. '기증해요' 게시물
@@ -55,6 +65,13 @@ public class DonationController {
 		donationDao.insertDonation(donation);
 		
 		return "donate_list";
+	}
+	
+	@RequestMapping("updateDonationItemForm.do")
+	public String updateDonationItem(Donation donation) {
+		
+		return "create_donate_item";
+		
 	}
 	
 	@InitBinder

@@ -36,6 +36,10 @@
         <property name="dataSource" ref="dataSource" />
         <property name="typeAliasesPackage" value="com.dwu.donut.domain" />
     </bean>
+    
+    <bean id="sqlSessionTemplate" class="org.mybatis.spring.SqlSessionTemplate">
+    	<constructor-arg ref="sqlSessionFactory"/>
+    </bean>
 
     <mybatis:scan base-package="com.dwu.donut.dao.mybatis.mapper" />
 </beans>

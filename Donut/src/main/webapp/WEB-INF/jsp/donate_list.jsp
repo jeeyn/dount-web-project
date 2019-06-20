@@ -80,8 +80,7 @@
 					<div class="causes-page-left-item">
 						<div class="causes-item">
 							<div class="row">
-								<c:forEach var="i" begin="1" end="9" step="1">
-								<%-- <c:forEach var="donation" items=${donationList}> --%>
+								<c:forEach items="${donationList}" var="donation">
 									<div class="col-sm-4">
 										<div class="recent-causes-pic-text causes colmd4">
 											<div class="recent-causes-pic">
@@ -91,18 +90,18 @@
 											<div class="cause-text pt75 pb50">
 												<div class="gola-reach">
 													<ul class="gola-reach-list">
-														<li>ID : <c:out value="${donation.userId}"/></li>
-														<li>QUANTITY : <c:out value="${donation.donationAlbumQuantity}"/></li>
+														<li>ID : ${donation.userId}</li>
+														<li>QUANTITY : ${donation.donationAlbumQuantity}</li>
 													</ul>
 												</div>
 												<div class="cause-text-head pt15 pb20 p10">
-													<h3><a href="donate_item.jsp"><c:out value="${donation.donationContent}"/></a></h3>
+													<h3>${donation.donationContent}</h3>
 												</div>
 												<div class="donate-now-btn">
 													<div class="donate-btn margin0 text-uppercase">
-														<a href="<c:url value="donate_item.jsp">
-															<c:param name="donationId" value="${donation.donationId}"/></c:url>">
-														donate now</a>
+														<a href="<c:url value="donationItem.do">
+																 	<c:param name="donationId" value="${donation.donationId}"/>
+																 </c:url>">donate now</a>
 													</div>
 												</div>
 											</div>
