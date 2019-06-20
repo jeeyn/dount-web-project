@@ -1,5 +1,6 @@
 package com.dwu.donut.controller;
 
+import javax.servlet.http.HttpServletRequest;
 import javax.servlet.http.HttpSession;
 
 import org.springframework.beans.factory.annotation.Autowired;
@@ -17,15 +18,15 @@ public class LoginController {
 	@Autowired
 	public AccountService accountService;
 	
-	// 로그인 화면
+	// 1. 로그인 화면
 	@RequestMapping("/loginForm.do")
 	public String loginForm() {
 		return "login";
 	}
 	
-	// 로그인 처리
-	@RequestMapping("/login.do")
-	public ModelAndView login(@ModelAttribute Account account, HttpSession session) {
+	// 2. 로그인 처리
+	@RequestMapping("*/login.do")
+	public ModelAndView login(@ModelAttribute Account account, HttpSession session, HttpServletRequest request) {
 		boolean loginResult = accountService.loginCheck(account, session);
 		ModelAndView mav = new ModelAndView();
 		
@@ -51,4 +52,5 @@ public class LoginController {
 		
 		return mav;
 	}
+	
 }

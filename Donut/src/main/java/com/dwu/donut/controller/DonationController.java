@@ -6,6 +6,8 @@ import java.text.SimpleDateFormat;
 import java.util.Date;
 import java.util.List;
 
+import javax.servlet.http.HttpSession;
+
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Controller;
 import org.springframework.web.bind.WebDataBinder;
@@ -17,19 +19,21 @@ import org.springframework.web.servlet.ModelAndView;
 
 import com.dwu.donut.dao.DonationDao;
 import com.dwu.donut.domain.Donation;
+import com.dwu.donut.service.AccountService;
+import com.dwu.donut.service.DonationService;
 
 @Controller
 public class DonationController {
 	
 	@Autowired
-	DonationDao donationDao;
+	public DonationService donationService;
 	
 	// 1. '기증해요' 게시판
 	@RequestMapping("donationList.do")
 	@ModelAttribute("donationList")
 	public ModelAndView donationList() {
 		
-		List<Donation> donationList = donationDao.getDonationList();
+		List<Donation> donationList = donationService.getDonationList();
 		
 		ModelAndView mav = new ModelAndView();
 		mav.setViewName("donate_list");
@@ -39,10 +43,10 @@ public class DonationController {
 	}
 		
 	// 2. '기증해요' 게시물
-	@RequestMapping("donationItem.do")
+	@RequestMapping("/donationItem.do")
 	public ModelAndView donationItem(@RequestParam("donationId") int donationId) {
 		
-		Donation donation = donationDao.getDonationItem(donationId);
+		Donation donation = donationService.getDonationItem(donationId);
 		
 		ModelAndView mav = new ModelAndView();
 		mav.setViewName("donate_item");
@@ -53,25 +57,27 @@ public class DonationController {
 	
 	// 3. '기증해요' 게시물 작성 화면
 	@RequestMapping("createDonationItemForm.do")
-	public String createDonationItemForm() {
-		
-		return "create_donation_item";
+	public String createDonationItemForm(HttpSession session) {
+		if (session.getAttribute("userId") != null) {
+			return "create_donation_item";
+		} else {
+			return "login";
+		}
 	}
 	
 	// 4. '기증해요' 게시물 작성하기
 	@RequestMapping("createDonationItem.do")
 	public String createDonationItem(Donation donation) {
 		
-		donationDao.insertDonation(donation);
+		donationService.insertDonation(donation);
 		
 		return "donate_list";
 	}
 	
+	// 5. '기증해요' 게시물 수정하기
 	@RequestMapping("updateDonationItemForm.do")
 	public String updateDonationItem(Donation donation) {
-		
 		return "create_donate_item";
-		
 	}
 	
 	@InitBinder

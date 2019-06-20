@@ -66,7 +66,7 @@
 								<!-- /img -->
 								<div class="blog-single-text  pb50">
 									<div class="blog-head-title pt15 pb20">
-										<h2 class="black"><a href="#">Stop Running on Hard Surfaces and Become a Trail Runner</a></h2>
+										<h2 class="black"><a href="#">동방신기 1집 - Tri-Angle</a></h2>
 									</div>
 									<!-- /head -->
 									<div class="blog-recent-post-meta">

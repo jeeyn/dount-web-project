@@ -1,5 +1,6 @@
 package com.dwu.donut.controller;
 
+import javax.servlet.http.HttpSession;
 import javax.validation.Valid;
 
 import org.springframework.beans.factory.annotation.Autowired;
@@ -11,7 +12,7 @@ import com.dwu.donut.dao.AccountDao;
 import com.dwu.donut.domain.Account;
 
 @Controller
-public class RegisterController {
+public class AccountController {
 	
 	@Autowired
 	private AccountDao accountDao;
@@ -27,6 +28,16 @@ public class RegisterController {
 	public String submitRegisterForm(@Valid Account account) {
 		accountDao.insertAccount(account);
 		return "index";
+	}
+	
+	// 3. 마이페이지
+	@RequestMapping("/myPage.do")
+	public String viewMyPage(HttpSession session) {
+		if (session.getAttribute("userId") != null) {
+			return "my_page";
+		} else {
+			return "login";
+		}
 	}
 
 }
