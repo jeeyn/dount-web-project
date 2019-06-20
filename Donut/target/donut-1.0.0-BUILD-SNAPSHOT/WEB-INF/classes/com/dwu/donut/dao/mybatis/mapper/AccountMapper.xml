@@ -1,0 +1,64 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE mapper PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN" "http://mybatis.org/dtd/mybatis-3-mapper.dtd">
+
+<mapper namespace="com.dwu.donut.dao.mybatis.mapper.AccountMapper">
+  <cache />
+
+  <select id="getAccountByUserId" resultType="Account">
+    SELECT USER_ID,
+    		PASSWORD,
+    		USER_NAME,
+    		EMAIL,
+    		PHONE,
+    		COUNTRY,
+    		ADDRESS_1,
+    		ADDRESS_2,
+    		ZIP_CODE,
+    		USER_TYPE
+    FROM ACCOUNT
+    WHERE USER_ID = #{userId}
+  </select>
+
+  <select id="getAccountByUserIdAndPassword" resultType="Account">
+    SELECT USER_ID,
+    		PASSWORD,
+    		USER_NAME,
+    		EMAIL,
+    		PHONE,
+    		COUNTRY,
+    		ADDRESS_1,
+    		ADDRESS_2,
+    		ZIP_CODE,
+    		USER_TYPE
+    FROM ACCOUNT
+    WHERE USER_ID = #{param1}
+    	AND PASSWORD = #{param2}
+  </select>
+
+  <update id="updateAccount" parameterType="Account">
+    UPDATE ACCOUNT SET
+    	PASSWORD = #{password},
+    	USER_NAME = #{userName},
+    	EMAIL = #{email},
+    	PHONE = #{phone},
+    	COUNTRY = #{country},
+    	ADDRESS_1 = #{address1},
+    	ADDRESS_2 = #{address2},
+    	ZIP_CODE = #{zipCode},
+    	USER_TYPE = #{userType}
+    WHERE USER_ID = #{userId}
+  </update>
+
+  <insert id="insertAccount" parameterType="Account">
+    INSERT INTO ACCOUNT
+      (USER_ID, PASSWORD, USER_NAME, EMAIL, PHONE, COUNTRY, ADDRESS_1, ADDRESS_2, ZIP_CODE, USER_TYPE)
+    VALUES
+      (#{userId}, #{password}, #{userName}, #{email}, #{phone}, #{country}, #{address1}, #{address2}, #{zipCode}, #{userType})
+  </insert>
+  
+  <delete id="deleteAccount" parameterType="Account">
+  	DELETE FROM ACCOUNT
+    WHERE USER_ID = #{userId}
+  </delete>
+
+</mapper>

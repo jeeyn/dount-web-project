@@ -9,13 +9,13 @@
 						<div class="row">
 							<div class="col-sm-8">
 								<div class="footer-logo pb20">
-									<a href="index.jsp"><img src="resources/assets/img/logo.png" alt="image"></a>
+									<a href="index.do"><img src="resources/assets/img/logo.png" alt="image"></a>
 								</div>
 								<div class="footer-text">
-									<p>Lorem ipsum dolor sit ametlyeolo consectetur adipisicing elit sed dong eiusmod tempor incididunt ut labore et incididunt.  </p>
+									<p>All we need is forever love tonight. I'll be late if this night goes by.<br>Our love makes a great miracle.</p>
 								</div>
 								<div class="footer-text">
-									<p>Ut enim ad minim veniam, quis nostrud exercitation ullamco. </p>
+									<p>When I look into your eyes in front of me, my heart burns hot.<br>I hope all the love in the world is full.</p>
 								</div>
 							</div>
 							<div class="col-sm-4">
@@ -25,15 +25,15 @@
 								<!-- /title -->
 								<div class="footer-text">
 									<span>Address: </span>
-									<span>315 Chat mohon Bazar New Yor, NY 4536 </span> 
+									<span>35, Jangwol-ro, Seongbuk-gu, Seoul, Republic of Korea</span> 
 								</div>
-								<div class="footer-text mt5">
+								<div class="footer-text">
 									<span>E-mail: </span>
-									<span>support@yourdomain.com </span> 
+									<span>support@donut.com</span> 
 								</div>
-								<div class="footer-text mt5">
+								<div class="footer-text">
 									<span>Phone: </span>
-									<span>560 265 1523</span> 
+									<span>012 345 6789</span> 
 								</div>
 							</div>
 						</div>
@@ -53,10 +53,10 @@
 						<div class="footer-menu-list pull-right mt25">
 							<ul class="menu-list">
 								<li><a href="index.do">Home</a><span>/</span></li>
-								<li><a href="donate_list.jsp">Donate</a><span>/</span></li>
+								<li><a href="donationList.do">Donate</a><span>/</span></li>
 								<li><a href="benefit_list.jsp">Benefit</a><span>/</span></li>
 								<li><a href="review_lsit.jsp">Review</a><span>/</span></li>
-								<li><a href="contact.jsp">Contact Us</a><span></span></li>
+								<li><a href="contact.do">Contact Us</a><span></span></li>
 							</ul>
 						</div>
 					</div>

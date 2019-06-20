@@ -146,7 +146,7 @@ Padding-Setting
 -------------------------*/
 .pb30{padding-bottom: 30px;}
 .pb10{padding-bottom: 10px;}
-.pb35{padding-bottom: 35px;}
+.pb35{padding-bottom: 30px;}
 .pb40{padding-bottom: 40px;}
 .pb50{padding-bottom: 50px;}
 .pb60{padding-bottom: 60px;}
@@ -1331,6 +1331,7 @@ Start of blog-archive page
 	margin: 0 auto;
 }
 .contact-form-title .section-title {
+	padding-top: 50px;
 	padding-bottom: 50px;
 }
 .contact-us-section .section-content {

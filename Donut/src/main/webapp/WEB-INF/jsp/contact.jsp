@@ -75,7 +75,7 @@
 											<h3 class="black">address</h3>
 										</div>
 										<div class="way-help-text-content">
-											<p>60 Hwarang-ro 13-gil <br>
+											<p>Jangwol-ro 35-gil <br>
 												Seongbuk-gu, Seoul
 											</p>
 										</div>
@@ -107,7 +107,7 @@
 											<h3 class="black">EMAIL ADDRESS</h3>
 										</div>
 										<div class="way-help-text-content">
-											<p>leesoyena@gmail.com <br>dbswldbs123@naver.com</p>
+											<p>leesoyena@gmail.com<br>dbswldbs123@naver.com</p>
 										</div>
 									</div>
 									<!-- /text -->

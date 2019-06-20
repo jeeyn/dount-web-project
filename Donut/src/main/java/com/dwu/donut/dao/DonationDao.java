@@ -18,20 +18,19 @@ public class DonationDao {
 		return donationMapper.getDonationItem(donationId);
 	}
 	
-	public List<Donation> getDonationList(Donation donation) {
+	public List<Donation> getDonationList() {
 		return donationMapper.getDonationList();
 	}
 	
 	public void insertDonation(Donation donation) {
-		donationMapper.insertAccount(donation);
+		donationMapper.insertDonation(donation);
 	}
 	
 	public void updateDonation(Donation donation) {
-		donationMapper.updateAccount(donation);
+		donationMapper.updateDonation(donation);
 	}
 	
 	public void deleteDonation(Donation donation) {
-		donationMapper.deleteAccount(donation);
+		donationMapper.deleteDonation(donation);
 	}
-	 
 }

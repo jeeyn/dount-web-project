@@ -2,11 +2,14 @@ package com.dwu.donut.domain;
 
 import java.util.Date;
 
+import org.springframework.format.annotation.DateTimeFormat;
+
 public class Donation {
 
 	private int donationId;
 	private String userId;
-	private Date donationDate;
+	@DateTimeFormat(pattern="yyyy/MM/dd")
+	private java.util.Date donationDate;
 	private char donationMatchingState;
 	private int albumId;
 	private int donationAlbumQuantity;

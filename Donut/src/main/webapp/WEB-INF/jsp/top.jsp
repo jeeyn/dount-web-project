@@ -18,7 +18,7 @@
 							<li><a href="donationList.do">Donate</a></li>
 							<li><a href="benefit_list.jsp">Benefit</a></li>
 							<li><a href="review_list.jsp">Review</a></li>
-							<li><a href="contact.jsp">Contact Us</a></li>
+							<li><a href="contact.do">Contact Us</a></li>
 							<li><a href="my_page.jsp">My Page</a></li>
 						</ul>
 					</div><!-- /.navbar-collapse -->
@@ -47,7 +47,7 @@
 								<li><a href="donationList.do">Donate</a></li>
 								<li><a href="benefit_list.jsp">Benefit</a></li>
 								<li><a href="review_list.jsp">Review</a></li>
-								<li><a href="contact.jsp">Contact Us</a></li>
+								<li><a href="contact.do">Contact Us</a></li>
 								<li><a href="my_page.jsp">My Page</a></li>
 							</ul>
 						</div>

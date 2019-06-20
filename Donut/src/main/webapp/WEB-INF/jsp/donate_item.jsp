@@ -71,15 +71,17 @@
 									<!-- /head -->
 									<div class="blog-recent-post-meta">
 										<ul class="meta-list pb20 mb20">
-											<li><a class="black" href="#"><span class="mr5 ti-pencil"></span> Tonmoy</a></li>
-											<li><a class="black" href="#"><span class="mr5 ti-timer"></span> 26 Apr, 2017</a></li>
-											<li class="pull-right"><a href="#"><span class="mr5 ti-comment-alt"></span>45</a></li>
-											<li class="pull-right"><a href="#"><span class="mr5 ti-heart"></span>45</a></li>
+											<li><a href="<c:url value="updateDonationItem.do">
+														 	<c:param name="donation" value="${donation}"/>
+														 </c:url>"><span class="mr5 ti-pencil"></span>${donation.userId}</a></li>
+											<li><span class="mr5 ti-timer"></span>${donation.donationDate}</li>
+											<li class="pull-right"><span class="mr5 ti-comment-alt"></span>45</li>
+											<li class="pull-right"><span class="mr5 ti-heart"></span>${donation.donationAlbumQuantity}</li>
 										</ul>
 									</div>
 									<!-- recent-post-meta -->
 									<div class="blog-details-text">
-										<p>Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit sunt in culpa qui officia deserunt.</p>
+										<p>${donation.donationContent}</p>
 									</div>
 									<!-- /text -->
 									<div class="blog-details-text pt15 pb10">

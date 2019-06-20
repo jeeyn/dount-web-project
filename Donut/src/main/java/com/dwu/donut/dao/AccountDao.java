@@ -1,7 +1,6 @@
 package com.dwu.donut.dao;
 
 import org.springframework.beans.factory.annotation.Autowired;
-import org.springframework.dao.DataAccessException;
 import org.springframework.stereotype.Repository;
 
 import com.dwu.donut.dao.mybatis.mapper.AccountMapper;
@@ -18,8 +17,7 @@ public class AccountDao {
 		return accountMapper.getAccountByUserId(userId);
 	}
 
-	public Account getAccountByUserIdAndPassword(String userId, String password) 
-			throws DataAccessException {
+	public Account getAccountByUserIdAndPassword(String userId, String password) {
 		return accountMapper.getAccountByUserIdAndPassword(userId, password);
 	}
 
