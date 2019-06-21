@@ -84,14 +84,15 @@
 									<div class="col-sm-4">
 										<div class="recent-causes-pic-text causes colmd4">
 											<div class="recent-causes-pic">
-												<img src="resources/assets/img/${donation.temp}" alt="image">
+												<img src="resources/assets/img/${donation.album.cover}" alt="image">
 											</div>
 											<!-- /img -->
 											<div class="cause-text pt75 pb50">
 												<div class="gola-reach">
-													<ul class="gola-reach-list" style="text-align:center;">
-														<li>ID : ${donation.userId}</li>
+													<ul class="gola-reach-list" style="text-align:center; height: 100px;">
+														<li>TITLE : ${donation.album.albumName}</li>
 														<li>QUANTITY : ${donation.donationAlbumQuantity}</li>
+														<li>DONOR : ${donation.userId}</li>
 													</ul>
 												</div>
 												<div class="cause-text-head pt15 pb20 p10" style="height: 100px; font-size:12px;">

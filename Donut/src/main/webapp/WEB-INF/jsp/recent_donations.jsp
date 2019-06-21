@@ -21,21 +21,27 @@
 						<div class="cause-item">
 							<div class="recent-causes-pic-text">
 								<div class="recent-causes-pic" style="text-align:center;">
-									<img src="resources/assets/img/${donation.temp}" alt="image">
+									<img src="resources/assets/img/${donation.album.cover}" alt="image">
 								</div>
 								<!-- /img -->
 	
-								<div class="cause-text pt75 pb50">
+								<div class="cause-text pt40 pb50">
 									<!-- /piechart -->
 									<div class="gola-reach">
-										<ul class="gola-reach-list">
-											<li class="yellow">Artist : <span class="black">동방신기</span></li>
-											<li class="yellow">Title : <span class="black">미니앨범 1집 : Another</span></li>
-										</ul>
+										<div class="gola-reach-list" style="height: 50px; text-align:center;">
+											<p><b>
+												<font color="#FFCC48">ARTIST : </font>
+												<font color="black">${donation.album.artist}</font>
+											</b></p>
+											<p><b>
+												<font color="#FFCC48">TITLE : </font>
+												<font color="black">${donation.album.albumName}</font>
+											</b></p>
+										</div>
 									</div>
 									<!-- /gola-reach -->
-									<div class="cause-text-head pt15 pb20">
-										<h3><a href="#">${donation.donationContent}</a> </h3>
+									<div class="cause-text-head pt15 pb20" style="padding: 20px; height: 100px;">
+										<h3>${donation.donationContent}</h3>
 									</div>
 									<!-- /cause-head -->
 									<div class="donate-now-btn">

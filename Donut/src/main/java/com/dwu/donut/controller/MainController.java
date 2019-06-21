@@ -31,8 +31,8 @@ public class MainController {
 		
 		for (int i = 0; i < donationList.size(); i++) {
 			
-			int temp = donationList.get(i).getAlbumId();
-			donationList.get(i).setTemp(albumService.getAlbumItem(temp).getCover());
+			int albumId = donationList.get(i).getAlbumId();
+			donationList.get(i).setAlbum(albumService.getAlbumItem(albumId));
 		}
 		
 		mav.setViewName("index");
