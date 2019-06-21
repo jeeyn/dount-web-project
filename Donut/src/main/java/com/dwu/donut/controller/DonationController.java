@@ -6,7 +6,6 @@ import java.text.SimpleDateFormat;
 import java.util.Date;
 import java.util.List;
 
-import javax.servlet.http.HttpServletRequest;
 import javax.servlet.http.HttpSession;
 
 import org.springframework.beans.factory.annotation.Autowired;
@@ -19,11 +18,10 @@ import org.springframework.web.bind.annotation.RequestMethod;
 import org.springframework.web.bind.annotation.RequestParam;
 import org.springframework.web.servlet.ModelAndView;
 
-import com.dwu.donut.dao.DonationDao;
-import com.dwu.donut.domain.Account;
 import com.dwu.donut.domain.Donation;
 import com.dwu.donut.service.AccountService;
 import com.dwu.donut.service.AlbumService;
+import com.dwu.donut.service.BenefitRequestService;
 import com.dwu.donut.service.DonationService;
 
 @Controller
@@ -37,6 +35,8 @@ public class DonationController {
 	
 	@Autowired
 	public AlbumService albumService;
+	
+	public BenefitRequestService benefitRequestService;
 	
 	// '기증해요' 게시판 View
 	@RequestMapping("donationList.do")
@@ -54,13 +54,14 @@ public class DonationController {
 		}
 		
 		mav.setViewName("donate_list");
-		mav.addObject("donationList", donationList);
+		mav.addObject("donationList", donationService.getDonationList());
 		
 		return mav;
 	}
 		
 	// '기증해요' 게시물 View
 	@RequestMapping("/donationItem.do")
+	@ModelAttribute("benefitRequestList")
 	public ModelAndView donationItem(@RequestParam("donationId") int donationId, HttpSession session) {
 		
 		Donation donation = donationService.getDonationItem(donationId);
@@ -79,7 +80,8 @@ public class DonationController {
 		mav.setViewName("donate_item");
 		mav.addObject("donation", donation);
 		mav.addObject("album", albumService.getAlbumItem(donation.getAlbumId()));
-		
+		mav.addObject("benefitRequestList", benefitRequestService.getBenefitRequestList(donationId));
+
 		return mav;
 	}
 	

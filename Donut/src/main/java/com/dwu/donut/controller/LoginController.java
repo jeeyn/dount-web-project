@@ -11,12 +11,16 @@ import org.springframework.web.servlet.ModelAndView;
 
 import com.dwu.donut.domain.Account;
 import com.dwu.donut.service.AccountService;
+import com.dwu.donut.service.DonationService;
 
 @Controller
 public class LoginController {
 	
 	@Autowired
 	public AccountService accountService;
+	
+	@Autowired
+	public DonationService donationService;
 	
 	// 1. 로그인 화면
 	@RequestMapping("/loginForm.do")
@@ -33,6 +37,9 @@ public class LoginController {
 		
 		if (loginResult == true) { // 로그인 성공
 			if (from != null) {
+				if (from.equals("donate_list")) {
+					mav.addObject("donationList", donationService.getDonationList());
+				}
 				mav.setViewName(from); // 이전 페이지로 이동
 			} else {
 				mav.setViewName("index"); // index.jsp로 이동

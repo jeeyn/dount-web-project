@@ -173,7 +173,7 @@
 											<h3 class="black">Contact Us</h3>
 										</div>
 										<div class="way-help-text-content">
-											<p>Contact Us Now</p>
+											<p>CONTACT US NOW</p>
 										</div>
 									</div>
 									<!-- /text -->

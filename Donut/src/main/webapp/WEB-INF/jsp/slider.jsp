@@ -89,7 +89,9 @@
 		            data-responsive_offset="on" 
 		            data-responsive="off"
 
-		            style="z-index: 8; min-width: 150px; max-width: 150px; max-width: 45px; max-width: 45px; white-space: normal; font-size: 14px; line-height: 22px; font-weight: 500; color: rgba(255, 255, 255, 1.00);font-family:'Merriweather Sans', sans-serif;text-align:center;background-color:#FFCC48;padding:12px 20px 12px 20px;border-color:rgba(0, 0, 0, 1.00);border-radius:3px 3px 3px 3px;outline:none;box-shadow:none;box-sizing:border-box;-moz-box-sizing:border-box;-webkit-box-sizing:border-box;cursor:pointer;">DONATE NOW</div>
+		            style="z-index: 8; min-width: 150px; max-width: 150px; max-width: 45px; max-width: 45px; white-space: normal; font-size: 14px; line-height: 22px; font-weight: 500; color: rgba(255, 255, 255, 1.00);font-family:'Merriweather Sans', sans-serif;text-align:center;background-color:#FFCC48;padding:12px 20px 12px 20px;border-color:rgba(0, 0, 0, 1.00);border-radius:3px 3px 3px 3px;outline:none;box-shadow:none;box-sizing:border-box;-moz-box-sizing:border-box;-webkit-box-sizing:border-box;cursor:pointer;">
+		        	<a href="donationList.do">DONATE NOW</a>
+		    	</div>
 			</li>
 		    <!-- /slide -->
 		        
@@ -157,24 +159,26 @@
 					         style="z-index: 7; white-space: nowrap; font-size: 20px; line-height: 36px; font-weight: 400; color: rgba(255, 255, 255, 1.00);font-family:Arial;">I hope all the love in the world is full.</div>
 
 						<!-- LAYER NR. 4 -->
-						<div class="tp-caption rev-btn " 
-					         id="slide-15-layer-4" 
-					         data-x="91" 
-					         data-y="465" 
-					         data-width="['150']"
-					         data-height="['45']"
-					         data-transform_idle="o:1;"
+						<div class="tp-caption rev-btn "
+							id="slide-15-layer-4" 
+					        data-x="91" 
+					        data-y="465" 
+					        data-width="['150']"
+					        data-height="['45']"
+					        data-transform_idle="o:1;"
 					 
-					         data-transform_in="y:[100%];z:0;rX:0deg;rY:0;rZ:0;sX:1;sY:1;skX:0;skY:0;opacity:0;s:2250;e:Power2.easeInOut;" 
-					         data-transform_out="opacity:0;s:300;" 
-					         data-mask_in="x:0px;y:[100%];" 
-					         data-start="2240" 
-					         data-splitin="none" 
-					         data-splitout="none" 
-					         data-responsive_offset="on" 
-					         data-responsive="off"
+					        data-transform_in="y:[100%];z:0;rX:0deg;rY:0;rZ:0;sX:1;sY:1;skX:0;skY:0;opacity:0;s:2250;e:Power2.easeInOut;" 
+					        data-transform_out="opacity:0;s:300;" 
+					        data-mask_in="x:0px;y:[100%];" 
+					        data-start="2240" 
+					        data-splitin="none" 
+					        data-splitout="none" 
+					        data-responsive_offset="on" 
+					        data-responsive="off"
 					         
-					         style="z-index: 8; min-width: 150px; max-width: 150px; max-width: 45px; max-width: 45px; white-space: normal; font-size: 14px; line-height: 22px; font-weight: 500; color: rgba(255, 255, 255, 1.00);font-family:'Merriweather Sans', sans-serif;text-align:center;background-color: #FFCC48;padding:12px 20px 12px 20px;border-color:rgba(0, 0, 0, 1.00);border-radius:3px 3px 3px 3px;outline:none;box-shadow:none;box-sizing:border-box;-moz-box-sizing:border-box;-webkit-box-sizing:border-box;cursor:pointer;">DONATE NOW</div>
+					        style="z-index: 8; min-width: 150px; max-width: 150px; max-width: 45px; max-width: 45px; white-space: normal; font-size: 14px; line-height: 22px; font-weight: 500; color: rgba(255, 255, 255, 1.00);font-family:'Merriweather Sans', sans-serif;text-align:center;background-color: #FFCC48;padding:12px 20px 12px 20px;border-color:rgba(0, 0, 0, 1.00);border-radius:3px 3px 3px 3px;outline:none;box-shadow:none;box-sizing:border-box;-moz-box-sizing:border-box;-webkit-box-sizing:border-box;cursor:pointer;">
+					    	<a href="donationList.do">DONATE NOW</a>
+						</div>
 			</li>
      		<!-- SLIDE  -->
 			<li data-index="rs-16" data-transition="slidingoverlayup" data-slotamount="default" data-hideafterloop="0" data-hideslideonmobile="off"  data-easein="default" data-easeout="default" data-masterspeed="default"  data-thumb="resources/assets/img/WannaOne.jpg"  data-rotate="0"  data-saveperformance="off"  data-title="Slide" data-param1="" data-param2="" data-param3="" data-param4="" data-param5="" data-param6="" data-param7="" data-param8="" data-param9="" data-param10="" data-description="">
@@ -260,7 +264,9 @@
 		            data-responsive_offset="on" 
 		            data-responsive="off"
 
-		            style="z-index: 8; min-width: 150px; max-width: 150px; max-width: 45px; max-width: 45px; white-space: normal; font-size: 14px; line-height: 22px; font-weight: 500; color: rgba(255, 255, 255, 1.00);font-family:'Merriweather Sans', sans-serif;text-align:center;background-color:#FFCC48;padding:12px 20px 12px 20px;border-color:rgba(0, 0, 0, 1.00);border-radius:3px 3px 3px 3px;outline:none;box-shadow:none;box-sizing:border-box;-moz-box-sizing:border-box;-webkit-box-sizing:border-box;cursor:pointer;">DONATE NOW</div>
+		            style="z-index: 8; min-width: 150px; max-width: 150px; max-width: 45px; max-width: 45px; white-space: normal; font-size: 14px; line-height: 22px; font-weight: 500; color: rgba(255, 255, 255, 1.00);font-family:'Merriweather Sans', sans-serif;text-align:center;background-color:#FFCC48;padding:12px 20px 12px 20px;border-color:rgba(0, 0, 0, 1.00);border-radius:3px 3px 3px 3px;outline:none;box-shadow:none;box-sizing:border-box;-moz-box-sizing:border-box;-webkit-box-sizing:border-box;cursor:pointer;">
+		        	<a href="donationList.do">DONATE NOW</a>
+				</div>
 			</li>
 		    <!-- /slide -->
 		    <!-- SLIDE  -->
@@ -347,7 +353,9 @@
 		            data-responsive_offset="on" 
 		            data-responsive="off"
 
-		            style="z-index: 8; min-width: 150px; max-width: 150px; max-width: 45px; max-width: 45px; white-space: normal; font-size: 14px; line-height: 22px; font-weight: 500; color: rgba(255, 255, 255, 1.00);font-family:'Merriweather Sans', sans-serif;text-align:center;background-color:#FFCC48;padding:12px 20px 12px 20px;border-color:rgba(0, 0, 0, 1.00);border-radius:3px 3px 3px 3px;outline:none;box-shadow:none;box-sizing:border-box;-moz-box-sizing:border-box;-webkit-box-sizing:border-box;cursor:pointer;">DONATE NOW</div>
+		            style="z-index: 8; min-width: 150px; max-width: 150px; max-width: 45px; max-width: 45px; white-space: normal; font-size: 14px; line-height: 22px; font-weight: 500; color: rgba(255, 255, 255, 1.00);font-family:'Merriweather Sans', sans-serif;text-align:center;background-color:#FFCC48;padding:12px 20px 12px 20px;border-color:rgba(0, 0, 0, 1.00);border-radius:3px 3px 3px 3px;outline:none;box-shadow:none;box-sizing:border-box;-moz-box-sizing:border-box;-webkit-box-sizing:border-box;cursor:pointer;">
+		        	<a href="donationList.do">DONATE NOW</a>
+		    	</div>
 			</li>
 		    <!-- /slide -->
 		</ul>

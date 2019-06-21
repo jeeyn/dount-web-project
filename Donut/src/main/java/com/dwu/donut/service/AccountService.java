@@ -14,31 +14,30 @@ public class AccountService {
 	
 	@Autowired
 	AccountDao accountDao;
-
+	
 	// 회원가입 처리
 	public void registerAccount(@Valid Account account) {
 		accountDao.insertAccount(account);
 	}
 	
-	// 회원 로그인 여부 체크\
+	// 회원 로그인 여부 체크
 	public boolean loginCheck(Account account, HttpSession session) {
 		boolean loginResult = accountDao.loginCheck(account);
 		
 		if (loginResult == true) { // true일 경우 세션에 등록
 			session.setAttribute("userId", account.getUserId());
-			session.setAttribute("userType", account.getUserType());
 		}
 		
 		return loginResult;
 	}
-
+	
 	// 회원정보 조회
 	public Account getAccount(String userId) {
 		Account account = accountDao.getAccountByUserId(userId);
 		return account;
 	}
 	
-	// 3. 회원 로그아웃
+	// 회원 로그아웃
 	public void logout(HttpSession session) {
 		// 세선 정보를 초기화
 		session.invalidate();

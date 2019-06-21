@@ -112,26 +112,32 @@
 							<div class="comment-area">
 								<div class="reply-comment mb50">
 									<div class="side-bar-title mb40">
-										<h2>Commnents  [12]</h2>
+										<h2>Commnents</h2>
 									</div>
-									<div class="client-name-reply pb70">
-										<div class="reply-pic pull-left mr25">
-											<img src="resources/assets/img/reply-1.jpg" alt="image">
-										</div>
-										<div class="name-reply-text">
-											<div class="name-reply pb20">
-												<span class="client-name"><a href="#">Tamanna</a></span>
-												<span class="designation">2day ago</span>
-												<div class="comment-icon pull-right">
-													<a href="#"><span class="ti-comments"></span></a>
-												</div>
+									<c:forEach items="${benefitRequestList}" var="benefitRequest">
+										<div class="leave-comment-form pb50 clearfix" style="padding:30px;">
+											<div class="comment-form">
+												<form id="contact_form" action="matchDonation.do" method="POST">
+													<div class="client-name-reply">
+														<div class="name-reply-text">
+															<div class="name-reply pb20">
+																<span class="client-name"><a href="#">${benefitRequest.userId}</a></span><br>
+																<span class="designation">${benefitRequest.brDate}</span><br>
+																<span>QUANTITY : ${benefitRequest.brAlbumQuantity}</span>
+															
+																<div class="send-button text-uppercase pull-right">
+																	<button type="submit" value="Submit">MATCH</button> 
+																</div>
+																<div class="reply-text">
+																	<p>${benefitRequest.brContent}</p>
+																</div>
+															</div>
+														</div>
+													</div>
+												</form>
 											</div>
-
-											<div class="reply-text">
-												<p>Lorem ipsum dolor sit amet, consectetur adipisicing elit  :)</p>
-											</div>
 										</div>
-									</div>
+									</c:forEach>
 									<!-- /client-name-reply --> 
 								</div>
 								<!-- /reply-comment -->
@@ -141,28 +147,15 @@
 									</div>
 									<div class="leave-comment-form pb50 clearfix" style="padding:30px;">
 										<div class="comment-form">
-											<form id="contact_form" action="requestBenefit.do" method="POST" enctype="multipart/form-data">
+											<form id="contact_form" action="requestBenefit.do" method="POST">
 												<div class="leave-commen-info">
-													<input name="brId" type="text" placeholder="Request Id...">
+													<input name="donationId" type="hidden" value="${donation.donationId}">
 												</div>
 												<div class="leave-commen-info">
-													<input name="brDate" type="date" placeholder="Request Date...">
-												</div>
-												<div class="leave-commen-info">
-													<input name="brAlbumQuantity" type="text" placeholder="Album Quantity...">
+													<input name="brAlbumQuantity" type="number" placeholder="Album Quantity">
 												</div>
 												<div class="leave-commen-info mt25">
-													<textarea id="message" name="brContent" placeholder="Message Here..." rows="7" cols="30"></textarea>
-
-												</div>
-												<div class="leave-commen-info">
-													<input name="brMatchingState" type="text" placeholder="Matching State...">
-												</div>
-												<div class="leave-commen-info">
-													<input name="donationId" type="text" placeholder="Donation Id...">
-												<div class="leave-commen-info">
-													<input name="userId" type="text" placeholder="User Id...">
-												</div>
+													<textarea name="brContent" placeholder="Message Here" rows="7" cols="30"></textarea>
 												</div>
 												<div class="send-button text-uppercase pull-right">
 													<button type="submit" value="Submit">SEND REQUEST</button> 
