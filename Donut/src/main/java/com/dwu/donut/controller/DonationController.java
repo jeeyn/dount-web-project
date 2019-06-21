@@ -36,6 +36,7 @@ public class DonationController {
 	@Autowired
 	public AlbumService albumService;
 	
+	@Autowired
 	public BenefitRequestService benefitRequestService;
 	
 	// '기증해요' 게시판 View
@@ -54,7 +55,7 @@ public class DonationController {
 		}
 		
 		mav.setViewName("donate_list");
-		mav.addObject("donationList", donationService.getDonationList());
+		mav.addObject("donationList", donationList);
 		
 		return mav;
 	}
