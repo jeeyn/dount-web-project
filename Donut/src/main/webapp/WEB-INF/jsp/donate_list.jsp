@@ -9,8 +9,6 @@
 	<title>Donut</title>
 	<link rel="shortcut icon" href="resources/assets/img/icon.png">
 
-	<meta name="description" content="FundMe - is a Premium HTML Responsive Templeate by HTMLmate Team. You can use this for anykind of Nonprofit website">
-
 	<meta name="keywords" content="Premium HTML Template">
 
 	<meta name="author" content="HTMLmate">
@@ -53,7 +51,7 @@
 	<!-- End of Header 
 	============================================= -->
 	
-	<!-- Start of Donate page content 
+	<!-- Start of Donate Section 
 	============================================= -->
 	<section id="donates-page-content" class="donates-page-section">
 		<div class="container">
@@ -66,7 +64,9 @@
 						<h2>Donate</h2>
 					</div>
 				</div>
-				<!-- title -->
+				
+				<!-- Donation Title
+				=====================================================================-->
 				
 				<div class="side-bar-search mb40">
 					<form action="#" method="get">
@@ -74,19 +74,31 @@
 							<button type="submit"><span class="ti-search"></span></button>
 					</form>
 				</div>
-				<!-- search -->
+				
+				<!-- Donation Search
+				=====================================================================-->						
 				
 				<div class="causes-page-item">
 					<div class="causes-page-left-item">
 						<div class="causes-item">
 							<div class="row">
+								
+								<!-- Start of Donation List
+								=====================================================================-->
+								
 								<c:forEach items="${donationList}" var="donation">
+								
+									<!-- Start of Donation Item
+									=====================================================================-->
+								
 									<div class="col-sm-4">
 										<div class="recent-causes-pic-text causes colmd4">
 											<div class="recent-causes-pic">
 												<img src="resources/assets/img/${donation.album.cover}" alt="image">
 											</div>
-											<!-- /img -->
+											<!-- Donation Album Cover
+											=====================================================================-->
+											
 											<div class="cause-text pt75 pb50">
 												<div class="gola-reach">
 													<ul class="gola-reach-list" style="text-align:center; height: 100px;">
@@ -100,24 +112,26 @@
 												</div>
 												<div class="donate-now-btn">
 													<div class="donate-btn margin0 text-uppercase">
-														<a href="<c:url value="donationItem.do">
-																 	<c:param name="donationId" value="${donation.donationId}"></c:param>
-																 </c:url>">request now</a>
+														<a href="<c:url value="donationItem.do"><c:param name="donationId" value="${donation.donationId}"></c:param></c:url>">request now</a>
 													</div>
 												</div>
 											</div>
 										</div>
 									</div>
-								<!-- /col-sm-4 -->
-								<!-- donation item -->
+								
+									<!-- End of Donation Item
+									=====================================================================-->
+								
 								</c:forEach>
+								
+								<!-- End of Donation List
+								=====================================================================-->
+								
 							</div>
 						</div>
-						<!-- /product-shop-item -->
 					</div>
-					<!-- /shop-page-left-item -->
 				</div>
-				<!-- /shop-page-item -->
+				
 				<div class="container">
 					<div class="row section-btn">
 						<div class="col-sm-offset-8 col-sm-4">
@@ -127,6 +141,10 @@
 						</div>
 					</div>
 				</div>
+				
+				<!-- Donation Create Button
+				=====================================================================-->
+				
 				<div class="blog-pagination text-center">
 					<ul class="pagination">
 						<li><a href="#"><span class="ti-angle-double-left"></span></a></li>
@@ -136,17 +154,22 @@
 						<li><a href="#"><span class="ti-angle-double-right"></span></a></li>
 					</ul>
 				</div>
+				
+				<!-- Donation List Paging
+				=====================================================================-->
+				
 			</div>
-			<!-- donation list -->
 		</div>
 	</section>
 
-	<!-- End of Donate page content 
+	<!-- End of Donate Section 
 	============================================= -->
 
 	<!-- Start of footer section
 	============================================= -->
+	
 	<jsp:include page="bottom.jsp"/>
+	
 	<!-- End of footer section
 	============================================= -->
 

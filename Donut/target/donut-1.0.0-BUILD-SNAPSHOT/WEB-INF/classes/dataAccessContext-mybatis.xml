@@ -17,8 +17,6 @@
 	     http://mybatis.org/schema/mybatis-spring 
 	     http://mybatis.org/schema/mybatis-spring.xsd">
 
-	<context:component-scan base-package="com.dwu.donut.dao" />
-
 	<context:property-placeholder location="classpath:jdbc.oracle.properties" />
 	 
 	<bean id="dataSource" class="org.apache.commons.dbcp2.BasicDataSource" destroy-method="close">
@@ -27,15 +25,33 @@
 		<property name="username" value="${jdbc.username}"/>
 		<property name="password" value="${jdbc.password}"/>
 	</bean>
-
-	<bean id="transactionManager" class="org.springframework.jdbc.datasource.DataSourceTransactionManager">
-		<property name="dataSource" ref="dataSource"/>
-	</bean>
+	
+	<bean id="incrementerManager" class="org.springframework.jdbc.support.incrementer.OracleSequenceMaxValueIncrementer">  
+     <property name="dataSource">
+            <ref bean="dataSource"/>
+        </property>
+        <property name="incrementerName">   
+            <value>DEFAULT_SEQ</value>
+        </property>
+    </bean>
 	
     <bean id="sqlSessionFactory" class="org.mybatis.spring.SqlSessionFactoryBean">
         <property name="dataSource" ref="dataSource" />
         <property name="typeAliasesPackage" value="com.dwu.donut.domain" />
     </bean>
-
+    
+    <bean id="sqlSessionTemplate" class="org.mybatis.spring.SqlSessionTemplate">
+    	<constructor-arg name="sqlSessionFactory" ref="sqlSessionFactory" />
+    </bean>
+    
     <mybatis:scan base-package="com.dwu.donut.dao.mybatis.mapper" />
+    
+    <bean id="transactionManager" class="org.springframework.jdbc.datasource.DataSourceTransactionManager">
+    	<property name="dataSource" ref="dataSource" />
+    </bean>
+    
+    <tx:annotation-driven transaction-manager="transactionManager" />
+    
+    <context:component-scan base-package="com.dwu.donut.dao" />
+    
 </beans>

@@ -44,7 +44,6 @@
 <!-- /end of head -->
 
 <body>
-	<div id="preloader"></div>
 	<!-- Start of Header 
 	============================================= -->
 	<jsp:include page="top.jsp"/>
@@ -53,183 +52,7 @@
 
 	<!-- Start of Slider Section 
 	============================================= -->
-	<!-- START REVOLUTION SLIDER 5.2.6 fullscreen mode -->
-	<div id="rev_slider_2_1" class="rev_slider fullscreenbanner" style="display:none;" data-version="5.2.6">
-		<ul>	<!-- SLIDE  -->
-			<li data-index="rs-13" data-transition="slidingoverlayup" data-slotamount="default" data-hideafterloop="0" data-hideslideonmobile="off"  data-easein="default" data-easeout="default" data-masterspeed="default"  data-thumb="resources/rev-slider/img/slider-bg.jpg"  data-rotate="0"  data-saveperformance="off"  data-title="Slide" data-param1="" data-param2="" data-param3="" data-param4="" data-param5="" data-param6="" data-param7="" data-param8="" data-param9="" data-param10="" data-description="">
-				<!-- MAIN IMAGE -->
-				<img src="resources/rev-slider/img/slider-bg.jpg"  alt="" title="slider-bg"  width="1920" height="750" data-bgposition="center center" data-bgfit="cover" data-bgrepeat="no-repeat" class="rev-slidebg" data-no-retina>
-				<!-- LAYERS -->
-
-				<!-- LAYER NR. 1 -->
-				<div class="tp-caption lato   tp-resizeme" 
-				id="slide-13-layer-1" 
-				data-x="91" 
-				data-y="325" 
-				data-width="['auto']"
-				data-height="['auto']"
-				data-transform_idle="o:1;"
-
-				data-transform_in="y:[100%];z:0;rX:0deg;rY:0;rZ:0;sX:1;sY:1;skX:0;skY:0;opacity:0;s:1640;e:Power2.easeInOut;" 
-				data-transform_out="opacity:0;s:300;" 
-				data-mask_in="x:0px;y:[100%];s:inherit;e:inherit;" 
-				data-start="1210" 
-				data-splitin="none" 
-				data-splitout="none" 
-				data-responsive_offset="on" 
-
-
-				style="z-index: 5; white-space: nowrap; font-size: 36px; line-height: 36px; font-weight: 700; color: rgba(255, 255, 255, 1.00);font-family:lato;">DONATE YOUR THINGS</div>
-
-				<!-- LAYER NR. 2 -->
-				<div class="tp-caption   tp-resizeme" 
-				id="slide-13-layer-2" 
-				data-x="91" 
-				data-y="383" 
-				data-width="['auto']"
-				data-height="['auto']"
-				data-transform_idle="o:1;"
-
-				data-transform_in="y:[100%];z:0;rX:0deg;rY:0;rZ:0;sX:1;sY:1;skX:0;skY:0;opacity:0;s:1890;e:Power2.easeInOut;" 
-				data-transform_out="opacity:0;s:300;" 
-				data-mask_in="x:0px;y:[100%];s:inherit;e:inherit;" 
-				data-start="1710" 
-				data-splitin="none" 
-				data-splitout="none" 
-				data-responsive_offset="on" 
-
-
-				style="z-index: 6; white-space: nowrap; font-size: 20px; line-height: 36px; font-weight: 400; color: rgba(255, 255, 255, 1.00);font-family:Arial;">Eaque ipsa quae ab illo inventore veritatis et quasi architecto voluptas  </div>
-
-				<!-- LAYER NR. 3 -->
-				<div class="tp-caption   tp-resizeme" 
-				id="slide-13-layer-3" 
-				data-x="91" 
-				data-y="413" 
-				data-width="['auto']"
-				data-height="['auto']"
-				data-transform_idle="o:1;"
-
-				data-transform_in="y:[100%];z:0;rX:0deg;rY:0;rZ:0;sX:1;sY:1;skX:0;skY:0;opacity:0;s:1920;e:Power2.easeInOut;" 
-				data-transform_out="opacity:0;s:300;" 
-				data-mask_in="x:0px;y:[100%];s:inherit;e:inherit;" 
-				data-start="1730" 
-				data-splitin="none" 
-				data-splitout="none" 
-				data-responsive_offset="on" 
-
-
-				style="z-index: 7; white-space: nowrap; font-size: 20px; line-height: 36px; font-weight: 400; color: rgba(255, 255, 255, 1.00);font-family:Arial;">explicabo. Nemo enim ipsam voluptatem quia  </div>
-
-				<!-- LAYER NR. 4 -->
-				<div class="tp-caption rev-btn " 
-				id="slide-13-layer-4" 
-				data-x="91" 
-				data-y="465" 
-				data-width="['150']"
-				data-height="['45']"
-				data-transform_idle="o:1;"
-
-				data-transform_in="y:[100%];z:0;rX:0deg;rY:0;rZ:0;sX:1;sY:1;skX:0;skY:0;opacity:0;s:2250;e:Power2.easeInOut;" 
-				data-transform_out="opacity:0;s:300;" 
-				data-mask_in="x:0px;y:[100%];" 
-				data-start="2240" 
-				data-splitin="none" 
-				data-splitout="none" 
-				data-responsive_offset="on" 
-				data-responsive="off"
-
-				style="z-index: 8; min-width: 150px; max-width: 150px; max-width: 45px; max-width: 45px; white-space: normal; font-size: 14px; line-height: 22px; font-weight: 500; color: rgba(255, 255, 255, 1.00);font-family:'Merriweather Sans', sans-serif;text-align:center;background-color:#FFCC48;padding:12px 20px 12px 20px;border-color:rgba(0, 0, 0, 1.00);border-radius:3px 3px 3px 3px;outline:none;box-shadow:none;box-sizing:border-box;-moz-box-sizing:border-box;-webkit-box-sizing:border-box;cursor:pointer;">DONATE NOW</div>
-			</li>
-			<!-- /slide -->
-			<li data-index="rs-15" data-transition="slidingoverlayup" data-slotamount="default" data-hideafterloop="0" data-hideslideonmobile="off"  data-easein="default" data-easeout="default" data-masterspeed="default"  data-thumb="resources/rev-slider/img/slider-bg.jpg"  data-rotate="0"  data-saveperformance="off"  data-title="Slide" data-param1="" data-param2="" data-param3="" data-param4="" data-param5="" data-param6="" data-param7="" data-param8="" data-param9="" data-param10="" data-description="">
-		<!-- MAIN IMAGE -->
-		<img src="resources/rev-slider/img/slider-bg.jpg"  alt="" title="slider-bg"  width="1920" height="750" data-bgposition="center center" data-bgfit="cover" data-bgrepeat="no-repeat" class="rev-slidebg" data-no-retina>
-		<!-- LAYERS -->
-
-		<!-- LAYER NR. 1 -->
-		<div class="tp-caption lato   tp-resizeme" 
-			 id="slide-15-layer-1" 
-			 data-x="91" 
-			 data-y="325" 
-						data-width="['auto']"
-			data-height="['auto']"
-			data-transform_idle="o:1;"
- 
-			 data-transform_in="y:[100%];z:0;rX:0deg;rY:0;rZ:0;sX:1;sY:1;skX:0;skY:0;opacity:0;s:1640;e:Power2.easeInOut;" 
-			 data-transform_out="opacity:0;s:300;" 
-			 data-mask_in="x:0px;y:[100%];s:inherit;e:inherit;" 
-			data-start="1210" 
-			data-splitin="none" 
-			data-splitout="none" 
-			data-responsive_offset="on" 
-
-			
-			style="z-index: 5; white-space: nowrap; font-size: 36px; line-height: 36px; font-weight: 700; color: rgba(255, 255, 255, 1.00);font-family:lato;">DONATE YOUR THINGS</div>
-
-		<!-- LAYER NR. 2 -->
-		<div class="tp-caption   tp-resizeme" 
-			 id="slide-15-layer-2" 
-			 data-x="91" 
-			 data-y="383" 
-						data-width="['auto']"
-			data-height="['auto']"
-			data-transform_idle="o:1;"
- 
-			 data-transform_in="y:[100%];z:0;rX:0deg;rY:0;rZ:0;sX:1;sY:1;skX:0;skY:0;opacity:0;s:1890;e:Power2.easeInOut;" 
-			 data-transform_out="opacity:0;s:300;" 
-			 data-mask_in="x:0px;y:[100%];s:inherit;e:inherit;" 
-			data-start="1710" 
-			data-splitin="none" 
-			data-splitout="none" 
-			data-responsive_offset="on" 
-
-			
-			style="z-index: 6; white-space: nowrap; font-size: 20px; line-height: 36px; font-weight: 400; color: rgba(255, 255, 255, 1.00);font-family:Arial;">Eaque ipsa quae ab illo inventore veritatis et quasi architecto voluptas</div>
-
-		<!-- LAYER NR. 3 -->
-		<div class="tp-caption   tp-resizeme" 
-			 id="slide-15-layer-3" 
-			 data-x="91" 
-			 data-y="413" 
-						data-width="['auto']"
-			data-height="['auto']"
-			data-transform_idle="o:1;"
- 
-			 data-transform_in="y:[100%];z:0;rX:0deg;rY:0;rZ:0;sX:1;sY:1;skX:0;skY:0;opacity:0;s:1920;e:Power2.easeInOut;" 
-			 data-transform_out="opacity:0;s:300;" 
-			 data-mask_in="x:0px;y:[100%];s:inherit;e:inherit;" 
-			data-start="1730" 
-			data-splitin="none" 
-			data-splitout="none" 
-			data-responsive_offset="on" 
-
-			
-			style="z-index: 7; white-space: nowrap; font-size: 20px; line-height: 36px; font-weight: 400; color: rgba(255, 255, 255, 1.00);font-family:Arial;">explicabo. Nemo enim ipsam voluptatem quia</div>
-
-		<!-- LAYER NR. 4 -->
-		<div class="tp-caption rev-btn " 
-			 id="slide-15-layer-4" 
-			 data-x="91" 
-			 data-y="465" 
-						data-width="['150']"
-			data-height="['45']"
-			data-transform_idle="o:1;"
- 
-			 data-transform_in="y:[100%];z:0;rX:0deg;rY:0;rZ:0;sX:1;sY:1;skX:0;skY:0;opacity:0;s:2250;e:Power2.easeInOut;" 
-			 data-transform_out="opacity:0;s:300;" 
-			 data-mask_in="x:0px;y:[100%];" 
-			data-start="2240" 
-			data-splitin="none" 
-			data-splitout="none" 
-			data-responsive_offset="on" 
-			data-responsive="off"
-			
-			style="z-index: 8; min-width: 150px; max-width: 150px; max-width: 45px; max-width: 45px; white-space: normal; font-size: 14px; line-height: 22px; font-weight: 500; color: rgba(255, 255, 255, 1.00);font-family:'Merriweather Sans', sans-serif;text-align:center;background-color: #FFCC48;padding:12px 20px 12px 20px;border-color:rgba(0, 0, 0, 1.00);border-radius:3px 3px 3px 3px;outline:none;box-shadow:none;box-sizing:border-box;-moz-box-sizing:border-box;-webkit-box-sizing:border-box;cursor:pointer;">DONATE NOW</div>
-	</li>
-	<!-- SLIDE  -->
-		</ul>
-	</div>
+	<jsp:include page="slider.jsp"/>
 	<!-- End of Slider Section 
 	============================================= -->
 
@@ -261,7 +84,7 @@
 											<h3 class="black">Donate</h3>
 										</div>
 										<div class="way-help-text-content">
-											<p>Excepteur sint occaecat cupidatat non proident suntin culpa</p>
+											<p>GIVE K-POP ALBUMS NOW</p>
 										</div>
 									</div>
 									<!-- /text -->
@@ -270,7 +93,7 @@
 											<h3 class="yellow">Donate</h3>
 										</div>
 										<div class="way-help-text-content pb20">
-											<p>Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla.</p>
+											<p>If Your User Type is DONOR, Donate Your Album to K-POP Fans Around the World Now!</p>
 										</div>
 										<div class="way-help-pic pb30">
 											<a href="donate_list.html"><span class="ti-plus"></span></a>
@@ -291,7 +114,7 @@
 											<h3 class="black">Benefit</h3>
 										</div>
 										<div class="way-help-text-content">
-											<p>Excepteur sint occaecat cupidatat non proident suntin culpa</p>
+											<p>GET K-POP ALBUMS NOW</p>
 										</div>
 									</div>
 									<!-- /text -->
@@ -300,7 +123,7 @@
 											<h3 class="yellow">Benefit</h3>
 										</div>
 										<div class="way-help-text-content pb20">
-											<p>Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla.</p>
+											<p>If Your User Type is DONOR, Benefit K-POP Albums to K-POP Fans Around the World Now!</p>
 										</div>
 										<div class="way-help-pic pb30">
 											<a href="#"><span class="ti-plus"></span></a>
@@ -321,7 +144,7 @@
 											<h3 class="black">Review</h3>
 										</div>
 										<div class="way-help-text-content">
-											<p>Excepteur sint occaecat cupidatat non proident suntin culpa</p>
+											<p>WRITE REVIEW NOW</p>
 										</div>
 									</div>
 									<!-- /text -->
@@ -330,7 +153,7 @@
 											<h3 class="yellow">Review</h3>
 										</div>
 										<div class="way-help-text-content pb20">
-											<p>Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla.</p>
+											<p>If You Have Received The K-POP Albums, Write a Review Please</p>
 										</div>
 										<div class="way-help-pic pb30">
 											<a href="review.html"><span class="ti-plus"></span></a>
@@ -350,7 +173,7 @@
 											<h3 class="black">Contact Us</h3>
 										</div>
 										<div class="way-help-text-content">
-											<p>Excepteur sint occaecat cupidatat non proident suntin culpa</p>
+											<p>CONTACT US NOW</p>
 										</div>
 									</div>
 									<!-- /text -->
@@ -359,10 +182,10 @@
 											<h3 class="yellow">Contact Us</h3>
 										</div>
 										<div class="way-help-text-content pb20">
-											<p>Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla.</p>
+											<p>Do You Have Any Problem? Feel Free to Contact Us</p>
 										</div>
 										<div class="way-help-pic pb30">
-											<a href="contact.html"><span class="ti-plus"></span></a>
+											<a href="contact.do"><span class="ti-plus"></span></a>
 										</div>
 									</div>
 								</div>
@@ -377,276 +200,10 @@
 	<!-- End of Ways of help  
 	============================================= -->
 
-	<!-- Start of Donation
+	<!-- Start of Recent Donations
 	============================================= -->
-	<section id="recent-causes" class="recent-causes-section">
-		<div class="container">
-			<div class="row section-content">
-				<div class="section-title text-center">
-					<div class="section-title-text text-uppercase">
-						<p>YOU MIGHT INTEREST</p>
-					</div>
-					<div class="section-title-text">
-						<h2>Recent Donations</h2>
-					</div>
-				</div>
-				<!-- /section-title -->
-				<div class="recent-causes-content">
-					<div class="cause-item">
-						<div class="recent-causes-pic-text">
-							<div class="recent-causes-pic">
-								<img src="resources/assets/img/cause-1.jpg" alt="image">
-							</div>
-							<!-- /img -->
-
-							<div class="cause-text pt75 pb50">
-								<!-- /piechart -->
-								<div class="gola-reach">
-									<ul class="gola-reach-list">
-										<li class="yellow">Artist : <span class="black">김재환</span></li>
-										<li class="yellow">Title : <span class="black">미니앨범 1집 : Another</span></li>
-									</ul>
-								</div>
-								<!-- /gola-reach -->
-								<div class="cause-text-head pt15 pb20">
-									<h3><a href="#">Nemo enim ipsam voluptatem quia vo-luptas sit aspernatur aut </a> </h3>
-								</div>
-								<!-- /cause-head -->
-								<div class="donate-now-btn">
-									<div class="donate-btn margin0 text-uppercase">
-										<a href="donation.html">donate now</a>
-									</div>
-								</div>
-								<!-- /donate-now-btn -->
-							</div>
-						</div><!--/recent-causes-pic-text -->
-					</div>
-					<!-- /cause-item -->
-
-					<div class="cause-item">
-						<div class="recent-causes-pic-text">
-							<div class="recent-causes-pic">
-								<img src="resources/assets/img/cause-2.jpg" alt="image">
-							</div>
-							<!-- /img -->
-
-							<div class="cause-text pt75 pb50">
-								<!-- /donate-piechart -->
-								<div class="gola-reach">
-									<ul class="gola-reach-list">
-										<li class="yellow">Artist : <span class="black">잔나비 (Jannabi)</span></li>
-										<li class="yellow">Title : <span class="black">2집 - 전설</span></li>
-									</ul>
-								</div>
-								<!-- /gola-reach -->
-								<div class="cause-text-head pt15 pb20">
-									<h3><a href="#">Nemo enim ipsam voluptatem quia vo-luptas sit aspernatur aut </a> </h3>
-								</div>
-								<!-- /tea=xt-head -->
-								<div class="donate-now-btn">
-									<div class="donate-btn margin0 text-uppercase">
-										<a href="donation.html">donate now</a>
-									</div>
-								</div>
-								<!-- /donate-now-btn -->
-							</div>
-						</div>
-						<!-- recent-causes-pic-text -->
-					</div>
-					<!-- /cause-item -->
-
-					<div class="cause-item">
-						<div class="recent-causes-pic-text">
-							<div class="recent-causes-pic">
-								<img src="resources/assets/img/cause-3.jpg" alt="image">
-							</div>
-							<!-- /img -->
-							<div class="cause-text pt75 pb50">
-								<!-- /donate-piechart -->
-								<div class="gola-reach">
-									<ul class="gola-reach-list">
-										<li class="yellow">Artist : <span class="black">러블리즈 (Lovelyz)</span></li>
-										<li class="yellow">Title : <span class="black">미니앨범 6집 : Once Upon A Time [한정판]</span></li>
-									</ul>
-								</div>
-								<!-- /gola-reach -->
-								<div class="cause-text-head pt15 pb20">
-									<h3><a href="#">Nemo enim ipsam voluptatem quia vo-luptas sit aspernatur aut</a> </h3>
-								</div>
-								<!-- /text-head -->
-								<div class="donate-now-btn">
-									<div class="donate-btn margin0 text-uppercase">
-										<a href="donation.html">donate now</a>
-									</div>
-								</div>
-								<!-- /doante-now-btn -->
-							</div>
-						</div>
-						<!-- /recent-causes-pic -->
-					</div>
-					<!-- /cause-item -->
-
-					<div class="cause-item">
-						<div class="recent-causes-pic-text">
-							<div class="recent-causes-pic">
-								<img src="resources/assets/img/cause-4.jpg" alt="image">
-							</div>
-							<!-- /img -->
-							<div class="cause-text pt75 pb50">
-								<div class="gola-reach">
-									<ul class="gola-reach-list">
-										<li class="yellow">Artist : <span class="black">위너 (WINNER)</span></li>
-										<li class="yellow">Title : <span class="black">미니앨범 2집 : WE [Blue ver.] </span></li>
-									</ul>
-								</div>
-								<div class="cause-text-head pt15 pb20">
-									<h3><a href="#">Nemo enim ipsam voluptatem quia vo-luptas sit aspernatur aut</a> </h3>
-								</div>
-								<div class="donate-now-btn">
-									<div class="donate-btn margin0 text-uppercase">
-										<a href="donation.html">donate now</a>
-									</div>
-								</div>
-							</div>
-						</div>
-					</div>
-					<!-- /cause-item -->
-
-					<div class="cause-item">
-						<div class="recent-causes-pic-text">
-							<div class="recent-causes-pic">
-								<img src="resources/assets/img/cause-5.jpg" alt="image">
-							</div>
-							<!-- /img -->
-							<div class="cause-text pt75 pb50">
-								<div class="gola-reach">
-									<ul class="gola-reach-list">
-										<li class="yellow">Artist : <span class="black">오마이걸 (OH MY GIRL)</span></li>
-										<li class="yellow">Title : <span class="black">The Fifth Season [Drawing ver.]</span></li>
-									</ul>
-								</div>
-								<div class="cause-text-head pt15 pb20">
-									<h3><a href="#">Nemo enim ipsam voluptatem quia vo-luptas sit aspernatur aut </a> </h3>
-								</div>
-								<div class="donate-now-btn">
-									<div class="donate-btn margin0 text-uppercase">
-										<a href="donation.html">donate now</a>
-									</div>
-								</div>
-							</div>
-						</div>
-					</div>
-					<!-- /cause-item -->
-
-					<div class="cause-item">
-						<div class="recent-causes-pic-text">
-							<div class="recent-causes-pic">
-								<img src="resources/assets/img/cause-6.jpg" alt="image">
-							</div>
-							<!-- /img -->
-							<div class="cause-text pt75 pb50">
-								<div class="gola-reach">
-									<ul class="gola-reach-list">
-										<li class="yellow">Artist : <span class="black">트와이스 (TWICE)</span></li>
-										<li class="yellow">Title : <span class="black">미니앨범 7집 : Fancy You</span></li>
-									</ul>
-								</div>
-								<div class="cause-text-head pt15 pb20">
-									<h3><a href="#">Nemo enim ipsam voluptatem quia vo-luptas sit aspernatur aut </a> </h3>
-								</div>
-								<div class="donate-now-btn">
-									<div class="donate-btn margin0 text-uppercase">
-										<a href="donation.html">donate now</a>
-									</div>
-								</div>
-							</div>
-						</div>
-					</div>
-					<!-- /cause-item -->
-
-					<div class="cause-item">
-						<div class="recent-causes-pic-text">
-							<div class="recent-causes-pic">
-								<img src="resources/assets/img/cause-7.jpg" alt="image">
-							</div>
-							<!-- /img -->
-							<div class="cause-text pt75 pb50">
-								<div class="gola-reach">
-									<ul class="gola-reach-list">
-										<li class="yellow">Artist : <span class="black">방탄소년단 (BTS)</span></li>
-										<li class="yellow">Title : <span class="black">화양연화 Young Forever</span></li>
-									</ul>
-								</div>
-								<div class="cause-text-head pt15 pb20">
-									<h3><a href="#">Nemo enim ipsam voluptatem quia vo-luptas sit aspernatur aut </a> </h3>
-								</div>
-								<div class="donate-now-btn">
-									<div class="donate-btn margin0 text-uppercase">
-										<a href="donation.html">donate now</a>
-									</div>
-								</div>
-							</div>
-						</div>
-					</div>
-					<!-- /cause-item -->
-					<div class="cause-item">
-						<div class="recent-causes-pic-text">
-							<div class="recent-causes-pic">
-								<img src="resources/assets/img/cause-9.jpg" alt="image">
-							</div>
-							<!-- /img -->
-							<div class="cause-text pt75 pb50">
-								<div class="gola-reach">
-									<ul class="gola-reach-list">
-										<li class="yellow">Artist : <span class="black">제이 레빗 (J Rabbit)</span></li>
-										<li class="yellow">Title : <span class="black">4집 Dialogue on the Road</span></li>
-									</ul>
-								</div>
-								<div class="cause-text-head pt15 pb20">
-									<h3><a href="#">Nemo enim ipsam voluptatem quia vo-luptas sit aspernatur aut </a> </h3>
-								</div>
-								<div class="donate-now-btn">
-									<div class="donate-btn margin0 text-uppercase">
-										<a href="donation.html">donate now</a>
-									</div>
-								</div>
-							</div>
-						</div>
-					</div>
-					<!-- /cause-item -->
-
-
-
-					<div class="cause-item">
-						<div class="recent-causes-pic-text">
-							<div class="recent-causes-pic">
-								<img src="resources/assets/img/cause-6.jpg" alt="image">
-							</div>
-							<!-- /img -->
-							<div class="cause-text pt75 pb50">
-								<div class="gola-reach">
-									<ul class="gola-reach-list">
-										<li class="yellow">Artist : <span class="black">아이유(IU)</span></li>
-										<li class="yellow">Title : <span class="black">모던타임즈(Modern Times)</span></li>
-									</ul>
-								</div>
-								<div class="cause-text-head pt15 pb20">
-									<h3><a href="#">Nemo enim ipsam voluptatem quia vo-luptas sit aspernatur aut </a> </h3>
-								</div>
-								<div class="donate-now-btn">
-									<div class="donate-btn margin0 text-uppercase">
-										<a href="donation.html">donate now</a>
-									</div>
-								</div>
-							</div>
-						</div>
-					</div>
-					<!-- /cause-item -->
-				</div>
-			</div><!-- /row -->
-		</div><!-- /container -->
-	</section>
-	<!-- End of Recent Causes   
+	<jsp:include page="recent_donations.jsp"/>
+	<!-- End of Recent Donations
 	============================================= -->
 
 	<!-- Start of footer section
@@ -656,7 +213,6 @@
 	
 	<!-- End of footer section
 	============================================= -->
-
 
 	<!-- js -->
 	<script type="text/javascript" src="resources/assets/js/jquery-2.1.4.min.js"></script>
@@ -668,7 +224,6 @@
 	<script type="text/javascript" src="resources/assets/js/countdown.js"></script>
 	<script type="text/javascript" src="resources/assets/js/parallax.min.js"></script>
 	<script type="text/javascript" src="resources/assets/js/circle-progress.js"></script>
-
 
 	<!-- REVOLUTION JS FILES -->
 	<script type="text/javascript" src="resources/rev-slider/js/jquery.themepunch.tools.min.js"></script>
@@ -684,7 +239,6 @@
     <script type="text/javascript" src="resources/rev-slider/js/revolution.extension.parallax.min.js"></script>
     <script type="text/javascript" src="resources/rev-slider/js/revolution.extension.slideanims.min.js"></script>
     <script type="text/javascript" src="resources/rev-slider/js/revolution.extension.video.min.js"></script>
-
     <script type="text/javascript" src="resources/assets/js/function.js"></script>
 
     <script>
@@ -712,7 +266,7 @@
     						enable:true,
     						hide_onmobile:false,
     						hide_onleave:false,
-    						tmp:'<div class="tp-arr-allwrapper">	<div class="tp-arr-imgholder"></div></div>',
+    						tmp:'<div class="tp-arr-allwrapper"><div class="tp-arr-imgholder"></div></div>',
     						left: {
     							h_align:"left",
     							v_align:"center",

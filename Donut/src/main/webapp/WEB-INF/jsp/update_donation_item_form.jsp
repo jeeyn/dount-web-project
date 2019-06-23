@@ -55,20 +55,21 @@
 	<!-- End of Header 
 	============================================= -->
 
-	<!-- Start of create page section 
+	<!-- Start of Update Donation Section
 	============================================= -->
 	<div class="contact-form">
 		<div class="contact-form-title">
 			<div class="section-title text-center">
 				<div class="section-title-text text-uppercase">
-					<p>Create Donation</p>
+					<p>Update Donation</p>
 				</div>
 				<div class="section-title-text">
-					<h2>Create Donation</h2>
+					<h2>Update Donation</h2>
 				</div>
 			</div>
 		</div>
-		<!-- / create-form-title-->
+		<!-- Update Donation Title
+		============================================= -->
 		<div class="container">
 			<div class="contact-comment-form pb50 clearfix">
 				<div class="comment-form">
@@ -106,17 +107,15 @@
 							<textarea name="donationContent" rows="7" cols="30">${donation.donationContent}</textarea>
 						</div>
 						<div class="send-button text-uppercase text-center">
-							<button type="submit" value="Donate Now">Donate Now</button> 
+							<button type="submit" value="Update">Update</button> 
 						</div>
 					</form>
 				</div>
 			</div>
 		</div>
 	</div>
-	<!-- / create-form-->
 
-
-	<!-- End of contact page section  
+	<!-- End of Update Donation Section  
 	============================================= -->
 
 	<!-- Start of footer section

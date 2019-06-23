@@ -66,12 +66,11 @@
 									<img src="resources/assets/img/${album.cover}" alt="image">
 								</div>
 								<br><br>
-								<!-- /img -->
+								<!-- album cover -->
 								<div class="blog-single-text  pb50">
 									<div class="blog-head-title pt15 pb20">
 										<h2 class="black"><a href="#">${album.albumName}</a></h2>
 									</div>
-									<!-- /head -->
 									<div class="blog-recent-post-meta">
 										<ul class="meta-list pb20 mb20">
 											<li><span class="mr5 ti-pencil"></span>${donation.userId}&nbsp;&nbsp;</li>
@@ -79,12 +78,11 @@
 											<li><span class="mr5 ti-heart"></span>${donation.donationAlbumQuantity}장&nbsp;&nbsp;</li>
 										</ul>
 									</div>
-									<!-- recent-post-meta -->
 									<div class="blog-details-text">
 										<p>${donation.donationContent}</p>
 									</div>
 								</div>
-								<!-- / blog-single-text-->
+								<!-- album detail -->
 							</div>
 							
 							<div class="container">

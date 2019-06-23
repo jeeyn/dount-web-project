@@ -55,7 +55,7 @@
 	<!-- End of Header 
 	============================================= -->
 
-	<!-- Start of create page section 
+	<!-- Start of Create Donation Section
 	============================================= -->
 	<div class="contact-form">
 		<div class="contact-form-title">
@@ -68,7 +68,9 @@
 				</div>
 			</div>
 		</div>
-		<!-- / create-form-title-->
+		<!-- Create Donation Title
+		============================================= -->
+		
 		<div class="container">
 			<div class="contact-comment-form pb50 clearfix">
 				<div class="comment-form">
@@ -94,16 +96,15 @@
 							<textarea name="donationContent" placeholder="Message Here..." rows="7" cols="30"></textarea>
 						</div>
 						<div class="send-button text-uppercase text-center">
-							<button type="submit" value="Donate Now">Donate Now</button> 
+							<button type="submit" value="Create">Create</button> 
 						</div>
 					</form>
 				</div>
 			</div>
 		</div>
 	</div>
-	<!-- / create-form-->
 
-	<!-- End of contact page section  
+	<!-- End of Create Donation Section 
 	============================================= -->
 
 	<!-- Start of footer section

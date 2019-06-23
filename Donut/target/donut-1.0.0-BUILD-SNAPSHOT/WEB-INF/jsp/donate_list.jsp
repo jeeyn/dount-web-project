@@ -1,4 +1,4 @@
-<%@ page language="java" contentType="text/html; charset=UTF-8" pageEncoding="UTF-8"%>
+<%@ page language="java" contentType="text/html; charset=UTF-8" pageEncoding="UTF-8" %>
 
 <%@ taglib prefix="c" uri="http://java.sun.com/jsp/jstl/core" %>
 
@@ -80,41 +80,40 @@
 					<div class="causes-page-left-item">
 						<div class="causes-item">
 							<div class="row">
-								<c:forEach var="i" begin="1" end="9" step="1">
-								<%-- <c:forEach var="donation" items=${donationList}> --%>
+								<c:forEach items="${donationList}" var="donation">
 									<div class="col-sm-4">
 										<div class="recent-causes-pic-text causes colmd4">
 											<div class="recent-causes-pic">
-												<img src="resources/assets/img/cause-1.jpg" alt="image">
+												<img src="resources/assets/img/${donation.album.cover}" alt="image">
 											</div>
 											<!-- /img -->
 											<div class="cause-text pt75 pb50">
 												<div class="gola-reach">
-													<ul class="gola-reach-list">
-														<li>ID : <c:out value="${donation.userId}"/></li>
-														<li>QUANTITY : <c:out value="${donation.donationAlbumQuantity}"/></li>
+													<ul class="gola-reach-list" style="text-align:center; height: 100px;">
+														<li>TITLE : ${donation.album.albumName}</li>
+														<li>QUANTITY : ${donation.donationAlbumQuantity}</li>
+														<li>DONOR : ${donation.userId}</li>
 													</ul>
 												</div>
-												<div class="cause-text-head pt15 pb20 p10">
-													<h3><a href="donate_item.jsp"><c:out value="${donation.donationContent}"/></a></h3>
+												<div class="cause-text-head pt15 pb20 p10" style="height: 100px; font-size:12px;">
+													<h3>${donation.donationContent}</h3>
 												</div>
 												<div class="donate-now-btn">
 													<div class="donate-btn margin0 text-uppercase">
-														<a href="<c:url value="donate_item.jsp">
-															<c:param name="donationId" value="${donation.donationId}"/></c:url>">
-														donate now</a>
+														<a href="<c:url value="donationItem.do">
+																 	<c:param name="donationId" value="${donation.donationId}"></c:param>
+																 </c:url>">request now</a>
 													</div>
 												</div>
 											</div>
 										</div>
 									</div>
-									<!-- donation item -->
+								<!-- donation item -->
 								</c:forEach>
 							</div>
 						</div>
-						<!-- /product-shop-item -->
 					</div>
-					<!-- /shop-page-left-item -->
+					
 				</div>
 				<!-- /shop-page-item -->
 				<div class="container">

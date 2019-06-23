@@ -146,7 +146,7 @@ Padding-Setting
 -------------------------*/
 .pb30{padding-bottom: 30px;}
 .pb10{padding-bottom: 10px;}
-.pb35{padding-bottom: 35px;}
+.pb35{padding-bottom: 30px;}
 .pb40{padding-bottom: 40px;}
 .pb50{padding-bottom: 50px;}
 .pb60{padding-bottom: 60px;}
@@ -485,7 +485,7 @@ canvas {
 	font-weight: 600;
 }
 .cause-text-head h3 {
-	font-size: 18px;
+	font-size: 12px;
 	text-align: center;
 	line-height: 25px;
 	color: #0e0e0e;
@@ -1373,6 +1373,7 @@ Start of become-a-volentaree-section
 	margin-top: 10px;
 }
 .donate-cause-item select {
+	margin-botom: 30px;
 	height: 50px;
 	width: 100%;
 	padding: 0px 15px;

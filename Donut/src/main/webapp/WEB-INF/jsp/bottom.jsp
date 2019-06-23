@@ -54,8 +54,8 @@
 							<ul class="menu-list">
 								<li><a href="index.do">Home</a><span>/</span></li>
 								<li><a href="donationList.do">Donate</a><span>/</span></li>
-								<li><a href="benefit_list.jsp">Benefit</a><span>/</span></li>
-								<li><a href="review_lsit.jsp">Review</a><span>/</span></li>
+								<li><a href="benefitList.do">Benefit</a><span>/</span></li>
+								<li><a href="reviewList.do">Review</a><span>/</span></li>
 								<li><a href="contact.do">Contact Us</a><span></span></li>
 							</ul>
 						</div>

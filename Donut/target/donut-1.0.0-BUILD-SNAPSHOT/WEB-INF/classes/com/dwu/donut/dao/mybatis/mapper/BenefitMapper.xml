@@ -1,0 +1,63 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE mapper PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN" "http://mybatis.org/dtd/mybatis-3-mapper.dtd">
+
+<mapper namespace="com.dwu.donut.dao.mybatis.mapper.BenefitMapper">
+
+	<select id="getBenefitItem" resultType="Benefit">
+		SELECT BENEFIT_ID benefitId,
+				USER_ID userId,
+				BENEFIT_DATE benefitDate,
+				BENEFIT_MATCHING_STATE benefitMatchingState, 
+				ALBUM_ID albumId,
+				BENEFIT_ALBUM_QUANTITY benefitAlbumQuantity,
+				BENEFIT_CONTENT benefitContent
+		FROM BENEFIT
+		WHERE BENEFIT_ID = #{benefitId}
+	</select>
+	
+	<select id="getBenefitList" resultType="Benefit">
+		SELECT BENEFIT_ID benefitId,
+				USER_ID userId,
+				BENEFIT_DATE benefitDate,
+				BENEFIT_MATCHING_STATE benefitMatchingState, 
+				ALBUM_ID albumId,
+				BENEFIT_ALBUM_QUANTITY benefitAlbumQuantity,
+				BENEFIT_CONTENT benefitContent
+		FROM BENEFIT
+	</select>
+	
+	<insert id="insertBenefit">
+		INSERT INTO BENEFIT 
+			(BENEFIT_ID,
+				USER_ID,
+				BENEFIT_DATE,
+				BENEFIT_MATCHING_STATE,
+				ALBUM_ID,
+				BENEFIT_ALBUM_QUANTITY,
+				BENEFIT_CONTENT) 
+		VALUES 
+			(SEQ_BENEFIT.NEXTVAL,
+				#{userId, jdbcType=VARCHAR},
+				#{benefitDate, jdbcType=DATE},
+				#{benefitMatchingState, jdbcType=CHAR},
+				#{albumId, jdbcType=NUMERIC},
+				#{benefitAlbumQuantity, jdbcType=NUMERIC},
+				#{benefitContent, jdbcType=VARCHAR})
+	</insert>
+	
+	<update id="updateBenefit" parameterType="Benefit">
+		UPDATE BENEFIT SET
+			BENEFIT_DATE=#{benefitDate, jdbcType=DATE},
+			ALBUM_ID=#{albumId},
+			BENEFIT_ALBUM_QUANTITY=#{benefitAlbumQuantity},
+			BENEFIT_CONTENT=#{benefitContent}
+		WHERE BENEFIT_ID = #{benefitId}
+	</update>
+	
+	
+	<delete id="deleteBenefit">
+		DELETE FROM BENEFIT
+		WHERE BENEFIT_ID = #{benefitId}
+	</delete>
+
+</mapper>

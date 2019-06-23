@@ -5,60 +5,62 @@
   <cache />
 
   <select id="getAccountByUserId" resultType="Account">
-    SELECT USER_ID,
-    		PASSWORD,
-    		USER_NAME,
-    		EMAIL,
-    		PHONE,
-    		COUNTRY,
-    		ADDRESS_1,
-    		ADDRESS_2,
-    		ZIP_CODE,
-    		USER_TYPE
+    SELECT USER_ID userId,
+    		PASSWORD password,
+    		USER_NAME userName,
+    		EMAIL email,
+    		PHONE phone,
+    		COUNTRY country,
+    		ADDRESS_1 address1,
+    		ADDRESS_2 address2,
+    		ZIP_CODE zipCode,
+    		USER_TYPE userType
     FROM ACCOUNT
-    WHERE USER_ID = #{userId}
+    WHERE USER_ID = #{userId, jdbcType=VARCHAR}
   </select>
 
   <select id="getAccountByUserIdAndPassword" resultType="Account">
-    SELECT USER_ID,
-    		PASSWORD,
-    		USER_NAME,
-    		EMAIL,
-    		PHONE,
-    		COUNTRY,
-    		ADDRESS_1,
-    		ADDRESS_2,
-    		ZIP_CODE,
-    		USER_TYPE
+    SELECT USER_ID userId,
+    		PASSWORD password,
+    		USER_NAME userName,
+    		EMAIL email,
+    		PHONE phone,
+    		COUNTRY country,
+    		ADDRESS_1 address1,
+    		ADDRESS_2 address2,
+    		ZIP_CODE zipCode,
+    		USER_TYPE userType
     FROM ACCOUNT
-    WHERE USER_ID = #{param1}
-    	AND PASSWORD = #{param2}
+    WHERE USER_ID = #{param1, jdbcType=VARCHAR}
+    	AND PASSWORD = #{param2, jdbcType=VARCHAR}
   </select>
 
   <update id="updateAccount" parameterType="Account">
     UPDATE ACCOUNT SET
-    	PASSWORD = #{password},
-    	USER_NAME = #{userName},
-    	EMAIL = #{email},
-    	PHONE = #{phone},
-    	COUNTRY = #{country},
-    	ADDRESS_1 = #{address1},
-    	ADDRESS_2 = #{address2},
-    	ZIP_CODE = #{zipCode},
-    	USER_TYPE = #{userType}
-    WHERE USER_ID = #{userId}
+    	PASSWORD = #{password, jdbcType=VARCHAR},
+    	USER_NAME = #{userName, jdbcType=VARCHAR},
+    	EMAIL = #{email, jdbcType=VARCHAR},
+    	PHONE = #{phone, jdbcType=VARCHAR},
+    	COUNTRY = #{country, jdbcType=VARCHAR},
+    	ADDRESS_1 = #{address1, jdbcType=VARCHAR},
+    	ADDRESS_2 = #{address2, jdbcType=VARCHAR},
+    	ZIP_CODE = #{zipCode, jdbcType=VARCHAR},
+    	USER_TYPE = #{userType, jdbcType=VARCHAR}
+    WHERE USER_ID = #{userId, jdbcType=VARCHAR}
   </update>
 
   <insert id="insertAccount" parameterType="Account">
     INSERT INTO ACCOUNT
       (USER_ID, PASSWORD, USER_NAME, EMAIL, PHONE, COUNTRY, ADDRESS_1, ADDRESS_2, ZIP_CODE, USER_TYPE)
     VALUES
-      (#{userId}, #{password}, #{userName}, #{email}, #{phone}, #{country}, #{address1}, #{address2}, #{zipCode}, #{userType})
+      (#{userId, jdbcType=VARCHAR}, #{password, jdbcType=VARCHAR}, #{userName, jdbcType=VARCHAR},
+      #{email, jdbcType=VARCHAR}, #{phone, jdbcType=VARCHAR}, #{country, jdbcType=VARCHAR},
+      #{address1, jdbcType=VARCHAR}, #{address2, jdbcType=VARCHAR}, #{zipCode, jdbcType=VARCHAR}, #{userType, jdbcType=VARCHAR})
   </insert>
   
   <delete id="deleteAccount" parameterType="Account">
   	DELETE FROM ACCOUNT
-    WHERE USER_ID = #{userId}
+    WHERE USER_ID = #{userId, jdbcType=VARCHAR}
   </delete>
 
 </mapper>

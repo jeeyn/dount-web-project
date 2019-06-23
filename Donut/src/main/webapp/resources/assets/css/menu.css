@@ -3,7 +3,7 @@ Start Of Header [*3]
 -------------------------------------------------------------------------*/
 .header-top-bg {
 	background-color: #010c25;
-	border-bottom: 2px solid #d7062c;
+	border-bottom: 2px solid #FFCC48;
 }
 .top-info li img {
 	margin-right: 15px;
@@ -20,18 +20,18 @@ Start Of Header [*3]
 }
 .header-social .social-list li:hover,
 .footer-social .social-list li:hover {
-	background-color: #d7062c;
+	background-color: #FFCC48;
 }
 .header-social .social-list li:hover a span,
 .footer-social .social-list li:hover a span {
 	color: #ffffff;
-	border-color: #d8062c;
+	border-color: #FFCC48;
 }
 .search-open {
 	overflow: hidden;
 }
 .navbar-toggle .icon-bar {
-	background-color: red;
+	background-color: #FFCC48;
 }
 ul.nav.navbar-nav.navbar-right {
 	margin-right: 190px;
@@ -50,7 +50,7 @@ ul.nav.navbar-nav.navbar-right {
 }
 
 .nav>li>a:hover {
-	color: #d7062c;
+	color: #FFCC48;
 }
 .nav>li>a:focus, .nav>li>a:hover {
 	background-color: transparent;
@@ -100,7 +100,7 @@ ul.nav.navbar-nav.navbar-right {
 	top: 97px;
 	left: 15px;
 	padding: 10px;
-	border-bottom: 2px solid #d7062c;
+	border-bottom: 2px solid #FFCC48;
 	box-shadow: 0px 0px 4px 2px rgba(222, 222, 222, 0.5);
 }
 .menu-dropdown li {
@@ -119,7 +119,7 @@ ul.nav.navbar-nav.navbar-right {
 }
 #main-menu li:hover a,
 .menu-dropdown li:hover a {
-	color: #d7062c;
+	color: #FFCC48;
 }
 #main-menu {
 	z-index: 99;
