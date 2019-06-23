@@ -15,17 +15,22 @@ public class BenefitService {
 	@Autowired
 	BenefitDao benefitDao;
 	
-	// 1. 'Benefit' 게시판 View
+	// 전체 Benefit List 불러오기
 	public List<Benefit> getBenefitList() {
 		return benefitDao.getBenefitList();
 	}
 	
-	// 2. 'Benefit' 게시물 View
+	// User 작성 Benefit List 불러오기
+	public List<Benefit> getUserBenefitList(String userId) {
+		return benefitDao.getUserBenefitList(userId);
+	}
+	
+	// 'Benefit' 게시물 View
 	public Benefit getBenefitItem(int benefitId) {
 		return benefitDao.getBenefitItem(benefitId);
 	}
 
-	// 3. 'Benefit' 게시물 작성하기
+	// 'Benefit' 게시물 작성
 	public void insertBenefit(Benefit benefit) {
 		
 		benefit.setBenefitDate(new Date());
@@ -34,14 +39,14 @@ public class BenefitService {
 		benefitDao.insertBenefit(benefit);
 	}
 	
-	// 4. 'Benefit' 게시물 수정하기
+	// 'Benefit' 게시물 수정
 	public void updateBenefit(Benefit benefit) {
 		benefit.setBenefitDate(new Date());
 		
 		benefitDao.updateBenefit(benefit);
 	}
 	
-	// 5. 'Benefit' 게시물 삭제하기
+	// 'Benefit' 게시물 삭제
 	public void deleteBenefit(int benefitId) {
 		benefitDao.deleteBenefit(benefitDao.getBenefitItem(benefitId));
 	}

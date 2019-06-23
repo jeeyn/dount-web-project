@@ -8,6 +8,8 @@ public interface BenefitMapper {
 	Benefit getBenefitItem(int benefitId);
 
 	List<Benefit> getBenefitList();
+	
+	List<Benefit> getUserBenefitList(String userId);
 	 
 	void insertBenefit(Benefit benefit);
 

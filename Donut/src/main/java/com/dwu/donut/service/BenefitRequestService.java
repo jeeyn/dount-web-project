@@ -26,4 +26,8 @@ public class BenefitRequestService {
 		return benefitRequestDao.getBenefitRequestList(donationId);
 	}
 	
+	public List<BenefitRequest> getUserBenefitRequestList(String userId) {
+		return benefitRequestDao.getUserBenefitRequestList(userId);
+	}
+	
 }

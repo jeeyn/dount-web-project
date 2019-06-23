@@ -11,8 +11,10 @@ import org.springframework.web.bind.annotation.RequestMethod;
 import org.springframework.web.servlet.ModelAndView;
 
 import com.dwu.donut.domain.Account;
-import com.dwu.donut.domain.Donation;
 import com.dwu.donut.service.AccountService;
+import com.dwu.donut.service.BenefitRequestService;
+import com.dwu.donut.service.BenefitService;
+import com.dwu.donut.service.DonationRequestService;
 import com.dwu.donut.service.DonationService;
 
 @Controller
@@ -23,6 +25,15 @@ public class AccountController {
 	
 	@Autowired
 	public DonationService donationService;
+	
+	@Autowired
+	public BenefitService benefitService;
+	
+	@Autowired
+	public BenefitRequestService benefitRequestService;
+	
+	@Autowired
+	public DonationRequestService donationRequestService;
 
 	// 회원가입 화면
 	@RequestMapping("/registerForm.do")
@@ -74,33 +85,32 @@ public class AccountController {
 	}
 	
 	// 작성 게시물, 댓글 조회
-	@RequestMapping("/postingList.do")
+	@RequestMapping({"/postingList.do", "/commentList.do"})
 	public ModelAndView viewPostingList(HttpSession session, HttpServletRequest request) {
 		String userId = (String)session.getAttribute("userId");
+		String userType = accountService.getAccount(userId).getUserType();
 		String userUrl = request.getServletPath();
 		ModelAndView mav = new ModelAndView();
 		
 		if (userUrl.equals("/postingList.do")) {
-			mav.addObject("userDonationList", donationService.getUserDonationList(userId));
-			mav.setViewName("posting_list");
+			if (userType.equals("D")) {
+				mav.addObject("userDonationList", donationService.getUserDonationList(userId));
+			} else if (userType.equals("B")) {
+				mav.addObject("userBenefitList", benefitService.getUserBenefitList(userId));
+			}
+		} else if (userUrl.equals("/commentList.do")) {
+			if (userType.equals("D")) {
+				mav.addObject("userDonationRequestList", donationRequestService.getUserDonationRequestList(userId));
+			} else if (userType.equals("B")) {
+				mav.addObject("userBenefitRequestList", benefitRequestService.getUserBenefitRequestList(userId));
+			}
 		}
-		
+	
+		mav.addObject("userType", userType);
 		mav.addObject("userUrl", userUrl);
-		
-		for (Donation d : donationService.getUserDonationList(userId)) {
-			System.out.println(d.getDonationId());
-			System.out.println(d.getUserId());
-			System.out.println(d.getDonationDate());
-			System.out.println(d.getDonationMatchingState());
-			System.out.println(d.getAlbumId());
-			System.out.println(d.getDonationAlbumQuantity());
-			System.out.println(d.getDonationContent());
-			System.out.println(d.getAlbum().getAlbumName());
-			System.out.println(d.getAlbum().getArtist());
-			System.out.println(d.getAlbum().getCover());
-		}
-		
-		return mav;		
+		mav.setViewName("posting_list");
+
+		return mav;
 	}
 
 }

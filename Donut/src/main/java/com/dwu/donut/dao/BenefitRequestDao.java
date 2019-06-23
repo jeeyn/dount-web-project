@@ -22,6 +22,10 @@ public class BenefitRequestDao {
 		return benefitRequestMapper.getBenefitRequestList(donationId);
 	}
 	
+	public List<BenefitRequest> getUserBenefitRequestList(String userId) {
+		return benefitRequestMapper.getUserBenefitRequestList(userId);
+	}
+	
 	public void insertBenefitRequest(BenefitRequest benefitRequest) {
 		benefitRequestMapper.insertBenefitRequest(benefitRequest);
 	}

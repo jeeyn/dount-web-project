@@ -22,6 +22,10 @@ public class BenefitDao {
 		return benefitMapper.getBenefitList();
 	}
 	
+	public List<Benefit> getUserBenefitList(String userId) {
+		return benefitMapper.getUserBenefitList(userId);
+	}
+	
 	public void insertBenefit(Benefit benefit) {
 		benefitMapper.insertBenefit(benefit);
 	}

@@ -29,6 +29,7 @@ public class Benefit {
 	public java.util.Date getBenefitDate() {
 		return benefitDate;
 	}
+	@DateTimeFormat(pattern="yyyy/MM/dd")
 	public void setBenefitDate(java.util.Date benefitDate) {
 		this.benefitDate = benefitDate;
 	}

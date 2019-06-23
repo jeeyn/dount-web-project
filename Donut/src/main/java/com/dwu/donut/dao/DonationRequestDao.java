@@ -22,6 +22,10 @@ public class DonationRequestDao {
 		return donationRequestMapper.getDonationRequestList(benefitId);
 	}
 	
+	public List<DonationRequest> getUserDonationRequestList(String userId) {
+		return donationRequestMapper.getUserDonationRequestList(userId);
+	}
+	
 	public void insertDonationRequest(DonationRequest donationRequest) {
 		donationRequestMapper.insertDonationRequest(donationRequest);
 	}

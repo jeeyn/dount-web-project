@@ -12,6 +12,7 @@ public class BenefitRequest {
 	private int donationId;
 	private int brAlbumQuantity;
 	private String brContent;
+	private Album album;
 	
 	public int getBrId() {
 		return brId;
@@ -28,6 +29,7 @@ public class BenefitRequest {
 	public java.util.Date getBrDate() {
 		return brDate;
 	}
+	@DateTimeFormat(pattern="yyyy/MM/dd")
 	public void setBrDate(java.util.Date brDate) {
 		this.brDate = brDate;
 	}
@@ -54,6 +56,12 @@ public class BenefitRequest {
 	}
 	public void setBrContent(String brContent) {
 		this.brContent = brContent;
+	}
+	public Album getAlbum() {
+		return album;
+	}
+	public void setAlbum(Album album) {
+		this.album = album;
 	}
 
 }
