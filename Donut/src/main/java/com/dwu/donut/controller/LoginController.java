@@ -11,6 +11,7 @@ import org.springframework.web.servlet.ModelAndView;
 
 import com.dwu.donut.domain.Account;
 import com.dwu.donut.service.AccountService;
+import com.dwu.donut.service.AlbumService;
 import com.dwu.donut.service.DonationService;
 
 @Controller
@@ -18,9 +19,10 @@ public class LoginController {
 	
 	@Autowired
 	public AccountService accountService;
-	
 	@Autowired
 	public DonationService donationService;
+	@Autowired
+	public AlbumService albumService;
 	
 	// 1. 로그인 화면
 	@RequestMapping("/loginForm.do")
@@ -39,6 +41,9 @@ public class LoginController {
 			if (from != null) {
 				if (from.equals("donate_list")) {
 					mav.addObject("donationList", donationService.getDonationList());
+				} 
+				else if (from.equals("create_donation_item_form") || from.equals("create_benefit_item_form")) {
+					mav.addObject("albumList", albumService.getAlbumList());
 				}
 				mav.setViewName(from); // 이전 페이지로 이동
 			} else {

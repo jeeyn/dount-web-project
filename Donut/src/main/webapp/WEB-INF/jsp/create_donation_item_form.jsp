@@ -1,5 +1,7 @@
 <%@ page language="java" contentType="text/html; charset=UTF-8" pageEncoding="UTF-8"%>
 
+<%@ taglib prefix="c" uri="http://java.sun.com/jsp/jstl/core" %>
+
 <!DOCTYPE html>
 <html lang="zxx">
 <head>
@@ -79,13 +81,9 @@
 							<div class="donate-cause-item">
 								<select id="albumId" name="albumId" class="albumId">
 					                <option value="">Select Album *</option>
-					                <option value="1">동방신기 - Tri-Angle</option>
-					                <option value="2">아이유 - Palette</option>
-					                <option value="3">WANNA ONE - 1X1=1(TO BE ONE)</option>
-					                <option value="4">TWICE - YES or YES</option>
-					                <option value="5">BLACKPINK - SQUARE ONE</option>
-					                <option value="6">방탄소년단 - MAP OF THE SOUL : PERSONA</option>
-					                <option value="7">레드벨벳 - The Red Summer</option>
+					                <c:forEach items="${albumList}" var="album">
+						                <option value="${album.albumId}">${album.artist} - ${album.albumName}</option>
+						            </c:forEach>
 					            </select>
 					        </div>
 					    </div>

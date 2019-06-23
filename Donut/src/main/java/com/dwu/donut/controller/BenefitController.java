@@ -29,13 +29,10 @@ public class BenefitController {
 
 	@Autowired
 	public BenefitService benefitService;
-	
 	@Autowired
 	public AccountService accountService;
-	
 	@Autowired
 	public AlbumService albumService;
-	
 	@Autowired
 	public DonationRequestService donationRequestService;
 	
@@ -44,18 +41,10 @@ public class BenefitController {
 	@ModelAttribute("benefitList")
 	public ModelAndView benefitList() {
 		
-		List<Benefit> benefitList = benefitService.getBenefitList();
-		
 		ModelAndView mav = new ModelAndView();
 		
-		for (int i = 0; i < benefitList.size(); i++) {
-			
-			int albumId = benefitList.get(i).getAlbumId();
-			benefitList.get(i).setAlbum(albumService.getAlbumItem(albumId));
-		}
-		
 		mav.setViewName("benefit_list");
-		mav.addObject("benefitList", benefitList);
+		mav.addObject("benefitList", benefitService.getBenefitList());
 		
 		return mav;
 	}
@@ -80,7 +69,6 @@ public class BenefitController {
 		
 		mav.setViewName("benefit_item");
 		mav.addObject("benefit", benefit);
-		mav.addObject("album", albumService.getAlbumItem(benefit.getAlbumId()));
 		mav.addObject("donationRequestList", donationRequestService.getDonationRequestList(benefitId));
 
 		return mav;
@@ -97,7 +85,7 @@ public class BenefitController {
 		}
 	}
 	
-	// '' 게시물 작성하기
+	// 'Benefit' 게시물 작성하기
 	@RequestMapping(value="createBenefitItem.do", method=RequestMethod.POST)
 	public ModelAndView createBenefitItem(Benefit benefit, HttpSession session) {
 		benefit.setUserId((String)session.getAttribute("userId"));
@@ -112,6 +100,7 @@ public class BenefitController {
 		ModelAndView mav = new ModelAndView();
 		
 		mav.addObject("benefit", benefitService.getBenefitItem(benefitId));
+		mav.addObject("albumList", albumService.getAlbumList());
 		mav.setViewName("update_benefit_item_form");
 		
 		return mav;

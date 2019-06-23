@@ -4,7 +4,6 @@ import java.beans.PropertyEditorSupport;
 import java.text.ParseException;
 import java.text.SimpleDateFormat;
 import java.util.Date;
-import java.util.List;
 
 import javax.servlet.http.HttpSession;
 
@@ -76,7 +75,7 @@ public class DonationController {
 	
 	// 'Donation' 게시물 작성 화면
 	@RequestMapping("createDonationItemForm.do")
-	public String createDonationItemForm(HttpSession session) {		
+	public String createDonationItemForm(HttpSession session) {
 		if (session.getAttribute("userId") != null) {
 			return "create_donation_item_form";
 		} else {
@@ -100,6 +99,7 @@ public class DonationController {
 		ModelAndView mav = new ModelAndView();
 		
 		mav.addObject("donation", donationService.getDonationItem(donationId));
+		mav.addObject("albumList", albumService.getAlbumList());
 		mav.setViewName("update_donation_item_form");
 		
 		return mav;

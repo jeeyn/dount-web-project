@@ -9,8 +9,6 @@
 	<title>Donut</title>
 	<link rel="shortcut icon" href="resources/assets/img/icon.png">
 
-	<meta name="description" content="FundMe - is a Premium HTML Responsive Templeate by HTMLmate Team. You can use this for anykind of Nonprofit website">
-
 	<meta name="keywords" content="Premium HTML Template">
 
 	<meta name="author" content="HTMLmate">
@@ -53,7 +51,7 @@
 	<!-- End of Header 
 	============================================= -->
 
-	<!-- Start of blog details section  
+	<!-- Start of Donation Item Section  
 	============================================= -->
 	<section id="blog-details" class="blog-details-section pt60 pb80">
 		<div class="container">
@@ -63,26 +61,28 @@
 						<div class="col-sm-12">
 							<div class="blog-details-section-left-side" style="text-align:center;">
 								<div class="blog-details-main-pic">
-									<img src="resources/assets/img/${album.cover}" alt="image">
+									<img src="resources/assets/img/${donation.album.cover}" alt="image">
 								</div>
 								<br><br>
-								<!-- album cover -->
+								<!-- Donation Item Album Cover
+								============================================= -->
 								<div class="blog-single-text  pb50">
 									<div class="blog-head-title pt15 pb20">
-										<h2 class="black"><a href="#">${donation.album.albumName}</a></h2>
+										<h2 class="black"><a href="#">${donation.album.artist} - ${donation.album.albumName}</a></h2>
 									</div>
 									<div class="blog-recent-post-meta">
 										<ul class="meta-list pb20 mb20">
 											<li><span class="mr5 ti-pencil"></span>${donation.userId}&nbsp;&nbsp;</li>
 											<li><span class="mr5 ti-timer"></span>${donation.donationDate}&nbsp;&nbsp;</li>
-											<li><span class="mr5 ti-heart"></span>${donation.donationAlbumQuantity}장&nbsp;&nbsp;</li>
+											<li><span class="mr5 ti-heart"></span><b>${donation.donationAlbumQuantity}장&nbsp;&nbsp;</b></li>
 										</ul>
 									</div>
 									<div class="blog-details-text">
 										<p>${donation.donationContent}</p>
 									</div>
 								</div>
-								<!-- album detail -->
+								<!-- Donation Item Detail
+								============================================= -->
 							</div>
 							
 							<div class="container">
@@ -102,10 +102,14 @@
 															<c:param name="donationId" value="${donation.donationId}"></c:param>
 														 </c:url>">Delete</a>
 											</div>
-										</div>
+										</div>							
 									</c:if>
+									<!-- Donation Update / Delete Button
+									============================================= -->
 								</div>
 							</div>
+							<!-- Donation Item
+							============================================= -->
 
 							<div class="comment-area">
 								<div class="reply-comment mb50">
