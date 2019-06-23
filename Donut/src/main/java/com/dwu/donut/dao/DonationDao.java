@@ -22,6 +22,10 @@ public class DonationDao {
 		return donationMapper.getDonationList();
 	}
 	
+	public List<Donation> getUserDonationList(String userId) {
+		return donationMapper.getUserDonationList(userId);
+	}
+	
 	public void insertDonation(Donation donation) {
 		donationMapper.insertDonation(donation);
 	}

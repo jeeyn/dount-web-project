@@ -9,6 +9,8 @@ public interface DonationMapper {
 	Donation getDonationItem(int donationId);
 
 	List<Donation> getDonationList();
+	
+	List<Donation> getUserDonationList(String userId);
 	 
 	void insertDonation(Donation donation);
 

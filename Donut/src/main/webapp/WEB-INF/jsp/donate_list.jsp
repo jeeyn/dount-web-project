@@ -42,6 +42,16 @@
 	<link rel="stylesheet" type="text/css" href="resources/assets/css/style.css">
 	<!-- responsive.css -->
 	<link rel="stylesheet" type="text/css" href="resources/assets/css/responsive.css">
+	
+	<style>
+	.postContent {
+		display: -webkit-box;
+		-webkit-line-clamp: 2;
+		-webkit-box-orient:vertical;
+		overflow: hidden;
+		text-overflow: ellipsis;
+	}
+	</style>
 </head>
 <!-- /end of head -->
 
@@ -87,16 +97,23 @@
 												<img src="resources/assets/img/${donation.album.cover}" alt="image">
 											</div>
 											<!-- /img -->
-											<div class="cause-text pt75 pb50">
-												<div class="gola-reach">
-													<ul class="gola-reach-list" style="text-align:center; height: 100px;">
-														<li>TITLE : ${donation.album.albumName}</li>
-														<li>QUANTITY : ${donation.donationAlbumQuantity}</li>
-														<li>DONOR : ${donation.userId}</li>
-													</ul>
+											<div class="cause-text" style="padding-top: 50px; padding-bottom: 50px;">
+												<div class="gola-reach" style="text-align:center; height: 100px;">
+													<p><b>
+														<font color="#FFCC48">TITLE : </font>
+														${donation.album.albumName}
+													</b></p>
+													<p><b>
+														<font color="#FFCC48">QUANTITY : </font>
+														${donation.donationAlbumQuantity}
+													</b></p>
+													<p><b>
+														<font color="#FFCC48">DONOR : </font>
+														${donation.userId}
+													</b></p>
 												</div>
 												<div class="cause-text-head pt15 pb20 p10" style="height: 100px; font-size:12px;">
-													<h3>${donation.donationContent}</h3>
+													<h3 class="postContent">${donation.donationContent}</h3>
 												</div>
 												<div class="donate-now-btn">
 													<div class="donate-btn margin0 text-uppercase">

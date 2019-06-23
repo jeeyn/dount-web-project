@@ -111,7 +111,7 @@
 									<span class="yellow ti-book"></span>
 								</div>
 								<div class="we-can-do-text">
-									<h3 class="we-can-do-head red"><a href="posting_list.jsp">작성 게시물 조회</a></h3>
+									<h3 class="we-can-do-head red"><a href="postingList.do">작성 게시물 조회</a></h3>
 								</div>
 								<div class="hide-icon">
 									<span class="red ti-book"></span>

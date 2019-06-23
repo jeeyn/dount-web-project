@@ -69,7 +69,7 @@
 								<!-- /img -->
 								<div class="blog-single-text  pb50">
 									<div class="blog-head-title pt15 pb20">
-										<h2 class="black"><a href="#">${album.albumName}</a></h2>
+										<h2 class="black"><a href="#">${donation.album.albumName}</a></h2>
 									</div>
 									<!-- /head -->
 									<div class="blog-recent-post-meta">
@@ -124,10 +124,11 @@
 																<span class="client-name"><a href="#">${benefitRequest.userId}</a></span><br>
 																<span class="designation">${benefitRequest.brDate}</span><br>
 																<span>QUANTITY : ${benefitRequest.brAlbumQuantity}</span>
-															
-																<div class="send-button text-uppercase pull-right">
-																	<button type="submit" value="Submit">MATCH</button> 
-																</div>
+																<c:if test="${sessionScope.isWriter == 'me'}">
+																	<div class="send-button text-uppercase pull-right">
+																		<button type="submit" value="Submit">MATCH</button> 
+																	</div>
+																</c:if>
 																<div class="reply-text">
 																	<p>${benefitRequest.brContent}</p>
 																</div>

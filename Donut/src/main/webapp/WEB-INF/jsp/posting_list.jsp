@@ -1,5 +1,7 @@
 <%@ page language="java" contentType="text/html; charset=UTF-8" pageEncoding="UTF-8"%>
 
+<%@ taglib prefix="c" uri="http://java.sun.com/jsp/jstl/core" %>
+
 <!DOCTYPE html>
 <html lang="zxx">
 <head>
@@ -40,6 +42,12 @@
 	<link rel="stylesheet" type="text/css" href="resources/assets/css/style.css">
 	<!-- responsive.css -->
 	<link rel="stylesheet" type="text/css" href="resources/assets/css/responsive.css">
+	
+	<style>
+		th, td {
+			text-align: center;
+		}
+	</style>
 </head>
 <!-- /end of head -->
 
@@ -54,97 +62,47 @@
 	<section id="can-we-do" class="can-we-do-section">
 		<div class="container">
 			<div class="row section-content">
-				<div class="section-title text-center">
+				<div class="section-title text-center" style="padding: 0px 0px 60px;">
 					<div class="section-title-text text-uppercase">
 						<p>작성 게시물 조회</p>
 					</div>
 					<div class="section-title-text">
 						<h2>작성 게시물 조회</h2>
 					</div>
+					<div style="margin: 15px; float: right; font-size: 15px;">
+						<a href="postingList.do"><b>POST</b></a>
+						<b>&nbsp;&nbsp;&nbsp;&nbsp;|&nbsp;&nbsp;&nbsp;&nbsp;</b>
+						<a href="commentList.do"><b>COMMENT</b></a>
+					</div>
 				</div>
-				<!-- /section-title -->
 
+				<!-- /section-title -->
+				
 				<div class="well">
 				    <table class="table">
-				      <thead>
-				        <tr>
-				          <th>#</th>
-				          <th>Prenume</th>
-				          <th>Nume</th>
-				          <th>Utilizator</th>
-				          <th>Rol</th>
-				          <th style="width: 36px;"></th>
-				        </tr>
-				      </thead>
-				      <tbody>
-				        <tr>
-				          <td>1</td>
-				          <td>Mark</td>
-				          <td>Tompson</td>
-				          <td>the_mark7</td>
-				          <td>Angajat</td>
-				          <td>
-				              <a href="#"><i class="icon-pencil"></i></a>
-				              <a href="#myModal" role="button" data-toggle="modal"><i class="icon-remove"></i></a>
-				          </td>
-				        </tr>
-				        <tr>
-				          <td>2</td>
-				          <td>Ashley</td>
-				          <td>Jacobs</td>
-				          <td>ash11927</td>
-				          <td>Angajat</td>
-				          <td>
-				              <a href="#"><i class="icon-pencil"></i></a>
-				              <a href="#myModal" role="button" data-toggle="modal"><i class="icon-remove"></i></a>
-				          </td>
-				        </tr>
-				        <tr>
-				          <td>3</td>
-				          <td>Audrey</td>
-				          <td>Ann</td>
-				          <td>audann84</td>
-				          <td>Angajat</td>
-				          <td>
-				              <a href="#"><i class="icon-pencil"></i></a>
-				              <a href="#myModal" role="button" data-toggle="modal"><i class="icon-remove"></i></a>
-				          </td>
-				        </tr>
-				        <tr>
-				          <td>4</td>
-				          <td>John</td>
-				          <td>Robinson</td>
-				          <td>jr5527</td>
-				          <td>Angajat</td>
-				          <td>
-				              <a href="#"><i class="icon-pencil"></i></a>
-				              <a href="#myModal" role="button" data-toggle="modal"><i class="icon-remove"></i></a>
-				          </td>
-				        </tr>
-				        <tr>
-				          <td>5</td>
-				          <td>Aaron</td>
-				          <td>Butler</td>
-				          <td>aaron_butler</td>
-				          <td>Angajat</td>
-				          <td>
-				              <a href="#"><i class="icon-pencil"></i></a>
-				              <a href="#myModal" role="button" data-toggle="modal"><i class="icon-remove"></i></a>
-				          </td>
-				        </tr>
-				        <tr>
-				          <td>6</td>
-				          <td>Chris</td>
-				          <td>Albert</td>
-				          <td>cab79</td>
-				          <td>Sef departament</td>
-				          <td>
-				              <a href="#"><i class="icon-pencil"></i></a>
-				              <a href="#myModal" role="button" data-toggle="modal"><i class="icon-remove"></i></a>
-				          </td>
-				        </tr>
-				      </tbody>
-				    </table>
+				    	<thead>
+					        <tr>
+					          <th>#</th>
+					          <th>DATE</th>
+					          <th>ALBUM TITLE</th>
+					          <th>ARTIST</th>
+					          <th>QUANTITY</th>
+					          <th>MATCHING STATE</th>
+					        </tr>
+						</thead>
+						<tbody>
+							<c:forEach items="${userDonationList}" var="userDonation" varStatus="status">
+						        <tr>
+						          <td>${status.count}</td>
+						          <td>${userDonation.donationDate}</td>
+						          <td>${userDonation.album.albumName}</td>
+						          <td>${userDonation.album.artist}</td>
+						          <td>${userDonation.donationAlbumQuantity}</td>
+						          <td>${userDonation.donationMatchingState}</td>
+						        </tr>
+							</c:forEach>
+						</tbody>
+					</table>
 				</div>
 				<div class="blog-pagination text-center">
 					<ul class="pagination">
@@ -154,19 +112,6 @@
 						<li><a href="#">3</a></li>
 						<li><a href="#"><span class="ti-angle-double-right"></span></a></li>
 					</ul>
-				</div>
-				<div class="modal small hide fade" id="myModal" tabindex="-1" role="dialog" aria-labelledby="myModalLabel" aria-hidden="true">
-				    <div class="modal-header">
-				        <button type="button" class="close" data-dismiss="modal" aria-hidden="true">×</button>
-				        <h3 id="myModalLabel">Delete Confirmation</h3>
-				    </div>
-				    <div class="modal-body">
-				        <p class="error-text">Are you sure you want to delete the user?</p>
-				    </div>
-				    <div class="modal-footer">
-				        <button class="btn" data-dismiss="modal" aria-hidden="true">Cancel</button>
-				        <button class="btn btn-danger" data-dismiss="modal">Delete</button>
-				    </div>
 				</div>
 			</div>
 		</div>

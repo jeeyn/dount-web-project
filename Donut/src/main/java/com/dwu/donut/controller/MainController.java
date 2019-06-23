@@ -24,19 +24,11 @@ public class MainController {
 	@RequestMapping("/index.do")
 	@ModelAttribute("donationList")
 	public ModelAndView index() {
-		
-		List<Donation> donationList = donationService.getDonationList();
-		
+
 		ModelAndView mav = new ModelAndView();
 		
-		for (int i = 0; i < donationList.size(); i++) {
-			
-			int albumId = donationList.get(i).getAlbumId();
-			donationList.get(i).setAlbum(albumService.getAlbumItem(albumId));
-		}
-		
 		mav.setViewName("index");
-		mav.addObject("donationList", donationList);
+		mav.addObject("donationList", donationService.getDonationList());
 		
 		return mav;
 	}

@@ -15,17 +15,22 @@ public class DonationService {
 	@Autowired
 	DonationDao donationDao;
 	
-	// 1. '기증해요' 게시판 View
+	// 전체 Donation List 불러오기
 	public List<Donation> getDonationList() {
 		return donationDao.getDonationList();
 	}
 	
-	// 2. '기증해요' 게시물 View
+	// User 작성 Donation List 불러오기
+	public List<Donation> getUserDonationList(String userId) {
+		return donationDao.getUserDonationList(userId);
+	}
+	
+	// '기증해요' 게시물 View
 	public Donation getDonationItem(int donationId) {
 		return donationDao.getDonationItem(donationId);
 	}
 
-	// 3. '기증해요' 게시물 작성하기
+	// '기증해요' 게시물 작성
 	public void insertDonation(Donation donation) {
 		
 		donation.setDonationDate(new Date());
@@ -34,14 +39,14 @@ public class DonationService {
 		donationDao.insertDonation(donation);
 	}
 	
-	// 4. '기증해요' 게시물 수정하기
+	// '기증해요' 게시물 수정
 	public void updateDonation(Donation donation) {
 		donation.setDonationDate(new Date());
 		
 		donationDao.updateDonation(donation);
 	}
 	
-	// 5. '기증해요' 게시물 삭제하기
+	// '기증해요' 게시물 삭제
 	public void deleteDonation(int donationId) {
 		donationDao.deleteDonation(donationDao.getDonationItem(donationId));
 	}

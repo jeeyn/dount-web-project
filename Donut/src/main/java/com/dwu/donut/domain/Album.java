@@ -1,5 +1,6 @@
 package com.dwu.donut.domain;
 
+
 public class Album {
 
 	private int albumId;
