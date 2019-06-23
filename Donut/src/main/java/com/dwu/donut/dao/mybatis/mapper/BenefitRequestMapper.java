@@ -9,6 +9,8 @@ public interface BenefitRequestMapper {
 	BenefitRequest getBenefitRequestItem(int brId);
 
 	List<BenefitRequest> getBenefitRequestList(int donationId);
+	
+	List<BenefitRequest> getUserBenefitRequestList(String userId);
 	 
 	void insertBenefitRequest(BenefitRequest benefitRequest);
 

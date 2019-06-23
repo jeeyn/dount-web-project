@@ -4,15 +4,21 @@
 <mapper namespace="com.dwu.donut.dao.mybatis.mapper.BenefitRequestMapper">
 
 	<select id="getBenefitRequestItem" resultType="BenefitRequest">
-		SELECT BR_ID brId,
-				USER_ID userId,
-				BR_DATE brDate,
-				BR_MATCHING_STATE brMatchingState, 
-				DONATION_ID donationId,
-				BR_ALBUM_QUANTITY brAlbumQuantity,
-				BR_CONTENT brContent
-		FROM BENEFIT_REQUEST
-		WHERE DONATION_ID = #{brId}
+		SELECT BR.BR_ID brId,
+				BR.USER_ID userId,
+				BR.BR_DATE brDate,
+				BR.BR_MATCHING_STATE brMatchingState, 
+				BR.DONATION_ID donationId,
+				BR.BR_ALBUM_QUANTITY brAlbumQuantity,
+				BR.BR_CONTENT brContent,
+				A.ALBUM_ID AS "album.albumId",
+				A.ALBUM_NAME AS "album.albumName",
+				A.ARTIST AS "album.artist",
+				A.COVER AS "album.cover"
+		FROM BENEFIT_REQUEST BR, DONATION D, ALBUM A
+		WHERE BR.BR_ID = #{brId}
+			AND BR.DONATION_ID = D.DONATION_ID
+			AND D.ALBUM_ID = A.ALBUM_ID
 	</select>
 	
 	<select id="getBenefitRequestList" resultType="BenefitRequest">
@@ -25,6 +31,24 @@
 				BR_CONTENT brContent
 		FROM BENEFIT_REQUEST
 		WHERE DONATION_ID = #{donationId}
+	</select>
+	
+	<select id="getUserBenefitRequestList" resultType="BenefitRequest">
+		SELECT BR.BR_ID brId,
+				BR.USER_ID userId,
+				BR.BR_DATE brDate,
+				BR.BR_MATCHING_STATE brMatchingState, 
+				BR.DONATION_ID donationId,
+				BR.BR_ALBUM_QUANTITY brAlbumQuantity,
+				BR.BR_CONTENT brContent,
+				A.ALBUM_ID AS "album.albumId",
+				A.ALBUM_NAME AS "album.albumName",
+				A.ARTIST AS "album.artist",
+				A.COVER AS "album.cover"
+		FROM BENEFIT_REQUEST BR, DONATION D, ALBUM A
+		WHERE BR.USER_ID = #{userId}
+			AND BR.DONATION_ID = D.DONATION_ID
+			AND D.ALBUM_ID = A.ALBUM_ID
 	</select>
 	
 	<update id="updateBenefitRequest" parameterType="BenefitRequest">

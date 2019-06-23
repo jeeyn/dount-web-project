@@ -12,6 +12,7 @@ public class DonationRequest {
 	private int benefitId;
 	private int drAlbumQuantity;
 	private String drContent;
+	private Album album;
 	
 	public int getDrId() {
 		return drId;
@@ -28,6 +29,7 @@ public class DonationRequest {
 	public java.util.Date getDrDate() {
 		return drDate;
 	}
+	@DateTimeFormat(pattern="yyyy/MM/dd")
 	public void setDrDate(java.util.Date drDate) {
 		this.drDate = drDate;
 	}
@@ -54,6 +56,12 @@ public class DonationRequest {
 	}
 	public void setDrContent(String drContent) {
 		this.drContent = drContent;
+	}
+	public Album getAlbum() {
+		return album;
+	}
+	public void setAlbum(Album album) {
+		this.album = album;
 	}
 
 }

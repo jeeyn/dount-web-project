@@ -70,9 +70,23 @@
 						<h2>작성 게시물 조회</h2>
 					</div>
 					<div style="margin: 15px; float: right; font-size: 15px;">
-						<a href="postingList.do"><b>POST</b></a>
+						<a href="postingList.do">
+							<c:choose>
+								<c:when test="${userUrl == '/postingList.do'}">
+									<b style="color: #FFCC48;">POST</b>
+								</c:when>
+								<c:otherwise><b>POST</b></c:otherwise>
+							</c:choose>
+						</a>
 						<b>&nbsp;&nbsp;&nbsp;&nbsp;|&nbsp;&nbsp;&nbsp;&nbsp;</b>
-						<a href="commentList.do"><b>COMMENT</b></a>
+						<a href="commentList.do">
+							<c:choose>
+								<c:when test="${userUrl == '/commentList.do'}">
+									<b style="color: #FFCC48;">COMMENT</b>
+								</c:when>
+								<c:otherwise><b>COMMENT</b></c:otherwise>
+							</c:choose>
+						</a>
 					</div>
 				</div>
 
@@ -91,16 +105,54 @@
 					        </tr>
 						</thead>
 						<tbody>
-							<c:forEach items="${userDonationList}" var="userDonation" varStatus="status">
-						        <tr>
-						          <td>${status.count}</td>
-						          <td>${userDonation.donationDate}</td>
-						          <td>${userDonation.album.albumName}</td>
-						          <td>${userDonation.album.artist}</td>
-						          <td>${userDonation.donationAlbumQuantity}</td>
-						          <td>${userDonation.donationMatchingState}</td>
-						        </tr>
-							</c:forEach>
+							<c:if test="${(userType == 'D') && (userUrl == '/postingList.do')}">
+								<c:forEach items="${userDonationList}" var="userDonation" varStatus="status">
+							        <tr>
+							          <td>${status.count}</td>
+							          <td>${userDonation.donationDate}</td>
+							          <td>${userDonation.album.albumName}</td>
+							          <td>${userDonation.album.artist}</td>
+							          <td>${userDonation.donationAlbumQuantity}</td>
+							          <td>${userDonation.donationMatchingState}</td>
+							        </tr>
+								</c:forEach>
+							</c:if>
+							<c:if test="${(userType == 'D') and (userUrl == '/commentList.do')}">
+								<c:forEach items="${userDonationRequestList}" var="userDonationRequest" varStatus="status">
+							        <tr>
+							          <td>${status.count}</td>
+							          <td>${userDonationRequest.drDate}</td>
+							          <td>${userDonationRequest.album.albumName}</td>
+							          <td>${userDonationRequest.album.artist}</td>
+							          <td>${userDonationRequest.drAlbumQuantity}</td>
+							          <td>${userDonationRequest.drMatchingState}</td>
+							        </tr>
+								</c:forEach>
+							</c:if>
+							<c:if test="${(userType == 'B') and (userUrl == '/postingList.do')}">
+								<c:forEach items="${userBenefitList}" var="userBenefit" varStatus="status">
+							        <tr>
+							          <td>${status.count}</td>
+							          <td>${userBenefit.benefitDate}</td>
+							          <td>${userBenefit.album.albumName}</td>
+							          <td>${userBenefit.album.artist}</td>
+							          <td>${userBenefit.benefitAlbumQuantity}</td>
+							          <td>${userBenefit.benefitMatchingState}</td>
+							        </tr>
+								</c:forEach>
+							</c:if>
+							<c:if test="${(userType == 'B') and (userUrl == '/commentList.do')}">
+								<c:forEach items="${userBenefitRequestList}" var="userBenefitRequest" varStatus="status">
+							        <tr>
+							          <td>${status.count}</td>
+							          <td>${userBenefitRequest.brDate}</td>
+							          <td>${userBenefitRequest.album.albumName}</td>
+							          <td>${userBenefitRequest.album.artist}</td>
+							          <td>${userBenefitRequest.brAlbumQuantity}</td>
+							          <td>${userBenefitRequest.brMatchingState}</td>
+							        </tr>
+								</c:forEach>
+							</c:if>
 						</tbody>
 					</table>
 				</div>

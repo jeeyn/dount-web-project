@@ -4,26 +4,51 @@
 <mapper namespace="com.dwu.donut.dao.mybatis.mapper.BenefitMapper">
 
 	<select id="getBenefitItem" resultType="Benefit">
-		SELECT BENEFIT_ID benefitId,
-				USER_ID userId,
-				BENEFIT_DATE benefitDate,
-				BENEFIT_MATCHING_STATE benefitMatchingState, 
-				ALBUM_ID albumId,
-				BENEFIT_ALBUM_QUANTITY benefitAlbumQuantity,
-				BENEFIT_CONTENT benefitContent
-		FROM BENEFIT
-		WHERE BENEFIT_ID = #{benefitId}
+		SELECT B.BENEFIT_ID benefitId,
+				B.USER_ID userId,
+				B.BENEFIT_DATE benefitDate,
+				B.BENEFIT_MATCHING_STATE benefitMatchingState,
+				B.BENEFIT_ALBUM_QUANTITY benefitAlbumQuantity,
+				B.ALBUM_ID albumId,
+				B.BENEFIT_CONTENT benefitContent,
+				A.ALBUM_ID AS "album.albumId",
+				A.ALBUM_NAME AS "album.albumName",
+				A.ARTIST AS "album.artist",
+				A.COVER AS "album.cover"
+		FROM BENEFIT B, ALBUM A
+		WHERE B.BENEFIT_ID = #{benefitId} AND B.ALBUM_ID = A.ALBUM_ID
 	</select>
 	
 	<select id="getBenefitList" resultType="Benefit">
-		SELECT BENEFIT_ID benefitId,
-				USER_ID userId,
-				BENEFIT_DATE benefitDate,
-				BENEFIT_MATCHING_STATE benefitMatchingState, 
-				ALBUM_ID albumId,
-				BENEFIT_ALBUM_QUANTITY benefitAlbumQuantity,
-				BENEFIT_CONTENT benefitContent
-		FROM BENEFIT
+		SELECT B.BENEFIT_ID benefitId,
+				B.USER_ID userId,
+				B.BENEFIT_DATE benefitDate,
+				B.BENEFIT_MATCHING_STATE benefitMatchingState,
+				B.BENEFIT_ALBUM_QUANTITY benefitAlbumQuantity,
+				B.ALBUM_ID albumId,
+				B.BENEFIT_CONTENT benefitContent,
+				A.ALBUM_ID AS "album.albumId",
+				A.ALBUM_NAME AS "album.albumName",
+				A.ARTIST AS "album.artist",
+				A.COVER AS "album.cover"
+		FROM BENEFIT B, ALBUM A
+		WHERE B.ALBUM_ID = A.ALBUM_ID
+	</select>
+	
+	<select id="getUserBenefitList" resultType="Benefit">
+		SELECT B.BENEFIT_ID benefitId,
+				B.USER_ID userId,
+				B.BENEFIT_DATE benefitDate,
+				B.BENEFIT_MATCHING_STATE benefitMatchingState,
+				B.BENEFIT_ALBUM_QUANTITY benefitAlbumQuantity,
+				B.ALBUM_ID albumId,
+				B.BENEFIT_CONTENT benefitContent,
+				A.ALBUM_ID AS "album.albumId",
+				A.ALBUM_NAME AS "album.albumName",
+				A.ARTIST AS "album.artist",
+				A.COVER AS "album.cover"
+		FROM BENEFIT B, ALBUM A
+		WHERE B.USER_ID = #{userId} AND B.ALBUM_ID = A.ALBUM_ID
 	</select>
 	
 	<insert id="insertBenefit">
