@@ -29,13 +29,10 @@ public class DonationController {
 	
 	@Autowired
 	public DonationService donationService;
-	
 	@Autowired
 	public AccountService accountService;
-	
 	@Autowired
 	public AlbumService albumService;
-	
 	@Autowired
 	public BenefitRequestService benefitRequestService;
 	
