@@ -181,8 +181,8 @@
 										<div class="way-help-head pb20 text-uppercase">
 											<h3 class="yellow">Contact Us</h3>
 										</div>
-										<div class="way-help-text-content pb20">
-											<p>Do You Have Any Problem? Feel Free to Contact Us</p>
+										<div class="way-help-text-content pb20" style="text-align: center;">
+											<p>Do You Have Any Problem?<br>Feel Free to Contact Us</p>
 										</div>
 										<div class="way-help-pic pb30">
 											<a href="contact.do"><span class="ti-plus"></span></a>

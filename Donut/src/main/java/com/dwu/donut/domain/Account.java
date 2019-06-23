@@ -1,14 +1,11 @@
 package com.dwu.donut.domain;
 
-import java.io.Serializable;
-
 import javax.validation.constraints.Size;
 
 import org.hibernate.validator.constraints.Email;
 import org.hibernate.validator.constraints.NotEmpty;
 
-@SuppressWarnings("serial")
-public class Account implements Serializable {
+public class Account {
 
 	@NotEmpty
 	@Size(min=5, max=16, message="Please set your ID at least 5 characters and less than 16 characters")

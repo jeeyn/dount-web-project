@@ -4,26 +4,51 @@
 <mapper namespace="com.dwu.donut.dao.mybatis.mapper.DonationMapper">
 
 	<select id="getDonationItem" resultType="Donation">
-		SELECT DONATION_ID donationId,
-				USER_ID userId,
-				DONATION_DATE donationDate,
-				DONATION_MATCHING_STATE donationMatchingState, 
-				ALBUM_ID albumId,
-				DONATION_ALBUM_QUANTITY donationAlbumQuantity,
-				DONATION_CONTENT donationContent
-		FROM DONATION
-		WHERE DONATION_ID = #{donationId}
+		SELECT D.DONATION_ID donationId,
+				D.USER_ID userId,
+				D.DONATION_DATE donationDate,
+				D.DONATION_MATCHING_STATE donationMatchingState,
+				D.DONATION_ALBUM_QUANTITY donationAlbumQuantity,
+				D.ALBUM_ID albumId,
+				D.DONATION_CONTENT donationContent,
+				A.ALBUM_ID AS "album.albumId",
+				A.ALBUM_NAME AS "album.albumName",
+				A.ARTIST AS "album.artist",
+				A.COVER AS "album.cover"
+		FROM DONATION D, ALBUM A
+		WHERE D.DONATION_ID = #{donationId} AND D.ALBUM_ID = A.ALBUM_ID
 	</select>
 	
 	<select id="getDonationList" resultType="Donation">
-		SELECT DONATION_ID donationId,
-				USER_ID userId,
-				DONATION_DATE donationDate,
-				DONATION_MATCHING_STATE donationMatchingState, 
-				ALBUM_ID albumId,
-				DONATION_ALBUM_QUANTITY donationAlbumQuantity,
-				DONATION_CONTENT donationContent
-		FROM DONATION
+		SELECT D.DONATION_ID donationId,
+				D.USER_ID userId,
+				D.DONATION_DATE donationDate,
+				D.DONATION_MATCHING_STATE donationMatchingState,
+				D.DONATION_ALBUM_QUANTITY donationAlbumQuantity,
+				D.ALBUM_ID albumId,
+				D.DONATION_CONTENT donationContent,
+				A.ALBUM_ID AS "album.albumId",
+				A.ALBUM_NAME AS "album.albumName",
+				A.ARTIST AS "album.artist",
+				A.COVER AS "album.cover"
+		FROM DONATION D, ALBUM A
+		WHERE D.ALBUM_ID = A.ALBUM_ID
+	</select>
+	
+	<select id="getUserDonationList" resultType="Donation">
+		SELECT D.DONATION_ID donationId,
+				D.USER_ID userId,
+				D.DONATION_DATE donationDate,
+				D.DONATION_MATCHING_STATE donationMatchingState,
+				D.DONATION_ALBUM_QUANTITY donationAlbumQuantity,
+				D.ALBUM_ID albumId,
+				D.DONATION_CONTENT donationContent,
+				A.ALBUM_ID AS "album.albumId",
+				A.ALBUM_NAME AS "album.albumName",
+				A.ARTIST AS "album.artist",
+				A.COVER AS "album.cover"
+		FROM DONATION D, ALBUM A
+		WHERE D.USER_ID = #{userId} AND D.ALBUM_ID = A.ALBUM_ID
 	</select>
 	
 	<insert id="insertDonation">

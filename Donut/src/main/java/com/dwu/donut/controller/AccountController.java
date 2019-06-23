@@ -11,13 +11,18 @@ import org.springframework.web.bind.annotation.RequestMethod;
 import org.springframework.web.servlet.ModelAndView;
 
 import com.dwu.donut.domain.Account;
+import com.dwu.donut.domain.Donation;
 import com.dwu.donut.service.AccountService;
+import com.dwu.donut.service.DonationService;
 
 @Controller
 public class AccountController {
 	
 	@Autowired
 	public AccountService accountService;
+	
+	@Autowired
+	public DonationService donationService;
 
 	// 회원가입 화면
 	@RequestMapping("/registerForm.do")
@@ -66,6 +71,36 @@ public class AccountController {
 	public String submitUpdateForm(@Valid Account account) {
 		accountService.updateAccount(account);
 		return "my_page";
+	}
+	
+	// 작성 게시물, 댓글 조회
+	@RequestMapping("/postingList.do")
+	public ModelAndView viewPostingList(HttpSession session, HttpServletRequest request) {
+		String userId = (String)session.getAttribute("userId");
+		String userUrl = request.getServletPath();
+		ModelAndView mav = new ModelAndView();
+		
+		if (userUrl.equals("/postingList.do")) {
+			mav.addObject("userDonationList", donationService.getUserDonationList(userId));
+			mav.setViewName("posting_list");
+		}
+		
+		mav.addObject("userUrl", userUrl);
+		
+		for (Donation d : donationService.getUserDonationList(userId)) {
+			System.out.println(d.getDonationId());
+			System.out.println(d.getUserId());
+			System.out.println(d.getDonationDate());
+			System.out.println(d.getDonationMatchingState());
+			System.out.println(d.getAlbumId());
+			System.out.println(d.getDonationAlbumQuantity());
+			System.out.println(d.getDonationContent());
+			System.out.println(d.getAlbum().getAlbumName());
+			System.out.println(d.getAlbum().getArtist());
+			System.out.println(d.getAlbum().getCover());
+		}
+		
+		return mav;		
 	}
 
 }

@@ -41,18 +41,10 @@ public class DonationController {
 	@ModelAttribute("donationList")
 	public ModelAndView donationList() {
 		
-		List<Donation> donationList = donationService.getDonationList();
-		
 		ModelAndView mav = new ModelAndView();
 		
-		for (int i = 0; i < donationList.size(); i++) {
-			
-			int albumId = donationList.get(i).getAlbumId();
-			donationList.get(i).setAlbum(albumService.getAlbumItem(albumId));
-		}
-		
 		mav.setViewName("donate_list");
-		mav.addObject("donationList", donationList);
+		mav.addObject("donationList", donationService.getDonationList());
 		
 		return mav;
 	}
@@ -77,7 +69,6 @@ public class DonationController {
 		
 		mav.setViewName("donate_item");
 		mav.addObject("donation", donation);
-		mav.addObject("album", albumService.getAlbumItem(donation.getAlbumId()));
 		mav.addObject("benefitRequestList", benefitRequestService.getBenefitRequestList(donationId));
 
 		return mav;
