@@ -33,6 +33,7 @@
 				A.COVER AS "album.cover"
 		FROM BENEFIT B, ALBUM A
 		WHERE B.ALBUM_ID = A.ALBUM_ID
+		ORDER BY B.BENEFIT_DATE DESC
 	</select>
 	
 	<select id="getUserBenefitList" resultType="Benefit">
@@ -49,6 +50,7 @@
 				A.COVER AS "album.cover"
 		FROM BENEFIT B, ALBUM A
 		WHERE B.USER_ID = #{userId} AND B.ALBUM_ID = A.ALBUM_ID
+		ORDER BY B.BENEFIT_DATE DESC
 	</select>
 	
 	<insert id="insertBenefit">

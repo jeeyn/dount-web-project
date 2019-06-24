@@ -15,7 +15,6 @@ public class DonationRequestService {
 	@Autowired
 	DonationRequestDao donationRequestDao;
 
-	// donationRequest Comment 작성하기
 	public void insertDonationRequest(DonationRequest donationRequest) {
 		donationRequest.setDrDate(new Date());			
 		donationRequest.setDrMatchingState('F');

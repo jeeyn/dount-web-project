@@ -25,7 +25,7 @@ public class DonationService {
 		return donationDao.getUserDonationList(userId);
 	}
 	
-	// '기증해요' 게시물 View
+	// 'Donation' 게시물 View
 	public Donation getDonationItem(int donationId) {
 		return donationDao.getDonationItem(donationId);
 	}
@@ -39,14 +39,13 @@ public class DonationService {
 		donationDao.insertDonation(donation);
 	}
 	
-	// '기증해요' 게시물 수정
+	// 'Donation' 게시물 수정
 	public void updateDonation(Donation donation) {
 		donation.setDonationDate(new Date());
-		
 		donationDao.updateDonation(donation);
 	}
 	
-	// '기증해요' 게시물 삭제
+	// 'Donation' 게시물 삭제
 	public void deleteDonation(int donationId) {
 		donationDao.deleteDonation(donationDao.getDonationItem(donationId));
 	}

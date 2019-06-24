@@ -29,7 +29,6 @@ public class BenefitRequest {
 	public java.util.Date getBrDate() {
 		return brDate;
 	}
-	@DateTimeFormat(pattern="yyyy/MM/dd")
 	public void setBrDate(java.util.Date brDate) {
 		this.brDate = brDate;
 	}

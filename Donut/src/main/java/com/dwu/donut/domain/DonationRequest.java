@@ -29,7 +29,6 @@ public class DonationRequest {
 	public java.util.Date getDrDate() {
 		return drDate;
 	}
-	@DateTimeFormat(pattern="yyyy/MM/dd")
 	public void setDrDate(java.util.Date drDate) {
 		this.drDate = drDate;
 	}

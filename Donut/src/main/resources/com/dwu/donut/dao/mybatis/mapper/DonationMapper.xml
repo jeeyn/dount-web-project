@@ -33,6 +33,7 @@
 				A.COVER AS "album.cover"
 		FROM DONATION D, ALBUM A
 		WHERE D.ALBUM_ID = A.ALBUM_ID
+		ORDER BY D.DONATION_DATE DESC
 	</select>
 	
 	<select id="getUserDonationList" resultType="Donation">
@@ -49,6 +50,7 @@
 				A.COVER AS "album.cover"
 		FROM DONATION D, ALBUM A
 		WHERE D.USER_ID = #{userId} AND D.ALBUM_ID = A.ALBUM_ID
+		ORDER BY D.DONATION_DATE DESC
 	</select>
 	
 	<insert id="insertDonation">

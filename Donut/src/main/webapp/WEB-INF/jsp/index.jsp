@@ -44,20 +44,26 @@
 <!-- /end of head -->
 
 <body>
+
 	<!-- Start of Header 
 	============================================= -->
+	
 	<jsp:include page="top.jsp"/>
+	
 	<!-- End of Header 
 	============================================= -->
 
 	<!-- Start of Slider Section 
 	============================================= -->
+	
 	<jsp:include page="slider.jsp"/>
+	
 	<!-- End of Slider Section 
 	============================================= -->
 
-	<!-- Start of Ways of help 
+	<!-- Start of Description Menu Section
 	============================================= -->
+	
 	<section id="way-help" class="way-help-section">
 		<div class="container">
 			<div class="row section-content">
@@ -69,7 +75,7 @@
 						<h2>Some Ways To Help</h2>
 					</div>
 				</div>
-				<!-- /section-title -->
+				
 				<div class="way-help-section-content">
 					<div class="row">
 						<div class="fullScreenOffsetContainer">
@@ -96,12 +102,11 @@
 											<p>If Your User Type is DONOR, Donate Your Album to K-POP Fans Around the World Now!</p>
 										</div>
 										<div class="way-help-pic pb30">
-											<a href="donate_list.html"><span class="ti-plus"></span></a>
+											<a href="donationList.do"><span class="ti-plus"></span></a>
 										</div>
 									</div>
 								</div>
 							</div>
-							<!-- /col-sm-4 -->
 
 							<div class="col-lg-3 col-md-3 col-sm-6">
 								<div class="way-help-pic-text text-center colmd3">
@@ -126,12 +131,11 @@
 											<p>If Your User Type is DONOR, Benefit K-POP Albums to K-POP Fans Around the World Now!</p>
 										</div>
 										<div class="way-help-pic pb30">
-											<a href="#"><span class="ti-plus"></span></a>
+											<a href="benefitList.do"><span class="ti-plus"></span></a>
 										</div>
 									</div>
 								</div>
 							</div>
-							<!-- /col-sm-4 -->
 
 							<div class="col-lg-3 col-md-3 col-sm-6">
 								<div class="way-help-pic-text text-center colmd3">
@@ -156,12 +160,12 @@
 											<p>If You Have Received The K-POP Albums, Write a Review Please</p>
 										</div>
 										<div class="way-help-pic pb30">
-											<a href="review.html"><span class="ti-plus"></span></a>
+											<a href="reviewList.do"><span class="ti-plus"></span></a>
 										</div>
 									</div>
 								</div>
 							</div>
-							<!-- /col-sm-4 -->
+
 							<div class="col-lg-3 col-md-3 col-sm-6">
 								<div class="way-help-pic-text text-center colmd3">
 									<div class="way-help-pic pb40">
@@ -181,8 +185,8 @@
 										<div class="way-help-head pb20 text-uppercase">
 											<h3 class="yellow">Contact Us</h3>
 										</div>
-										<div class="way-help-text-content pb20" style="text-align: center;">
-											<p>Do You Have Any Problem?<br>Feel Free to Contact Us</p>
+										<div class="way-help-text-content pb20">
+											<p>Oh! Do You Have Any Problem? Feel Free to Contact Us</p>
 										</div>
 										<div class="way-help-pic pb30">
 											<a href="contact.do"><span class="ti-plus"></span></a>
@@ -190,19 +194,20 @@
 									</div>
 								</div>
 							</div>
-							<!-- /col-sm-4 -->
 						</div>
 					</div>
-				</div><!-- /way-help-section-content -->
-			</div><!-- /row-->
-		</div><!-- /container -->
+				</div>
+			</div>
+		</div>
 	</section>
-	<!-- End of Ways of help  
+	<!-- End of Description Menu Section 
 	============================================= -->
 
 	<!-- Start of Recent Donations
 	============================================= -->
+	
 	<jsp:include page="recent_donations.jsp"/>
+	
 	<!-- End of Recent Donations
 	============================================= -->
 

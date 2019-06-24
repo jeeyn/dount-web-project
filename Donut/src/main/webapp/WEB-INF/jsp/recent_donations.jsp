@@ -24,37 +24,31 @@
 					<h2>Recent Donations</h2>
 				</div>
 			</div>
-			<!-- /section-title -->
+			<!-- Recent Donations Title
+			============================================= -->
 			
 			
 			<div class="recent-causes-content">
-				<c:forEach items="${donationList}" var="donation">
+				<c:forEach items="${donationSubList}" var="donation" >
 					<div class="cause-item">
 						<div class="recent-causes-pic-text">
 							<div class="recent-causes-pic" style="text-align:center;">
 								<img src="resources/assets/img/${donation.album.cover}" alt="image">
 							</div>
-							<!-- /img -->
+							<!-- Recent Donation Album Cover
+							============================================= -->
 
 							<div class="cause-text pt40 pb50">
-								<!-- /piechart -->
 								<div class="gola-reach" style="margin-bottom: 10px;">
-									<div class="gola-reach-list" style="height: 50px; padding: 0px 5px; text-align:center;">
-										<p><b>
-											<font color="#FFCC48">ARTIST : </font>
-											<font color="black">${donation.album.artist}</font>
-										</b></p>
-										<p><b>
-											<font color="#FFCC48">TITLE : </font>
-											<font color="black">${donation.album.albumName}</font>
-										</b></p>
+									<div class="gola-reach-list" style="height: 30px; padding-bottom: 10px; text-align:center;">
+										<h4><b>
+											<font color="black">${donation.album.artist} - ${donation.album.albumName}</font>
+										</b></h4>
 									</div>
 								</div>
-								<!-- /gola-reach -->
 								<div class="cause-text-head pt15 pb20" style="padding: 20px; height: 100px;">
 									<h3 class="postContent">${donation.donationContent}</h3>
 								</div>
-								<!-- /cause-head -->
 								<div class="donate-now-btn">
 									<div class="donate-btn margin0 text-uppercase">
 										<a href="<c:url value="donationItem.do">
@@ -64,13 +58,17 @@
 										</a>
 									</div>
 								</div>
-								<!-- /donate-now-btn -->
+								<!-- Recent Donation Item Button
+								============================================= -->
 							</div>
-						</div><!--/recent-causes-pic-text -->
+						</div>
 					</div>
-					<!-- /cause-item -->
+					<!-- Recent Donation Item
+					============================================= -->
 				</c:forEach>
+				<!-- Recent Donation Items List
+				============================================= -->
 			</div>
-		</div><!-- /row -->
-	</div><!-- /container -->
+		</div>
+	</div>
 </section>

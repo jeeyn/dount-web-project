@@ -96,14 +96,13 @@
 									<div class="event-date">
 										<span>Need<br><strong>${benefit.benefitAlbumQuantity}</strong></span>
 									</div>
-									<div class="event-text clearfix ">
+									<div class="event-text clearfix">
 										<div class="blog-head-title pt15">
 											<h2 class="black"><a href="<c:url value="benefitItem.do"><c:param name="benefitId" value="${benefit.benefitId}"></c:param></c:url>">${benefit.album.artist} - ${benefit.album.albumName}</a></h2>
 										</div>
 										<div class="event-location mt10">
 											<div class="way-help-text-content pull-left">
-												<p>ID : ${benefit.userId}<br>
-												</p>
+												<p>ID : ${benefit.userId}<br></p>
 											</div>
 											<div class="blog-button text-uppercase pull-right mt25 mr15">
 												<a href="<c:url value="benefitItem.do"><c:param name="benefitId" value="${benefit.benefitId}"></c:param></c:url>">read more <span class="arrow-right-btn ti-arrow-right"></span></a>

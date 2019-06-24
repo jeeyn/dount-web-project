@@ -31,7 +31,6 @@ public class Donation {
 	public Date getDonationDate() {
 		return donationDate;
 	}
-	@DateTimeFormat(pattern="yyyy/MM/dd")
 	public void setDonationDate(Date donationDate) {
 		this.donationDate = donationDate;
 	}

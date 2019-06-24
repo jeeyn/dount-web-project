@@ -54,7 +54,8 @@ public class Account {
 			return true;
 		
 		return false;
-	} */
+	}
+	*/
 	
 	public String getUserId() {
 		return userId;

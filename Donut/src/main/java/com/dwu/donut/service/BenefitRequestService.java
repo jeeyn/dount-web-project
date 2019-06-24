@@ -15,7 +15,6 @@ public class BenefitRequestService {
 	@Autowired
 	BenefitRequestDao benefitRequestDao;
 
-	// benefitRequest Comment 작성
 	public void insertBenefitRequest(BenefitRequest benefitRequest) {
 		benefitRequest.setBrDate(new Date());			
 		benefitRequest.setBrMatchingState('F');
