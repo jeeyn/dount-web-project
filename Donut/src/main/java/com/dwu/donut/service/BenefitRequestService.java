@@ -14,12 +14,9 @@ public class BenefitRequestService {
 
 	@Autowired
 	BenefitRequestDao benefitRequestDao;
-
-	// benefitRequest Comment 작성
-	public void insertBenefitRequest(BenefitRequest benefitRequest) {
-		benefitRequest.setBrDate(new Date());			
-		benefitRequest.setBrMatchingState('F');
-		benefitRequestDao.insertBenefitRequest(benefitRequest);
+	
+	public BenefitRequest getBenefitRequestItem(int brId) {
+		return benefitRequestDao.getBenefitRequestItem(brId);
 	}
 	
 	public List<BenefitRequest> getBenefitRequestList(int donationId) {
@@ -28,6 +25,21 @@ public class BenefitRequestService {
 	
 	public List<BenefitRequest> getUserBenefitRequestList(String userId) {
 		return benefitRequestDao.getUserBenefitRequestList(userId);
+	}
+	
+	// benefitRequest Comment 작성
+	public void insertBenefitRequest(BenefitRequest benefitRequest) {
+		benefitRequest.setBrDate(new Date());			
+		benefitRequest.setBrMatchingState('F');
+		benefitRequestDao.insertBenefitRequest(benefitRequest);
+	}
+	
+	public void updateBenefitRequest(BenefitRequest benefitRequest) {
+		benefitRequestDao.updateBenefitRequest(benefitRequest);
+	}
+	
+	public void deleteBenefitRequest(BenefitRequest benefitRequest) {
+		benefitRequestDao.deleteBenefitRequest(benefitRequest);
 	}
 	
 }

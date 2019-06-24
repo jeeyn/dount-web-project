@@ -126,10 +126,21 @@
 																<span class="client-name"><a href="#">${donationRequest.userId}</a></span><br>
 																<span class="designation">${donationRequest.drDate}</span><br>
 																<span>QUANTITY : ${donationRequest.drAlbumQuantity}</span>
+																<input type="hidden" name="benefitId" value="${benefit.benefitId}">
+																<input type="hidden" name="drId" value="${donationRequest.drId}">
 																<c:if test="${sessionScope.isWriter == 'me'}">
-																	<div class="send-button text-uppercase pull-right">
-																		<button type="submit" value="Submit">MATCH</button> 
-																	</div>
+																	<c:choose>
+																		<c:when test="${donationRequest.drMatchingState eq 'T'.charAt(0)}">
+																			<div class="send-button text-uppercase pull-right">
+																				<button disabled style="background-color: #AAAAAA;">COMPLETE</button>
+																			</div>
+																		</c:when>
+																		<c:otherwise>
+																			<div class="send-button text-uppercase pull-right">
+																				<button type="submit" value="Submit">MATCHING</button>
+																			</div>
+																		</c:otherwise>
+																	</c:choose>
 																</c:if>
 																<div class="reply-text">
 																	<p>${donationRequest.drContent}</p>

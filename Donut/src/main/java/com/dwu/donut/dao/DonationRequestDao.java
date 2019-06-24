@@ -14,8 +14,8 @@ public class DonationRequestDao {
 	@Autowired
 	private DonationRequestMapper donationRequestMapper;
 	
-	public DonationRequest getDonatioRequestItem(int brId) {
-		return donationRequestMapper.getDonationRequestItem(brId);
+	public DonationRequest getDonationRequestItem(int drId) {
+		return donationRequestMapper.getDonationRequestItem(drId);
 	}
 	
 	public List<DonationRequest> getDonationRequestList(int benefitId) {

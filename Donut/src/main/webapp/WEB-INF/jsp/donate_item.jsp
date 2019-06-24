@@ -123,13 +123,24 @@
 													<div class="client-name-reply">
 														<div class="name-reply-text">
 															<div class="name-reply pb20">
-																<span class="client-name"><a href="#">${benefitRequest.userId}</a></span><br>
+																<span class="client-name">${benefitRequest.userId}</span><br>
 																<span class="designation">${benefitRequest.brDate}</span><br>
 																<span>QUANTITY : ${benefitRequest.brAlbumQuantity}</span>
+																<input type="hidden" name="donationId" value="${donation.donationId}">
+																<input type="hidden" name="brId" value="${benefitRequest.brId}">
 																<c:if test="${sessionScope.isWriter == 'me'}">
-																	<div class="send-button text-uppercase pull-right">
-																		<button type="submit" value="Submit">MATCH</button> 
-																	</div>
+																	<c:choose>
+																		<c:when test="${benefitRequest.brMatchingState eq 'T'.charAt(0)}">
+																			<div class="send-button text-uppercase pull-right">
+																				<button disabled style="background-color: #AAAAAA;">COMPLETE</button>
+																			</div>
+																		</c:when>
+																		<c:otherwise>
+																			<div class="send-button text-uppercase pull-right">
+																				<button type="submit" value="Submit">MATCHING</button>
+																			</div>
+																		</c:otherwise>
+																	</c:choose>
 																</c:if>
 																<div class="reply-text">
 																	<p>${benefitRequest.brContent}</p>

@@ -60,7 +60,7 @@ public class AccountController {
 	}
 	
 	// 개인정보조회, 개인정보수정 화면
-	@RequestMapping(value= {"/viewAccount.do", "/updateAccount.do"})
+	@RequestMapping({"/viewAccount.do", "/updateAccount.do"})
 	public ModelAndView viewAccountInfo(HttpSession session, HttpServletRequest request) {
 		String userId = (String)session.getAttribute("userId");
 		String userUrl = request.getServletPath();

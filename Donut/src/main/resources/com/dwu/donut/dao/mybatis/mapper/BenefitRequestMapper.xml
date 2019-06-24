@@ -53,9 +53,10 @@
 	
 	<update id="updateBenefitRequest" parameterType="BenefitRequest">
 		UPDATE BENEFIT_REQUEST SET
-			BR_DATE=#{brDate}
+			BR_DATE=#{brDate},
 			DONATION_ID=#{donationId},
-			BR_ALBUM_QUANTITY=#{brContentAlbumQuantity},
+			BR_ALBUM_QUANTITY=#{brAlbumQuantity},
+			BR_MATCHING_STATE=#{brMatchingState},
 			BR_CONTENT=#{brContent}
 		WHERE BR_ID = #{brId}
 	</update>

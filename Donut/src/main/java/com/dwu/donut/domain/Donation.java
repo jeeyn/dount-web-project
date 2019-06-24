@@ -9,7 +9,7 @@ public class Donation {
 	private int donationId;
 	private String userId;
 	@DateTimeFormat(pattern="yyyy/MM/dd")
-	private java.util.Date donationDate;
+	private Date donationDate;
 	private char donationMatchingState;
 	private int albumId;
 	private int donationAlbumQuantity;
@@ -31,7 +31,6 @@ public class Donation {
 	public Date getDonationDate() {
 		return donationDate;
 	}
-	@DateTimeFormat(pattern="yyyy/MM/dd")
 	public void setDonationDate(Date donationDate) {
 		this.donationDate = donationDate;
 	}

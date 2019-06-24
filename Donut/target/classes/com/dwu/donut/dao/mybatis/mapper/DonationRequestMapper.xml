@@ -51,15 +51,6 @@
 			AND B.ALBUM_ID = A.ALBUM_ID
 	</select>
 	
-	<update id="updateDonationRequest" parameterType="DonationRequest">
-		UPDATE DONATION_REQUEST SET
-			DR_DATE=#{drDate}
-			BENEFIT_ID=#{benefitId},
-			DR_ALBUM_QUANTITY=#{drContentAlbumQuantity},
-			DR_CONTENT=#{drContent}
-		WHERE DR_ID = #{drId}
-	</update>
-	
 	<insert id="insertDonationRequest">
 		INSERT INTO DONATION_REQUEST
 			(DR_ID, USER_ID, DR_DATE, DR_MATCHING_STATE, BENEFIT_ID, DR_ALBUM_QUANTITY, DR_CONTENT)
@@ -72,6 +63,16 @@
 				#{drAlbumQuantity, jdbcType=NUMERIC}, 
 				#{drContent, jdbcType=VARCHAR})
 	</insert>
+	
+	<update id="updateDonationRequest" parameterType="DonationRequest">
+		UPDATE DONATION_REQUEST SET
+			DR_DATE=#{drDate},
+			BENEFIT_ID=#{benefitId},
+			DR_ALBUM_QUANTITY=#{drAlbumQuantity},
+			DR_MATCHING_STATE=#{drMatchingState},
+			DR_CONTENT=#{drContent}
+		WHERE DR_ID = #{drId}
+	</update>
 	
 	<delete id="deleteDonationRequest">
 		DELETE FROM DONATION_REQUEST
