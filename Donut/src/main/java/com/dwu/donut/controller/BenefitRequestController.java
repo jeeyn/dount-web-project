@@ -21,7 +21,7 @@ public class BenefitRequestController {
 	@Autowired
 	private DonationService donationService;
 	
-	// 'Donation' 게시물에 기부 요청하기
+	// 'Donation' 게시물에 기부 요청
 	@RequestMapping(value="/requestBenefit.do", method=RequestMethod.POST)
 	public ModelAndView createBenefitRequest(HttpSession session, BenefitRequest benefitRequest) {
 		String userId = (String) session.getAttribute("userId");

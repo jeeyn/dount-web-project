@@ -35,7 +35,7 @@ public class BenefitController {
 	@Autowired
 	public DonationRequestService donationRequestService;
 	
-	// 'Benefit' 게시판 View
+	// 'Benefit' 게시판 화면
 	@RequestMapping("benefitList.do")
 	@ModelAttribute("benefitList")
 	public ModelAndView benefitList() {
@@ -48,7 +48,7 @@ public class BenefitController {
 		return mav;
 	}
 		
-	// 'Benefit' 게시물 View
+	// 'Benefit' 게시물 화면
 	@RequestMapping("/benefitItem.do")
 	@ModelAttribute("dontaionRequestList")
 	public ModelAndView benefitItem(@RequestParam("benefitId") int benefitId, HttpSession session) {
@@ -75,16 +75,21 @@ public class BenefitController {
 	
 	// 'Benefit' 게시물 작성 화면
 	@RequestMapping("createBenefitItemForm.do")
-	public String createDonationItemForm(HttpSession session) {		
+	public ModelAndView createDonationItemForm(HttpSession session) {
+		ModelAndView mav = new ModelAndView();
+		
 		if (session.getAttribute("userId") != null) {
-			return "create_benefit_item_form";
+			mav.addObject("albumList", albumService.getAlbumList());
+			mav.setViewName("create_benefit_item_form");
 		} else {
 			session.setAttribute("from", "create_benefit_item_form");
-			return "login";
+			mav.setViewName("login");
 		}
+		
+		return mav;
 	}
 	
-	// 'Benefit' 게시물 작성하기
+	// 'Benefit' 게시물 작성 처리
 	@RequestMapping(value="createBenefitItem.do", method=RequestMethod.POST)
 	public ModelAndView createBenefitItem(Benefit benefit, HttpSession session) {
 		benefit.setUserId((String)session.getAttribute("userId"));
@@ -105,14 +110,14 @@ public class BenefitController {
 		return mav;
 	}
 	
-	// 'Benefit' 게시물 수정하기
+	// 'Benefit' 게시물 수정 처리
 	@RequestMapping("updateBenefitItem.do")
 	public ModelAndView updateBenefitItem(Benefit benefit) {
 		benefitService.updateBenefit(benefit);
 		return benefitList();
 	}
 	
-	// 'Benefit' 게시물 삭제하기
+	// 'Benefit' 게시물 삭제 처리
 	@RequestMapping("deleteBenefitItem.do")
 	public ModelAndView deleteBenefitItem(int benefitId) {
 		benefitService.deleteBenefit(benefitId);

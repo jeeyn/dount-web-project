@@ -35,9 +35,8 @@ public class DonationController {
 	@Autowired
 	public BenefitRequestService benefitRequestService;
 	
-	// 'Donation' 게시판 View
+	// 'Donation' 게시판 화면
 	@RequestMapping("donationList.do")
-	@ModelAttribute("donationList")
 	public ModelAndView donationList() {
 		
 		ModelAndView mav = new ModelAndView();
@@ -48,7 +47,7 @@ public class DonationController {
 		return mav;
 	}
 		
-	// 'Donation' 게시물 View
+	// 'Donation' 게시물 화면
 	@RequestMapping("/donationItem.do")
 	@ModelAttribute("benefitRequestList")
 	public ModelAndView donationItem(@RequestParam("donationId") int donationId, HttpSession session) {
@@ -75,16 +74,21 @@ public class DonationController {
 	
 	// 'Donation' 게시물 작성 화면
 	@RequestMapping("createDonationItemForm.do")
-	public String createDonationItemForm(HttpSession session) {
+	public ModelAndView createDonationItemForm(HttpSession session) {
+		ModelAndView mav = new ModelAndView();
+		
 		if (session.getAttribute("userId") != null) {
-			return "create_donation_item_form";
+			mav.addObject("albumList", albumService.getAlbumList());
+			mav.setViewName("create_donation_item_form");
 		} else {
 			session.setAttribute("from", "create_donation_item_form");
-			return "login";
+			mav.setViewName("login");
 		}
+		
+		return mav;
 	}
 	
-	// 'Donation' 게시물 작성하기
+	// 'Donation' 게시물 작성 처리
 	@RequestMapping(value="createDonationItem.do", method=RequestMethod.POST)
 	public ModelAndView createDonationItem(Donation donation, HttpSession session) {
 		donation.setUserId((String)session.getAttribute("userId"));
@@ -105,7 +109,7 @@ public class DonationController {
 		return mav;
 	}
 	
-	// 'Donation' 게시물 수정하기
+	// 'Donation' 게시물 수정 처리
 	@RequestMapping("updateDonationItem.do")
 	public ModelAndView updateDonationItem(Donation donation) {
 		donationService.updateDonation(donation);
@@ -113,7 +117,7 @@ public class DonationController {
 		return donationList();
 	}
 	
-	// 'Donation' 게시물 삭제하기
+	// 'Donation' 게시물 삭제 처리
 	@RequestMapping("deleteDonationItem.do")
 	public ModelAndView deleteDonationItem(int donationId) {
 		donationService.deleteDonation(donationId);

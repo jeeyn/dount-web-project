@@ -17,11 +17,10 @@ public class DonationRequestController {
 
 	@Autowired
 	public DonationRequestService donationRequestService;
-	
 	@Autowired
 	private BenefitService benefitService;
 	
-	// 'Benefit' 게시물에 기부 신청하기
+	// 'Benefit' 게시물에 기부 신청
 	@RequestMapping(value="/requestDonation.do", method=RequestMethod.POST)
 	public ModelAndView createDonationRequest(HttpSession session, DonationRequest donationRequest) {
 		String userId = (String) session.getAttribute("userId");

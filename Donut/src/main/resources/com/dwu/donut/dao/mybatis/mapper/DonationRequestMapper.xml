@@ -31,6 +31,7 @@
 				DR_CONTENT drContent
 		FROM DONATION_REQUEST
 		WHERE BENEFIT_ID = #{benefitId}
+		ORDER BY DR_DATE DESC
 	</select>
 	
 	<select id="getUserDonationRequestList" resultType="DonationRequest">
@@ -49,13 +50,14 @@
 		WHERE DR.USER_ID = #{userId}
 			AND DR.BENEFIT_ID = B.BENEFIT_ID
 			AND B.ALBUM_ID = A.ALBUM_ID
+		ORDER BY DR_DATE DESC
 	</select>
 	
 	<insert id="insertDonationRequest">
 		INSERT INTO DONATION_REQUEST
 			(DR_ID, USER_ID, DR_DATE, DR_MATCHING_STATE, BENEFIT_ID, DR_ALBUM_QUANTITY, DR_CONTENT)
 		VALUES
-			(SEQ_BR.NEXTVAL,
+			(SEQ_DR.NEXTVAL,
 				#{userId, jdbcType=VARCHAR}, 
 				#{drDate, jdbcType=DATE},
 				#{drMatchingState, jdbcType=CHAR}, 

@@ -5,18 +5,18 @@
 
 	<select id="getAlbumItem" resultType="Album">
 		SELECT ALBUM_ID albumId,
-				ALBUM_NAME albumName,
-				ARTIST artist,
-				COVER cover
+			   ALBUM_NAME albumName,
+			   ARTIST artist,
+			   COVER cover
 		FROM ALBUM
 		WHERE ALBUM_ID = #{albumId}
 	</select>
 	
 	<select id="getAlbumList" resultType="Album">
 		SELECT ALBUM_ID albumId,
-				ALBUM_NAME albumName,
-				ARTIST artist,
-				COVER cover
+			   ALBUM_NAME albumName,
+			   ARTIST artist,
+			   COVER cover
 		FROM ALBUM
 	</select>
 	

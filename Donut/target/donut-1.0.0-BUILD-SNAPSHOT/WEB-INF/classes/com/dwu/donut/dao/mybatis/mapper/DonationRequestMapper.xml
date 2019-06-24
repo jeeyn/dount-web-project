@@ -1,0 +1,94 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE mapper PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN" "http://mybatis.org/dtd/mybatis-3-mapper.dtd">
+
+<mapper namespace="com.dwu.donut.dao.mybatis.mapper.DonationRequestMapper">
+
+	<select id="getDonationRequestItem" resultType="DonationRequest">
+		SELECT DR.DR_ID drId,
+				DR.USER_ID userId,
+				DR.DR_DATE drDate,
+				DR.DR_MATCHING_STATE drMatchingState, 
+				DR.BENEFIT_ID benefitId,
+				DR.DR_ALBUM_QUANTITY drAlbumQuantity,
+				DR.DR_CONTENT drContent,
+				A.ALBUM_ID AS "album.albumId",
+				A.ALBUM_NAME AS "album.albumName",
+				A.ARTIST AS "album.artist",
+				A.COVER AS "album.cover"
+		FROM DONATION_REQUEST DR, BENEFIT B, ALBUM A
+		WHERE DR.DR_ID = #{drId}
+			AND DR.BENEFIT_ID = B.BENEFIT_ID
+			AND B.ALBUM_ID = A.ALBUM_ID
+	</select>
+	
+	<select id="getDonationRequestList" resultType="DonationRequest">
+		SELECT DR_ID drId,
+				USER_ID userId,
+				DR_DATE drDate,
+				DR_MATCHING_STATE drMatchingState, 
+				BENEFIT_ID benefitId,
+				DR_ALBUM_QUANTITY drAlbumQuantity,
+				DR_CONTENT drContent
+		FROM DONATION_REQUEST
+		WHERE BENEFIT_ID = #{benefitId}
+		ORDER BY DR_DATE DESC
+	</select>
+	
+	<select id="getUserDonationRequestList" resultType="DonationRequest">
+		SELECT DR.DR_ID drId,
+				DR.USER_ID userId,
+				DR.DR_DATE drDate,
+				DR.DR_MATCHING_STATE drMatchingState,
+				DR.BENEFIT_ID benefitId,
+				DR.DR_ALBUM_QUANTITY drAlbumQuantity,
+				DR.DR_CONTENT drContent,
+				A.ALBUM_ID AS "album.albumId",
+				A.ALBUM_NAME AS "album.albumName",
+				A.ARTIST AS "album.artist",
+				A.COVER AS "album.cover"
+		FROM DONATION_REQUEST DR, BENEFIT B, ALBUM A
+		WHERE DR.USER_ID = #{userId}
+			AND DR.BENEFIT_ID = B.BENEFIT_ID
+			AND B.ALBUM_ID = A.ALBUM_ID
+		ORDER BY DR_DATE DESC
+	</select>
+	
+	<update id="updateDonationRequest" parameterType="DonationRequest">
+		UPDATE DONATION_REQUEST SET
+			DR_DATE=#{drDate}
+			BENEFIT_ID=#{benefitId},
+			DR_ALBUM_QUANTITY=#{drAlbumQuantity},
+			DR_MATCHING_STATE=#{drMatchingState},
+			DR_CONTENT=#{drContent}
+		WHERE DR_ID = #{drId}
+	</update>
+	
+	<insert id="insertDonationRequest">
+		INSERT INTO DONATION_REQUEST
+			(DR_ID, USER_ID, DR_DATE, DR_MATCHING_STATE, BENEFIT_ID, DR_ALBUM_QUANTITY, DR_CONTENT)
+		VALUES
+			(SEQ_DR.NEXTVAL,
+				#{userId, jdbcType=VARCHAR}, 
+				#{drDate, jdbcType=DATE},
+				#{drMatchingState, jdbcType=CHAR}, 
+				#{benefitId, jdbcType=NUMERIC}, 
+				#{drAlbumQuantity, jdbcType=NUMERIC}, 
+				#{drContent, jdbcType=VARCHAR})
+	</insert>
+	
+	<update id="updateDonationRequest" parameterType="DonationRequest">
+		UPDATE DONATION_REQUEST SET
+			DR_DATE=#{drDate},
+			BENEFIT_ID=#{benefitId},
+			DR_ALBUM_QUANTITY=#{drAlbumQuantity},
+			DR_MATCHING_STATE=#{drMatchingState},
+			DR_CONTENT=#{drContent}
+		WHERE DR_ID = #{drId}
+	</update>
+	
+	<delete id="deleteDonationRequest">
+		DELETE FROM DONATION_REQUEST
+		WHERE DR_ID = #{drId}
+	</delete>
+
+</mapper>

@@ -24,13 +24,13 @@ public class LoginController {
 	@Autowired
 	public AlbumService albumService;
 	
-	// 1. 로그인 화면
+	// 로그인 화면
 	@RequestMapping("/loginForm.do")
 	public String loginForm() {
 		return "login";
 	}
 	
-	// 2. 로그인 처리
+	// 로그인 처리
 	@RequestMapping("/login.do")
 	public ModelAndView login(@ModelAttribute Account account, HttpSession session, HttpServletRequest request) {
 		boolean loginResult = accountService.loginCheck(account, session);

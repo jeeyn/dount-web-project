@@ -1,0 +1,76 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE mapper PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN" "http://mybatis.org/dtd/mybatis-3-mapper.dtd">
+
+<mapper namespace="com.dwu.donut.dao.mybatis.mapper.MatchingMapper">
+
+	<select id="getMatchingItem" resultType="Matching">
+		SELECT MATCHING_ID matchingId,
+				MATCHING_DATE matchingDate,
+				DONATION_USER_ID donationUserId,
+				BENEFIT_USER_ID benefitUserId,
+				MATCHING_TYPE matchingType,
+				POST_ID postId,
+				REQUEST_ID requestId,
+				ALBUM_ID albumId,
+				MATCHING_ALBUM_QUANTITY matchingAlbumQuantity
+		FROM MATCHING
+		WHERE MATCHING_ID = #{matchingId}
+	</select>
+	
+	<select id="getMatchingList" resultType="Matching">
+		SELECT MATCHING_ID matchingId,
+				MATCHING_DATE matchingDate,
+				DONATION_USER_ID donationUserId,
+				BENEFIT_USER_ID benefitUserId,
+				MATCHING_TYPE matchingType,
+				POST_ID postId,
+				REQUEST_ID requestId,
+				ALBUM_ID albumId,
+				MATCHING_ALBUM_QUANTITY matchingAlbumQuantity
+		FROM MATCHING
+	</select>
+	
+	<select id="getUserMatchingList" resultType="Matching">
+		SELECT MATCHING_ID matchingId,
+				MATCHING_DATE matchingDate,
+				DONATION_USER_ID donationUserId,
+				BENEFIT_USER_ID benefitUserId,
+				MATCHING_TYPE matchingType,
+				POST_ID postId,
+				REQUEST_ID requestId,
+				ALBUM_ID albumId,
+				MATCHING_ALBUM_QUANTITY matchingAlbumQuantity
+		FROM MATCHING
+		WHERE DONATION_USER_ID = #{userId}
+			OR BENEFIT_USER_ID = #{userId}
+	</select>
+	
+	<insert id="insertMatching">
+		INSERT INTO MATCHING
+			(MATCHING_ID,
+				MATCHING_DATE,
+				DONATION_USER_ID,
+				BENEFIT_USER_ID,
+				MATCHING_TYPE,
+				POST_ID,
+				REQUEST_ID,
+				ALBUM_ID,
+				MATCHING_ALBUM_QUANTITY) 
+		VALUES 
+			(SEQ_MATCHING.NEXTVAL,
+				#{matchingDate, jdbcType=DATE},
+				#{donationUserId, jdbcType=VARCHAR},
+				#{benefitUserId, jdbcType=VARCHAR},
+				#{matchingType, jdbcType=CHAR},
+				#{postId, jdbcType=NUMERIC},
+				#{requestId, jdbcType=NUMERIC},
+				#{albumId, jdbcType=NUMERIC},
+				#{matchingAlbumQuantity, jdbcType=NUMERIC})
+	</insert>
+	
+	<delete id="deleteMatching">
+		DELETE FROM MATCHING
+		WHERE MATCHING_ID = #{matchingId}
+	</delete>
+
+</mapper>
