@@ -50,12 +50,12 @@
 	<!-- End of Header 
 	============================================= -->
 
-	<!-- Start of contact page section 
+	<!-- Start of Contact Us Section 
 	============================================= -->
 	<section id="contact-us" class="contact-us-section">
 		<div class="container">
-			<div class="row section-content">
-				<div class="section-title text-center">
+			<div class="row section-content" style="padding-top:50px;">
+				<div class="section-title text-center" style="padding-bottom: 50px;">
 					<div class="section-title-text text-uppercase">
 						<p>Contact Us</p>
 					</div>
@@ -63,7 +63,14 @@
 						<h2>Contact Us</h2>
 					</div>
 				</div>
-				<!-- /section-title -->
+				<!-- Contact Us Title
+				============================================= -->
+				
+				<div class="recent-causes-pic" style="text-align:center; padding-bottom: 80px;">
+					<img src="resources/assets/img/icon.png" alt="image">
+				</div>
+				<!-- Donut Logo
+				============================================= -->
 
 				<div class="contact-us-section-content">
 					<div class="way-help-section-content">
@@ -75,7 +82,7 @@
 											<h3 class="black">address</h3>
 										</div>
 										<div class="way-help-text-content">
-											<p>60 Hwarang-ro 13-gil <br>
+											<p>Jangwol-ro 35-gil <br>
 												Seongbuk-gu, Seoul
 											</p>
 										</div>
@@ -107,7 +114,7 @@
 											<h3 class="black">EMAIL ADDRESS</h3>
 										</div>
 										<div class="way-help-text-content">
-											<p>leesoyena@gmail.com <br>dbswldbs123@naver.com</p>
+											<p>leesoyena@gmail.com<br>dbswldbs123@naver.com</p>
 										</div>
 									</div>
 									<!-- /text -->

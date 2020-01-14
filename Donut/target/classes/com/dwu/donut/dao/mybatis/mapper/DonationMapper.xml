@@ -1,0 +1,90 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE mapper PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN" "http://mybatis.org/dtd/mybatis-3-mapper.dtd">
+
+<mapper namespace="com.dwu.donut.dao.mybatis.mapper.DonationMapper">
+
+	<select id="getDonationItem" resultType="Donation">
+		SELECT D.DONATION_ID donationId,
+				D.USER_ID userId,
+				D.DONATION_DATE donationDate,
+				D.DONATION_MATCHING_STATE donationMatchingState,
+				D.DONATION_ALBUM_QUANTITY donationAlbumQuantity,
+				D.ALBUM_ID albumId,
+				D.DONATION_CONTENT donationContent,
+				A.ALBUM_ID AS "album.albumId",
+				A.ALBUM_NAME AS "album.albumName",
+				A.ARTIST AS "album.artist",
+				A.COVER AS "album.cover"
+		FROM DONATION D, ALBUM A
+		WHERE D.DONATION_ID = #{donationId} AND D.ALBUM_ID = A.ALBUM_ID
+	</select>
+	
+	<select id="getDonationList" resultType="Donation">
+		SELECT D.DONATION_ID donationId,
+				D.USER_ID userId,
+				D.DONATION_DATE donationDate,
+				D.DONATION_MATCHING_STATE donationMatchingState,
+				D.DONATION_ALBUM_QUANTITY donationAlbumQuantity,
+				D.ALBUM_ID albumId,
+				D.DONATION_CONTENT donationContent,
+				A.ALBUM_ID AS "album.albumId",
+				A.ALBUM_NAME AS "album.albumName",
+				A.ARTIST AS "album.artist",
+				A.COVER AS "album.cover"
+		FROM DONATION D, ALBUM A
+		WHERE D.ALBUM_ID = A.ALBUM_ID
+		ORDER BY D.DONATION_DATE DESC
+	</select>
+	
+	<select id="getUserDonationList" resultType="Donation">
+		SELECT D.DONATION_ID donationId,
+				D.USER_ID userId,
+				D.DONATION_DATE donationDate,
+				D.DONATION_MATCHING_STATE donationMatchingState,
+				D.DONATION_ALBUM_QUANTITY donationAlbumQuantity,
+				D.ALBUM_ID albumId,
+				D.DONATION_CONTENT donationContent,
+				A.ALBUM_ID AS "album.albumId",
+				A.ALBUM_NAME AS "album.albumName",
+				A.ARTIST AS "album.artist",
+				A.COVER AS "album.cover"
+		FROM DONATION D, ALBUM A
+		WHERE D.USER_ID = #{userId} AND D.ALBUM_ID = A.ALBUM_ID
+		ORDER BY D.DONATION_DATE DESC
+	</select>
+	
+	<insert id="insertDonation">
+		INSERT INTO DONATION 
+			(DONATION_ID,
+				USER_ID,
+				DONATION_DATE,
+				DONATION_MATCHING_STATE,
+				ALBUM_ID,
+				DONATION_ALBUM_QUANTITY,
+				DONATION_CONTENT) 
+		VALUES 
+			(SEQ_DONATION.NEXTVAL,
+				#{userId, jdbcType=VARCHAR},
+				#{donationDate, jdbcType=DATE},
+				#{donationMatchingState, jdbcType=CHAR},
+				#{albumId, jdbcType=NUMERIC},
+				#{donationAlbumQuantity, jdbcType=NUMERIC},
+				#{donationContent, jdbcType=VARCHAR})
+	</insert>
+	
+	<update id="updateDonation" parameterType="Donation">
+		UPDATE DONATION SET
+			DONATION_DATE=#{donationDate, jdbcType=DATE},
+			ALBUM_ID=#{albumId},
+			DONATION_ALBUM_QUANTITY=#{donationAlbumQuantity},
+			DONATION_CONTENT=#{donationContent}
+		WHERE DONATION_ID = #{donationId}
+	</update>
+	
+	
+	<delete id="deleteDonation">
+		DELETE FROM DONATION
+		WHERE DONATION_ID = #{donationId}
+	</delete>
+
+</mapper>

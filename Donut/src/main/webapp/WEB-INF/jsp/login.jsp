@@ -1,4 +1,5 @@
 <%@ page language="java" contentType="text/html; charset=UTF-8" pageEncoding="UTF-8"%>
+<%@ taglib prefix="c" uri="http://java.sun.com/jsp/jstl/core" %>
 
 <!DOCTYPE html>
 <html lang="en">
@@ -51,7 +52,7 @@
 					<nav class="navbar">
 						<!-- Brand and toggle get grouped for better mobile display -->
 						<div class="navbar-header">
-							<a class="navbar-brand" href="index.html"><img src="resources/assets/img/logo.png" alt="image"></a>
+							<a class="navbar-brand" href="index.do"><img src="resources/assets/img/logo.png" alt="image"></a>
 						</div>
 					</nav>
 				</div>
@@ -60,24 +61,27 @@
 	</header>
 	<br><br><br>
 	<div class="login-form">
-	    <form action="#" method="post">
+	    <form action="login.do" method="post">
 			<div class="avatar">
-				<img src="resources/assets/img/donut.png" alt="donut">
+				<a href="registerForm.do">
+					<img src="resources/assets/img/donut.png" alt="donut">
+				</a>
 			</div>
 	        <h2 class="text-center">Member Login</h2>   
 	        <div class="form-group">
-	        	<input type="text" class="form-control" name="username" placeholder="Username" required="required">
+	        	<input type="text" class="form-control" name="userId" placeholder="Username" required="required">
 	        </div>
 			<div class="form-group">
 	            <input type="password" class="form-control" name="password" placeholder="Password" required="required">
 	        </div>        
 	        <div class="form-group">
 	            <button type="submit" class="btn btn-primary btn-lg btn-block">Sign in</button>
+	            <c:if test="${msg == 'failure'}">
+	            	<div style="color: red; text-align: center;">ID or password Do Not Match</div>
+	            </c:if>
 	        </div>
 	    </form>
-	    <!--
-	    <p class="text-center small">Don't have an account? <a href="#">Sign up here!</a></p>
-	    -->
+	    <p class="text-center small">Don't have an account? <a href="registerAccount.do">Sign up here!</a></p>
 	</div>
 
 	<!-- js -->
@@ -90,7 +94,6 @@
 	<script type="text/javascript" src="resources/assets/js/countdown.js"></script>
 	<script type="text/javascript" src="resources/assets/js/parallax.min.js"></script>
 	<script type="text/javascript" src="resources/assets/js/circle-progress.js"></script>
-
 
 	<!-- REVOLUTION JS FILES -->
 	<script type="text/javascript" src="resources/rev-slider/js/jquery.themepunch.tools.min.js"></script>
@@ -106,9 +109,6 @@
     <script type="text/javascript" src="resources/rev-slider/js/revolution.extension.parallax.min.js"></script>
     <script type="text/javascript" src="resources/rev-slider/js/revolution.extension.slideanims.min.js"></script>
     <script type="text/javascript" src="resources/rev-slider/js/revolution.extension.video.min.js"></script>
-
-
-
     <script type="text/javascript" src="resources/assets/js/function.js"></script>
 
     <script>

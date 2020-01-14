@@ -1,4 +1,5 @@
-<%@ page language="java" contentType="text/html; charset=UTF-8" pageEncoding="UTF-8"%>
+<%@ page language="java" contentType="text/html; charset=UTF-8" pageEncoding="UTF-8" %>
+<%@ taglib prefix="c" uri="http://java.sun.com/jsp/jstl/core" %>
 
 <!DOCTYPE html>
 <html lang="zxx">
@@ -6,8 +7,6 @@
 	<meta charset="utf-8">
 	<title>Donut</title>
 	<link rel="shortcut icon" href="resources/assets/img/icon.png">
-
-	<meta name="description" content="FundMe - is a Premium HTML Responsive Templeate by HTMLmate Team. You can use this for anykind of Nonprofit website">
 
 	<meta name="keywords" content="Premium HTML Template">
 
@@ -40,6 +39,16 @@
 	<link rel="stylesheet" type="text/css" href="resources/assets/css/style.css">
 	<!-- responsive.css -->
 	<link rel="stylesheet" type="text/css" href="resources/assets/css/responsive.css">
+	
+	<style>
+	.postContent {
+		display: -webkit-box;
+		-webkit-line-clamp: 2;
+		-webkit-box-orient:vertical;
+		overflow: hidden;
+		text-overflow: ellipsis;
+	}
+	</style>
 </head>
 <!-- /end of head -->
 
@@ -50,8 +59,8 @@
 	<jsp:include page="top.jsp"/>
 	<!-- End of Header 
 	============================================= -->
-
-	<!-- Start of Donate page content 
+	
+	<!-- Start of Donate Section 
 	============================================= -->
 	<section id="donates-page-content" class="donates-page-section">
 		<div class="container">
@@ -64,7 +73,9 @@
 						<h2>Donate</h2>
 					</div>
 				</div>
-				<!-- /section-title -->
+				
+				<!-- Donation Title
+				=====================================================================-->
 				
 				<div class="side-bar-search mb40">
 					<form action="#" method="get">
@@ -72,267 +83,85 @@
 							<button type="submit"><span class="ti-search"></span></button>
 					</form>
 				</div>
-				<!-- /side-bar-search -->
+				
+				<!-- Donation Search
+				=====================================================================-->						
+				
 				<div class="causes-page-item">
 					<div class="causes-page-left-item">
 						<div class="causes-item">
 							<div class="row">
-								<div class="col-sm-4">
-									<div class="recent-causes-pic-text causes colmd4">
-										<div class="recent-causes-pic">
-											<img src="resources/assets/img/cause-1.jpg" alt="image">
-										</div>
-										<!-- /img -->
-										<div class="cause-text pt75 pb50">
-											<div class="gola-reach">
-												<ul class="gola-reach-list">
-													<li class="black">Artist : 김재환</li>
-													<li class="black">Title : 미니앨범 1집 : Another [Classy ver.]</li>
-												</ul>
+								
+								<!-- Start of Donation List
+								=====================================================================-->
+								
+								<c:forEach items="${donationList}" var="donation">
+								
+									<!-- Start of Donation Item
+									=====================================================================-->
+								
+									<div class="col-sm-4">
+										<div class="recent-causes-pic-text causes colmd4">
+											<div class="recent-causes-pic">
+												<img src="resources/assets/img/${donation.album.cover}" alt="image">
 											</div>
-											<div class="cause-text-head pt15 pb20 p10">
-												<h3><a href="#">Nemo enim ipsam voluptatem quia vo-luptas sit aspernatur aut</a></h3>
-											</div>
-											<div class="donate-now-btn">
-												<div class="donate-btn margin0 text-uppercase">
-													<a href="donate_item.jsp">donate now</a>
+											
+											<!-- Donation Album Cover
+											=====================================================================-->
+											
+											<div class="cause-text" style="padding-top: 50px; padding-bottom: 50px;">
+												<div class="gola-reach" style="text-align:center; height: 100px;">
+													<p><b>
+														<font color="#FFCC48">TITLE : </font>
+														${donation.album.albumName}
+													</b></p>
+													<p><b>
+														<font color="#FFCC48">QUANTITY : </font>
+														${donation.donationAlbumQuantity}
+													</b></p>
+													<p><b>
+														<font color="#FFCC48">DONOR : </font>
+														${donation.userId}
+													</b></p>
+												</div>
+												<div class="cause-text-head pt15 pb20 p10" style="height: 100px; font-size:12px;">
+													<h3 class="postContent">${donation.donationContent}</h3>
+												</div>
+												<div class="donate-now-btn">
+													<div class="donate-btn margin0 text-uppercase">
+														<a href="<c:url value="donationItem.do"><c:param name="donationId" value="${donation.donationId}"></c:param></c:url>">request now</a>
+													</div>
 												</div>
 											</div>
 										</div>
 									</div>
-								</div>
-								<!-- /col-sm-4 -->
-
-								<div class="col-sm-4">
-									<div class="recent-causes-pic-text causes colmd4">
-										<div class="recent-causes-pic">
-											<img src="resources/assets/img/cause-2.jpg" alt="image">
-										</div>
-										<!-- /img -->
-										<div class="cause-text pt75 pb50">
-											<div class="gola-reach">
-												<ul class="gola-reach-list">
-													<li class="black">Artist : 잔나비 (Jannabi)</li>
-													<li class="black">Title : 2집 - 전설</li>
-												</ul>
-											</div>
-											<div class="cause-text-head pt15 pb20 p10">
-												<h3><a href="#">Nemo enim ipsam voluptatem quia vo-luptas sit aspernatur aut </a> </h3>
-											</div>
-											<div class="donate-now-btn">
-												<div class="donate-btn margin0 text-uppercase">
-													<a href="donate_item.jsp">donate now</a>
-												</div>
-											</div>
-										</div>
-									</div>
-								</div>
-								<!-- /col-sm-4 -->
-
-
-								<div class="col-sm-4">
-									<div class="recent-causes-pic-text causes colmd4">
-										<div class="recent-causes-pic">
-											<img src="resources/assets/img/cause-3.jpg" alt="image">
-										</div>
-										<!-- /img -->
-										<div class="cause-text pt75 pb50">
-											<div class="gola-reach">
-												<ul class="gola-reach-list">
-													<li class="black">Artist : 러블리즈 (Lovelyz)</li>
-													<li class="black">Title : 미니앨범 6집 : Once Upon A Time [한정판]</li>
-												</ul>
-											</div>
-											<div class="cause-text-head pt15 pb20 p10">
-												<h3><a href="#">Nemo enim ipsam voluptatem quia vo-luptas sit aspernatur aut </a> </h3>
-											</div>
-											<div class="donate-now-btn">
-												<div class="donate-btn margin0 text-uppercase">
-													<a href="donate_item.jsp">donate now</a>
-												</div>
-											</div>
-										</div>
-									</div>
-								</div>
-								<!-- /col-sm-4 -->
-
-
-								<div class="col-sm-4">
-									<div class="recent-causes-pic-text causes colmd4">
-										<div class="recent-causes-pic">
-											<img src="resources/assets/img/cause-4.jpg" alt="image">
-										</div>
-										<!-- /img -->
-										<div class="cause-text pt75 pb50">
-											<div class="gola-reach">
-												<ul class="gola-reach-list">
-													<li class="black">Artist : 위너 (WINNER)</li>
-													<li class="black">Title : 미니앨범 2집 : WE [Blue ver.]</li>
-												</ul>
-											</div>
-											<div class="cause-text-head pt15 pb20 p10">
-												<h3><a href="#">Nemo enim ipsam voluptatem quia vo-luptas sit aspernatur aut </a> </h3>
-											</div>
-											<div class="donate-now-btn">
-												<div class="donate-btn margin0 text-uppercase">
-													<a href="donate_item.jsp">donate now</a>
-												</div>
-											</div>
-										</div>
-									</div>
-								</div>
-								<!-- /col-sm-4 -->
-
-
-								<div class="col-sm-4">
-									<div class="recent-causes-pic-text causes colmd4">
-										<div class="recent-causes-pic">
-											<img src="resources/assets/img/cause-5.jpg" alt="image">
-										</div>
-										<!-- /img -->
-										<div class="cause-text pt75 pb50">
-											<div class="gola-reach">
-												<ul class="gola-reach-list">
-													<li class="black">Artist : 오마이걸 (OH MY GIRL)</li>
-													<li class="black">Title : The Fifth Season</li>
-												</ul>
-											</div>
-											<div class="cause-text-head pt15 pb20 p10">
-												<h3><a href="#">Nemo enim ipsam voluptatem quia vo-luptas sit aspernatur aut </a> </h3>
-											</div>
-											<div class="donate-now-btn">
-												<div class="donate-btn margin0 text-uppercase">
-													<a href="donate_item.jsp">donate now</a>
-												</div>
-											</div>
-										</div>
-									</div>
-								</div>
-								<!-- /col-sm-4 -->
-
-
-								<div class="col-sm-4">
-									<div class="recent-causes-pic-text causes colmd4">
-										<div class="recent-causes-pic">
-											<img src="resources/assets/img/cause-6.jpg" alt="image">
-										</div>
-										<!-- /img -->
-										<div class="cause-text pt75 pb50">
-											<div class="gola-reach">
-												<ul class="gola-reach-list">
-													<li class="black">Artist : 트와이스 (TWICE)</li>
-													<li class="black">Title : 미니앨범 7집 : Fancy You</li>
-												</ul>
-											</div>
-											<div class="cause-text-head pt15 pb20 p10">
-												<h3><a href="#">Nemo enim ipsam voluptatem quia vo-luptas sit aspernatur aut </a> </h3>
-											</div>
-											<div class="donate-now-btn">
-												<div class="donate-btn margin0 text-uppercase">
-													<a href="donate_item.jsp">donate now</a>
-												</div>
-											</div>
-										</div>
-									</div>
-								</div>
-								<!-- /col-sm-4 -->
-
-
-								<div class="col-sm-4">
-									<div class="recent-causes-pic-text causes colmd4">
-										<div class="recent-causes-pic">
-											<img src="resources/assets/img/cause-7.jpg" alt="image">
-										</div>
-										<!-- /img -->
-										<div class="cause-text pt75 pb50">
-											<div class="gola-reach">
-												<ul class="gola-reach-list">
-													<li class="black">Artist : 방탄소년단 (BTS)</li>
-													<li class="black">Title : 화양연화 Young Forever</li>
-												</ul>
-											</div>
-											<div class="cause-text-head pt15 pb20 p10">
-												<h3><a href="#">Nemo enim ipsam voluptatem quia vo-luptas sit aspernatur aut </a> </h3>
-											</div>
-											<div class="donate-now-btn">
-												<div class="donate-btn margin0 text-uppercase">
-													<a href="donate_item.jsp">donate now</a>
-												</div>
-											</div>
-										</div>
-									</div>
-								</div>
-								<!-- /col-sm-4 -->
-
-
-								<div class="col-sm-4">
-									<div class="recent-causes-pic-text causes colmd4">
-										<div class="recent-causes-pic">
-											<img src="resources/assets/img/cause-8.jpg" alt="image">
-										</div>
-										<!-- /img -->
-										<div class="cause-text pt75 pb50">
-											<div class="gola-reach">
-												<ul class="gola-reach-list">
-													<li class="black">Artist : 제이 레빗 (J Rabbit)</li>
-													<li class="black">Title : 4집 Dialogue on the Road</li>
-												</ul>
-											</div>
-											<div class="cause-text-head pt15 pb20 p10">
-												<h3><a href="#">Nemo enim ipsam voluptatem quia vo-luptas sit aspernatur aut </a> </h3>
-											</div>
-											<div class="donate-now-btn">
-												<div class="donate-btn margin0 text-uppercase">
-													<a href="donate_item.jsp">donate now</a>
-												</div>
-											</div>
-										</div>
-									</div>
-								</div>
-								<!-- /col-sm-4 -->
-
-
-								<div class="col-sm-4">
-									<div class="recent-causes-pic-text causes colmd4">
-										<div class="recent-causes-pic">
-											<img src="resources/assets/img/cause-9.jpg" alt="image">
-										</div>
-										<!-- /img -->
-										<div class="cause-text pt75 pb50">
-											<div class="gola-reach">
-												<ul class="gola-reach-list">
-													<li class="black">Artist : 장범준<br></li>
-													<li class="black">Title : 3집</li>
-												</ul>
-											</div>
-											<div class="cause-text-head pt15 pb20 p10">
-												<h3><a href="#">Nemo enim ipsam voluptatem quia vo-luptas sit aspernatur aut </a> </h3>
-											</div>
-											<div class="donate-now-btn">
-												<div class="donate-btn margin0 text-uppercase">
-													<a href="donate_item.jsp">donate now</a>
-												</div>
-											</div>
-										</div>
-									</div>
-								</div>
-								<!-- /col-sm-4 -->
+								
+									<!-- End of Donation Item
+									=====================================================================-->
+								
+								</c:forEach>
+								
+								<!-- End of Donation List
+								=====================================================================-->
+								
 							</div>
 						</div>
-						<!-- /product-shop-item -->
 					</div>
-					<!-- /shop-page-left-item -->
 				</div>
-				<!-- /shop-page-item -->
+				
 				<div class="container">
 					<div class="row section-btn">
 						<div class="col-sm-offset-8 col-sm-4">
 							<div class="home-donate donate-btn-1 text-uppercase">
-								<a href="donate_create.jsp">Create</a>
+								<a href="createDonationItemForm.do">Create</a>
 							</div>
 						</div>
 					</div>
 				</div>
+				
+				<!-- Donation Create Button
+				=====================================================================-->
+				
 				<div class="blog-pagination text-center">
 					<ul class="pagination">
 						<li><a href="#"><span class="ti-angle-double-left"></span></a></li>
@@ -342,17 +171,22 @@
 						<li><a href="#"><span class="ti-angle-double-right"></span></a></li>
 					</ul>
 				</div>
+				
+				<!-- Donation List Paging
+				=====================================================================-->
+				
 			</div>
-			<!-- /section-conetent -->
 		</div>
 	</section>
 
-	<!-- End of Donate page content 
+	<!-- End of Donate Section 
 	============================================= -->
 
 	<!-- Start of footer section
 	============================================= -->
+	
 	<jsp:include page="bottom.jsp"/>
+	
 	<!-- End of footer section
 	============================================= -->
 

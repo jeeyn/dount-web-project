@@ -1,4 +1,5 @@
 <%@ page language="java" contentType="text/html; charset=UTF-8" pageEncoding="UTF-8"%>
+<%@ taglib prefix="c" uri="http://java.sun.com/jsp/jstl/core" %>
 
 <!DOCTYPE html>
 <html lang="zxx">
@@ -6,8 +7,6 @@
 	<meta charset="utf-8">
 	<title>Dount</title>
 	<link rel="shortcut icon" href="resources/assets/img/icon.png">
-
-	<meta name="description" content="FundMe - is a Premium HTML Responsive Templeate by HTMLmate Team. You can use this for anykind of Nonprofit website">
 
 	<meta name="keywords" content="Premium HTML Template">
 
@@ -51,8 +50,9 @@
 	<!-- End of Header 
 	============================================= -->
 
-	<!-- Start of Event section content
+	<!-- Start of Benefit Section
 	============================================= -->
+	
 	<section id="event" class="event-list">
 		<div class="container">
 			<div class="row section-content">
@@ -64,7 +64,8 @@
 						<h2>Benefit</h2>
 					</div>
 				</div>
-				<!-- /section-title -->
+				<!-- Benefit Title
+				============================================= -->
 				
 				<div class="side-bar-search mb40">
 					<form action="#" method="get">
@@ -72,176 +73,67 @@
 							<button type="submit"><span class="ti-search"></span></button>
 					</form>
 				</div>
-				<!-- /side-bar-search -->
+				
+				<!-- Benefit Search
+				============================================= -->
+				
 				<div class="event-list-content">
 					<div class="row">
-						<div class="col-sm-4">
-							<div class="event-list-item colmd4">
-								<div class="event-list-pic">
-									<img src="resources/assets/img/blog-pic-1.jpg" alt="image">
-								</div>
-								<div class="event-date">
-									<span><strong>26</strong> <br>April</span>
-								</div>
-								<div class="event-text clearfix ">
-									<div class="blog-head-title pt15">
-										<h2 class="black"><a href="benefit_item.jsp">Help Poor Children</a></h2>
+					
+						<!-- Start of Benefit List
+						=====================================================================-->
+								
+						<c:forEach items="${benefitList}" var="benefit">
+							<div class="col-sm-4">
+								<div class="event-list-item colmd4">
+									<div class="event-list-pic">
+										<img src="resources/assets/img/${benefit.album.cover}" alt="image">
 									</div>
-									<div class="event-location mt10">
-										<div class="way-help-text-content pull-left">
-											<p>315 Chat mohon Bazar <br>
-												New Yor, NY 4536
-											</p>
-										</div>
-										<div class="blog-button text-uppercase pull-right mt25 mr15">
-											<a href="benefit_item.jsp">read more <span class="arrow-right-btn ti-arrow-right"></span></a>
-										</div>
+									
+									<!-- Benefit Album Cover
+									============================================= -->
+		
+									<div class="event-date">
+										<span>Need<br><strong>${benefit.benefitAlbumQuantity}</strong></span>
 									</div>
-								</div>
-							</div>
-						</div>
-						<!-- /col-sm-4 -->
-						<div class="col-sm-4">
-							<div class="event-list-item colmd4">
-								<div class="event-list-pic">
-									<img src="resources/assets/img/blog-pic-2.jpg" alt="image">
-								</div>
-								<div class="event-date">
-									<span><strong>26</strong> <br>April</span>
-								</div>
-								<div class="event-text clearfix ">
-									<div class="blog-head-title pt15">
-										<h2 class="black"><a href="benefit_item.jsp">Help Poor Children</a></h2>
-									</div>
-									<div class="event-location mt10">
-										<div class="way-help-text-content pull-left">
-											<p>315 Chat mohon Bazar <br>
-												New Yor, NY 4536
-											</p>
+									<div class="event-text clearfix">
+										<div class="blog-head-title pt15">
+											<h2 class="black"><a href="<c:url value="benefitItem.do"><c:param name="benefitId" value="${benefit.benefitId}"></c:param></c:url>">${benefit.album.artist} - ${benefit.album.albumName}</a></h2>
 										</div>
-										<div class="blog-button text-uppercase pull-right mt25 mr15">
-											<a href="benefit_item.jsp">read more <span class="arrow-right-btn ti-arrow-right"></span></a>
+										<div class="event-location mt10">
+											<div class="way-help-text-content pull-left">
+												<p>ID : ${benefit.userId}<br></p>
+											</div>
+											<div class="blog-button text-uppercase pull-right mt25 mr15">
+												<a href="<c:url value="benefitItem.do"><c:param name="benefitId" value="${benefit.benefitId}"></c:param></c:url>">read more <span class="arrow-right-btn ti-arrow-right"></span></a>
+											</div>
 										</div>
 									</div>
 								</div>
 							</div>
-						</div>
-						<!-- /col-sm-4 -->
-						<div class="col-sm-4">
-							<div class="event-list-item colmd4">
-								<div class="event-list-pic">
-									<img src="resources/assets/img/blog-pic-3.jpg" alt="image">
-								</div>
-								<div class="event-date">
-									<span><strong>26</strong> <br>April</span>
-								</div>
-								<div class="event-text clearfix ">
-									<div class="blog-head-title pt15">
-										<h2 class="black"><a href="benefit_item.jsp">Help Poor Children</a></h2>
-									</div>
-									<div class="event-location mt10">
-										<div class="way-help-text-content pull-left">
-											<p>315 Chat mohon Bazar <br>
-												New Yor, NY 4536
-											</p>
-										</div>
-										<div class="blog-button text-uppercase pull-right mt25 mr15">
-											<a href="benefit_item.jsp">read more <span class="arrow-right-btn ti-arrow-right"></span></a>
-										</div>
-									</div>
-								</div>
-							</div>
-						</div>
-						<!-- /col-sm-4 -->
-						<div class="col-sm-4">
-							<div class="event-list-item colmd4">
-								<div class="event-list-pic">
-									<img src="resources/assets/img/blog-pic-2.jpg" alt="image">
-								</div>
-								<div class="event-date">
-									<span><strong>26</strong> <br>April</span>
-								</div>
-								<div class="event-text clearfix ">
-									<div class="blog-head-title pt15">
-										<h2 class="black"><a href="benefit_item.jsp">Help Poor Children</a></h2>
-									</div>
-									<div class="event-location mt10">
-										<div class="way-help-text-content pull-left">
-											<p>315 Chat mohon Bazar <br>
-												New Yor, NY 4536
-											</p>
-										</div>
-										<div class="blog-button text-uppercase pull-right mt25 mr15">
-											<a href="benefit_item.jsp">read more <span class="arrow-right-btn ti-arrow-right"></span></a>
-										</div>
-									</div>
-								</div>
-							</div>
-						</div>
-						<!-- /col-sm-4 -->
-						<div class="col-sm-4">
-							<div class="event-list-item colmd4">
-								<div class="event-list-pic">
-									<img src="resources/assets/img/blog-pic-1.jpg" alt="image">
-								</div>
-								<div class="event-date">
-									<span><strong>26</strong> <br>April</span>
-								</div>
-								<div class="event-text clearfix ">
-									<div class="blog-head-title pt15">
-										<h2 class="black"><a href="benefit_item.jsp">Help Poor Children</a></h2>
-									</div>
-									<div class="event-location mt10">
-										<div class="way-help-text-content pull-left">
-											<p>315 Chat mohon Bazar <br>
-												New Yor, NY 4536
-											</p>
-										</div>
-										<div class="blog-button text-uppercase pull-right mt25 mr15">
-											<a href="benefit_item.jsp">read more <span class="arrow-right-btn ti-arrow-right"></span></a>
-										</div>
-									</div>
-								</div>
-							</div>
-						</div>
-						<!-- /col-sm-4 -->
-						<div class="col-sm-4">
-							<div class="event-list-item colmd4">
-								<div class="event-list-pic">
-									<img src="resources/assets/img/blog-pic-3.jpg" alt="image">
-								</div>
-								<div class="event-date">
-									<span><strong>26</strong> <br>April</span>
-								</div>
-								<div class="event-text clearfix ">
-									<div class="blog-head-title pt15">
-										<h2 class="black"><a href="benefit_item.jsp">Help Poor Children</a></h2>
-									</div>
-									<div class="event-location mt10">
-										<div class="way-help-text-content pull-left">
-											<p>315 Chat mohon Bazar <br>
-												New Yor, NY 4536
-											</p>
-										</div>
-										<div class="blog-button text-uppercase pull-right mt25 mr15">
-											<a href="benefit_item.jsp">read more <span class="arrow-right-btn ti-arrow-right"></span></a>
-										</div>
-									</div>
-								</div>
-							</div>
-						</div>
-						<!-- /col-sm-4 -->
+							
+							<!-- Benefit Item
+							============================================= -->
+							
+							</c:forEach>
+								
+							<!-- End of Donation List
+							=====================================================================-->
 					</div>
 				</div>
+				
 				<div class="container">
 					<div class="row section-btn">
 						<div class="col-sm-offset-8 col-sm-4">
 							<div class="home-donate donate-btn-1 text-uppercase">
-								<a href="benefit_create.jsp">Create</a>
+								<a href="createBenefitItemForm.do">Create</a>
 							</div>
 						</div>
 					</div>
 				</div>
+				<!-- Benefit Create Button
+				============================================= -->
+				
 				<div class="blog-pagination text-center">
 					<ul class="pagination">
 						<li><a href="#"><span class="ti-angle-double-left"></span></a></li>

@@ -1,13 +1,13 @@
 <%@ page language="java" contentType="text/html; charset=UTF-8" pageEncoding="UTF-8"%>
 
+<%@ taglib prefix="c" uri="http://java.sun.com/jsp/jstl/core" %>
+
 <!DOCTYPE html>
 <html lang="zxx">
 <head>
 	<meta charset="utf-8">
 	<title>Donut</title>
 	<link rel="shortcut icon" href="resources/assets/img/icon.png">
-
-	<meta name="description" content="FundMe - is a Premium HTML Responsive Templeate by HTMLmate Team. You can use this for anykind of Nonprofit website">
 
 	<meta name="keywords" content="Premium HTML Template">
 
@@ -51,141 +51,141 @@
 	<!-- End of Header 
 	============================================= -->
 
-	<!-- Start of blog details section  
+	<!-- Start of Benefit Item Section  
 	============================================= -->
-	<section id="blog-details" class="blog-details-section pt60  pb80">
+	<section id="blog-details" class="blog-details-section pt60 pb80">
 		<div class="container">
 			<div class="row">
 				<div class="blog-details-section-content">
 					<div class="row">
 						<div class="col-sm-12">
-							<div class="blog-details-section-left-side  pb80">
+							<div class="blog-details-section-left-side" style="text-align:center;">
 								<div class="blog-details-main-pic">
-									<img src="resources/assets/img/blog-detail.jpg" alt="image">
+									<img src="resources/assets/img/${benefit.album.cover}" alt="image">
 								</div>
-								<!-- /img -->
+								<br><br>
+								<!-- Benefit Item Album Cover
+								============================================= -->
 								<div class="blog-single-text  pb50">
 									<div class="blog-head-title pt15 pb20">
-										<h2 class="black"><a href="#">Stop Running on Hard Surfaces and Become a Trail Runner</a></h2>
+										<h2 class="black"><a href="#">${benefit.album.artist} - ${benefit.album.albumName}</a></h2>
 									</div>
-									<!-- /head -->
 									<div class="blog-recent-post-meta">
 										<ul class="meta-list pb20 mb20">
-											<li><a class="black" href="#"><span class="mr5 ti-pencil"></span> Tonmoy</a></li>
-											<li><a class="black" href="#"><span class="mr5 ti-timer"></span> 26 Apr, 2017</a></li>
-											<li class="pull-right"><a href="#"><span class="mr5 ti-comment-alt"></span>45</a></li>
-											<li class="pull-right"><a href="#"><span class="mr5 ti-heart"></span>45</a></li>
+											<li><span class="mr5 ti-pencil"></span>${benefit.userId}&nbsp;&nbsp;</li>
+											<li><span class="mr5 ti-timer"></span>${benefit.benefitDate}&nbsp;&nbsp;</li>
+											<li><span class="mr5 ti-heart"></span><b>${benefit.benefitAlbumQuantity}장&nbsp;&nbsp;</b></li>
 										</ul>
 									</div>
-									<!-- recent-post-meta -->
 									<div class="blog-details-text">
-										<p>Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit sunt in culpa qui officia deserunt.</p>
+										<p>${benefit.benefitContent}</p>
 									</div>
-									<!-- /text -->
-									<div class="blog-details-text pt15 pb10">
-										<p>Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum. Sed ut perspiciatis unde omnis iste natus error sit voluptatem accusantium doloremque laudantium sunt in culpa qui officia deserunt.</p>
-									</div>
-									<!-- /text -->
-
-									<div class="blog-details-text">
-										<p>Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt.</p>
-									</div>
-									<!-- /text -->
 								</div>
-								<!-- / blog-single-text-->
+								<!-- Benefit Item Detail
+								============================================= -->
 							</div>
+							
+							<div class="container">
+								<div class="row section-btn">
+									<c:if test="${sessionScope.isWriter == 'me'}">
+										<div class="col-sm-offset-10 col-sm-1">
+											<div class="home-donate donate-btn-1 text-uppercase">
+												<a href="<c:url value="updateBenefitItemForm.do">
+															<c:param name="benefitId" value="${benefit.benefitId}"></c:param>
+														 </c:url>">Update</a>
+											</div>
+										</div>
+										
+										<div class="col-sm-1">
+											<div class="home-donate donate-btn-1 text-uppercase">
+												<a href="<c:url value="deleteBenefitItem.do">
+															<c:param name="benefitId" value="${benefit.benefitId}"></c:param>
+														 </c:url>">Delete</a>
+											</div>
+										</div>							
+									</c:if>
+									<!-- Donation Update / Delete Button
+									============================================= -->
+								</div>
+							</div>
+							<!-- Donation Item
+							============================================= -->
 
 							<div class="comment-area">
 								<div class="reply-comment mb50">
 									<div class="side-bar-title mb40">
-										<h2>Commnents  [12]</h2>
+										<h2>Commnents</h2>
 									</div>
-									<div class="client-name-reply pb70">
-										<div class="reply-pic pull-left mr25">
-											<img src="resources/assets/img/reply-1.jpg" alt="image">
-										</div>
-										<div class="name-reply-text">
-											<div class="name-reply pb20">
-												<span class="client-name"><a href="#">Tamanna</a></span>
-												<span class="designation">2day ago</span>
-												<div class="comment-icon pull-right">
-													<a href="#"><span class="ti-comments"></span></a>
-												</div>
-											</div>
-
-											<div class="reply-text">
-												<p>Lorem ipsum dolor sit amet, consectetur adipisicing elit  :)</p>
-											</div>
-										</div>
-									</div>
-									<!-- /client-name-reply --> 
-									<div class="reply-text-2">
-										<div class="client-name-reply">
-											<div class="reply-pic pull-left mr25">
-												<img src="resources/assets/img/reply-2.jpg" alt="image">
-											</div>
-											<div class="name-reply-text">
-												<div class="name-reply pb20">
-													<span class="client-name"><a href="#">Saiful Islam</a></span>
-													<span class="designation">2day ago</span>
-													<div class="comment-icon pull-right">
-														<a href="#"><span class="ti-comments"></span></a>
+									<c:forEach items="${donationRequestList}" var="donationRequest">
+										<div class="leave-comment-form pb50 clearfix" style="padding:30px;">
+											<div class="comment-form">
+												<form id="contact_form" action="matchBenefit.do" method="POST">
+													<div class="client-name-reply">
+														<div class="name-reply-text">
+															<div class="name-reply pb20">
+																<span class="client-name"><a href="#">${donationRequest.userId}</a></span><br>
+																<span class="designation">${donationRequest.drDate}</span><br>
+																<span>QUANTITY : ${donationRequest.drAlbumQuantity}</span>
+																<c:if test="${sessionScope.isWriter == 'me'}">
+																	<div class="send-button text-uppercase pull-right">
+																		<button type="submit" value="Submit">MATCH</button> 
+																	</div>
+																</c:if>
+																<div class="reply-text">
+																	<p>${donationRequest.drContent}</p>
+																</div>
+															</div>
+														</div>
 													</div>
-												</div>
-
-												<div class="reply-text">
-													<p>Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor.</p>
-												</div>
+												</form>
 											</div>
 										</div>
-									</div>
+									</c:forEach>
 								</div>
-								<!-- /reply-comment -->
+								
+								<!-- Donation Request List
+								============================================= -->
+								
 								<div class="leave-comment">
 									<div class="side-bar-title mb40">
 										<h2>Leave a Comment</h2>
 									</div>
-									<div class="leave-comment-form pb50 clearfix">
+									<div class="leave-comment-form pb50 clearfix" style="padding:30px;">
 										<div class="comment-form">
-											<form id="contact_form" action="#" method="POST" enctype="multipart/form-data">
+											<form id="contact_form" action="requestDonation.do" method="POST">
 												<div class="leave-commen-info">
-													<input class="name" name="name" type="text" placeholder="Your Name..">
+													<input name="benefitId" type="hidden" value="${benefit.benefitId}">
 												</div>
 												<div class="leave-commen-info">
-													<input class="email" name="email" type="text" placeholder="Your Website..">
-												</div>
-												<div class="leave-commen-info">
-													<div class="leave-commen-info">
-														<input class="email" name="email" type="text" placeholder="Phone Number...">
-													</div>
+													<input name="drAlbumQuantity" type="number" placeholder="Album Quantity">
 												</div>
 												<div class="leave-commen-info mt25">
-													<textarea id="message" name="message" placeholder="Message Here.. " rows="7" cols="30"></textarea>
-
+													<textarea name="drContent" placeholder="Message Here" rows="7" cols="30"></textarea>
 												</div>
 												<div class="send-button text-uppercase pull-right">
-													<button type="submit" value="Submit">SEND MESSAGE</button> 
+													<button type="submit" value="Submit">SEND REQUEST</button> 
 												</div>
 											</form>
 										</div>
 									</div>
 								</div>
-								<!-- /leave-comment -->
+								<!-- Send Donation Request
+								============================================= -->
 							</div>
 						</div>
-						<!-- /col-sm-12 -->
 					</div>
-					<!-- /row -->
 				</div>
 			</div>
 		</div>
 	</section>
-	<!-- End of blog details section 
+	<!-- End of Benefit Section
 	============================================= -->
 
 	<!-- Start of footer section
 	============================================= -->
+	
 	<jsp:include page="bottom.jsp"/>
+	
 	<!-- End of footer section
 	============================================= -->
 

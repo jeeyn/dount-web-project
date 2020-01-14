@@ -1,4 +1,5 @@
 <%@ page language="java" contentType="text/html; charset=UTF-8" pageEncoding="UTF-8"%>
+<%@ taglib prefix="c" uri="http://java.sun.com/jsp/jstl/core" %>
 
 <!DOCTYPE html>
 <html lang="zxx">
@@ -74,13 +75,13 @@
 									<span class="yellow ti-crown"></span>
 								</div>
 								<div class="we-can-do-text">
-									<h3 class="we-can-do-head red"> <a href="register.jsp">개인 정보 조회</a></h3>
+									<h3 class="we-can-do-head red"><a href="viewAccount.do">개인 정보 조회</a></h3>
 								</div>
 								<div class="hide-icon">
 									<span class="red ti-crown"></span>
 								</div> 
 								<div class="hide-text text-left">
-									<p>Modi tempora incidunt ut labore et dolore magnam voluptatem...</p>
+									<p>View Your Account Information</p>
 								</div>
 							</div>
 						</div>
@@ -92,13 +93,13 @@
 									<span class="yellow ti-heart"></span>
 								</div>
 								<div class="we-can-do-text">
-									<h3 class="we-can-do-head red"><a href="register.jsp">개인 정보 수정</a></h3>
+									<h3 class="we-can-do-head red"><a href="updateAccount.do">개인 정보 수정</a></h3>
 								</div>
 								<div class="hide-icon">
 									<span class="red ti-heart"></span>
 								</div> 
 								<div class="hide-text text-left">
-									<p>Modi tempora incidunt ut labore et dolore magnam voluptatem...</p>
+									<p>Update Your Account Information</p>
 								</div>
 							</div>
 						</div>
@@ -110,13 +111,13 @@
 									<span class="yellow ti-book"></span>
 								</div>
 								<div class="we-can-do-text">
-									<h3 class="we-can-do-head red"><a href="posting_list.jsp">작성 게시물 조회</a></h3>
+									<h3 class="we-can-do-head red"><a href="postingList.do">작성 게시물 조회</a></h3>
 								</div>
 								<div class="hide-icon">
 									<span class="red ti-book"></span>
 								</div> 
 								<div class="hide-text text-left">
-									<p>Modi tempora incidunt ut labore et dolore magnam voluptatem...</p>
+									<p>View Your Posting Information</p>
 								</div>
 							</div>
 						</div>
@@ -134,7 +135,7 @@
 									<span class="red ti-gift"></span>
 								</div> 
 								<div class="hide-text text-left">
-									<p>Modi tempora incidunt ut labore et dolore magnam voluptatem...</p>
+									<p>View Your Matching History Information</p>
 								</div>
 							</div>
 						</div>
